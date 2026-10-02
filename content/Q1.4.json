@@ -1,0 +1,165 @@
+{
+  "id": "Q1.4",
+  "slug": "integrationsmethoden",
+  "name": "Integrationsmethoden vertiefen",
+  "stage": "Q1",
+  "reference": "Q1.4 · Wahlthema",
+  "lead": "Du findest Stammfunktionen mit einem Ansatz und lernst als LK-Erweiterung partielle Integration und Substitution.",
+  "prerequisites": "Produkt- und Kettenregel, Stammfunktionen",
+  "concepts": [
+    {
+      "title": "Lineare innere Funktion",
+      "explanation": "Beim Integrieren einer linearen Verkettung musst du den inneren Faktor ausgleichen. Das funktioniert hier, weil die innere Ableitung konstant ist.",
+      "example": "∫e^(3x)dx=(1/3)e^(3x)+C."
+    },
+    {
+      "title": "Ansatz mit Koeffizienten",
+      "explanation": "Vermute eine passende Stammfunktionsform, leite sie ab und vergleiche die Koeffizienten. Ein Polynom mal eˣ legt wieder ein Polynom mal eˣ nahe.",
+      "example": "Für xeˣ: F=(ax+b)eˣ → a=1, b=−1."
+    },
+    {
+      "title": "LK: Partielle Integration",
+      "explanation": "Die Produktregel rückwärts verschiebt das Ableiten auf einen günstigeren Faktor. Sinnvoll ist oft, ein Polynom abzuleiten und die e-Funktion zu integrieren.",
+      "example": "∫u·v′dx=u·v−∫u′·v dx."
+    },
+    {
+      "title": "LK: Substitution",
+      "explanation": "Ersetze eine innere Funktion durch eine neue Variable. Ihre Ableitung muss einschließlich des Differentials berücksichtigt werden. Bei bestimmten Integralen kannst du die Grenzen passend umrechnen.",
+      "example": "u=x² → du=2x dx; ∫2xe^(x²)dx=e^(x²)+C."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Inneren Faktor ausgleichen",
+      "question": "Integriere 5e^(2x).",
+      "steps": [
+        "Eine Stammfunktion von e^(2x) ist e^(2x)/2.",
+        "F(x)=2,5e^(2x)+C. Ableiten liefert wieder 5e^(2x)."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Koeffizientenvergleich",
+      "question": "Finde eine Stammfunktion von (2x+3)eˣ.",
+      "steps": [
+        "Ansatz F=(ax+b)eˣ. F′=(ax+a+b)eˣ.",
+        "Vergleich: a=2 und a+b=3 → b=1.",
+        "F=(2x+1)eˣ+C."
+      ]
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Partiell integrieren",
+      "question": "Berechne ∫₀¹xeˣdx.",
+      "steps": [
+        "u=x, v′=eˣ → u′=1, v=eˣ.",
+        "∫₀¹xeˣdx=[xeˣ]₀¹−∫₀¹eˣdx=e−(e−1).",
+        "Ergebnis 1."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Exponent",
+      "question": "Bestimme ∫e^(−2x)dx.",
+      "steps": [
+        "F=−e^(−2x)/2+C."
+      ],
+      "id": "Q1.4-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Sinus",
+      "question": "Bestimme ∫cos(3x)dx.",
+      "steps": [
+        "F=sin(3x)/3+C; die Kettenregel bestätigt dies."
+      ],
+      "id": "Q1.4-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Ansatz",
+      "question": "Finde eine Stammfunktion von (x+4)eˣ.",
+      "steps": [
+        "F=(ax+b)eˣ, F′=(ax+a+b)eˣ.",
+        "a=1, b=3 → F=(x+3)eˣ+C."
+      ],
+      "id": "Q1.4-03"
+    },
+    {
+      "level": "Mittel · LK",
+      "title": "Substitution",
+      "question": "Berechne ∫₀¹2xe^(x²)dx.",
+      "steps": [
+        "u=x², Grenzen 0 und 1.",
+        "∫₀¹eᵘdu=e−1."
+      ],
+      "id": "Q1.4-04"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Partiell",
+      "question": "Bestimme ∫xcos x dx.",
+      "steps": [
+        "u=x, v′=cos x, v=sin x.",
+        "F=xsin x−∫sin x dx=xsin x+cos x+C."
+      ],
+      "id": "Q1.4-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Fehler entdecken",
+      "question": "Warum ist e^(x²)/(2x) im Allgemeinen keine Stammfunktion von e^(x²)?",
+      "steps": [
+        "Der Faktor 1/(2x) ist selbst von x abhängig. Seine Ableitung erzeugt einen zusätzlichen Term.",
+        "Die Regel des konstanten inneren Faktors kann nicht unverändert auf eine nichtlineare innere Funktion übertragen werden."
+      ],
+      "id": "Q1.4-06"
+    },
+    {
+      "id": "Q1.4-verstehen-01",
+      "level": "Einfach",
+      "title": "Ausgleichen beim Integrieren",
+      "question": "Bestimme eine Stammfunktion von 5e^(5x).",
+      "hint": "Denke rückwärts an die Kettenregel.",
+      "steps": [
+        "F(x)=e^(5x).",
+        "Probe: F′(x)=5e^(5x)."
+      ]
+    },
+    {
+      "id": "Q1.4-verstehen-02",
+      "level": "Mittel",
+      "title": "Ansatz kontrollieren",
+      "question": "F(x)=(x−2)eˣ. Von welcher Funktion ist F eine Stammfunktion?",
+      "hint": "Leite das Produkt ab.",
+      "steps": [
+        "F′(x)=eˣ+(x−2)eˣ=(x−1)eˣ.",
+        "F ist also eine Stammfunktion von f(x)=(x−1)eˣ."
+      ]
+    },
+    {
+      "id": "Q1.4-verstehen-03",
+      "level": "Schwierig · LK",
+      "title": "Partielle Integration",
+      "question": "Berechne ∫₀¹x eˣ dx.",
+      "hint": "Wähle u=x und v′=eˣ.",
+      "steps": [
+        "Eine Stammfunktion ist xeˣ−eˣ=(x−1)eˣ.",
+        "An den Grenzen ergibt sich 0−(−1)=1.",
+        "Ableitungsprobe bestätigt xeˣ."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Nicht jeder Ausdruck lässt sich direkt mit einer Grundregel integrieren. Die Struktur des Terms entscheidet, ob du eine innere Funktion rückwärts behandelst, einen Ansatz prüfst oder eine weiterführende Methode brauchst.",
+    "idea": "Die wichtigste Kontrolle bleibt das Ableiten. Eine vorgeschlagene Stammfunktion muss dabei exakt die Ausgangsfunktion ergeben. So erkennst du etwa einen fehlenden Faktor aus der Kettenregel, bevor du mit Grenzen weiterrechnest.",
+    "check": "Warum gehört bei ∫e^(3x)dx der Faktor 1/3 dazu?",
+    "answer": "Beim Ableiten von e^(3x) entsteht der Faktor 3. Der Faktor 1/3 gleicht ihn aus."
+  }
+}

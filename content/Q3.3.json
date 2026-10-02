@@ -1,0 +1,175 @@
+{
+  "id": "Q3.3",
+  "slug": "hypothesentests",
+  "name": "Hypothesentests und Fehlentscheidungen",
+  "stage": "Q3",
+  "reference": "Q3.3 · LK verbindlich",
+  "lead": "Du legst eine Entscheidungsregel fest und untersuchst, wie wahrscheinlich falsche Entscheidungen sind.",
+  "prerequisites": "Binomialverteilung, kumulierte Wahrscheinlichkeiten",
+  "concepts": [
+    {
+      "title": "Hypothesen vor den Daten",
+      "explanation": "Eine Nullhypothese H₀ wird gegen eine gerichtete oder ungerichtete Alternative geprüft. Bei einem rechtsseitigen Binomialtest sprechen große Trefferzahlen gegen H₀. Richtung und Niveau werden vor der Auswertung festgelegt.",
+      "example": "H₀:p≤0,5 gegen H₁:p>0,5."
+    },
+    {
+      "title": "Ablehnungsbereich",
+      "explanation": "Wähle die kleinste kritische Grenze k, für die unter dem Randwert von H₀ die obere Wahrscheinlichkeit höchstens α ist. Wegen diskreter Trefferzahlen ist das tatsächliche Niveau oft kleiner als α.",
+      "example": "Verwerfe H₀ bei X≥k, wobei Pₚ₀(X≥k)≤α."
+    },
+    {
+      "title": "Zwei Fehlerarten",
+      "explanation": "Fehler 1. Art: H₀ wird verworfen, obwohl sie stimmt. Fehler 2. Art: H₀ wird nicht verworfen, obwohl die Alternative gilt. Für die zweite Fehlerwahrscheinlichkeit brauchst du einen konkreten alternativen Parameter.",
+      "example": "α begrenzt Fehler 1. Art; β(p₁)=Pₚ₁(nicht verwerfen)."
+    },
+    {
+      "title": "Ein Testergebnis richtig deuten",
+      "explanation": "Nicht verwerfen heißt nicht, dass H₀ bewiesen ist. Ein p-Wert ist die Wahrscheinlichkeit mindestens so extremer Daten unter der Nullhypothese; er ist nicht die Wahrscheinlichkeit, dass H₀ wahr ist.",
+      "example": "Kleine p-Werte zeigen schlechte Vereinbarkeit mit H₀, unter den Modellannahmen."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Richtung wählen",
+      "question": "Eine Münze soll häufiger Kopf als eine faire Münze zeigen. Formuliere einen Test.",
+      "steps": [
+        "Treffer=Kopf. H₀:p≤0,5; H₁:p>0,5.",
+        "Ein rechtsseitiger Test betrachtet besonders viele Köpfe als auffällig."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Exakte kritische Grenze",
+      "question": "n=10, p₀=0,5, α=5 %. Finde den Ablehnungsbereich.",
+      "steps": [
+        "P(X≥9)=(C(10,9)+C(10,10))/2¹⁰=11/1024≈1,074 %.",
+        "P(X≥8)=(45+10+1)/1024≈5,469 % >5 %.",
+        "Deshalb lautet die kleinste zulässige Grenze k=9. Verwerfe bei 9 oder 10 Köpfen."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Fehler zweiter Art",
+      "question": "Für dieselbe Regel sei tatsächlich p=0,8. Bestimme β.",
+      "steps": [
+        "Nicht verwerfen bedeutet X≤8.",
+        "β=1−P₀,₈(X≥9)=1−[10·0,8⁹·0,2+0,8¹⁰].",
+        "β≈0,62419. Der kleine Test übersieht diese Alternative häufig; Teststärke ≈37,58 %."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Hypothesen",
+      "question": "Ein Hersteller behauptet einen Defektanteil von höchstens 0,02. Welche Alternative prüft eine Verschlechterung?",
+      "steps": [
+        "H₀:p≤0,02 gegen H₁:p>0,02. Defekte werden als Treffer gezählt."
+      ],
+      "id": "Q3.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Fehler 1",
+      "question": "Erkläre Fehler 1. Art im Münztest H₀:p≤0,5.",
+      "steps": [
+        "Man erklärt die Münze für kopflastig, obwohl p≤0,5 gilt."
+      ],
+      "id": "Q3.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Entscheidung",
+      "question": "Beim oben hergeleiteten Test mit n=10 werden 8 Köpfe beobachtet. Was folgt?",
+      "steps": [
+        "8 liegt nicht im Ablehnungsbereich {9,10}.",
+        "H₀ wird nicht verworfen. Fairness ist damit nicht bewiesen."
+      ],
+      "id": "Q3.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "p-Wert",
+      "question": "Berechne für genau 9 beobachtete Köpfe den rechtsseitigen p-Wert unter p=0,5, n=10.",
+      "steps": [
+        "P(X≥9)=11/1024≈0,010742.",
+        "Bei α=0,05 wird verworfen; bei α=0,01 nicht."
+      ],
+      "id": "Q3.3-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Niveau verändern",
+      "question": "Wie verändert sich bei festem n meist der Ablehnungsbereich, wenn α kleiner wird?",
+      "steps": [
+        "Er wird kleiner oder bleibt durch die diskreten Grenzen gleich.",
+        "H₀ wird schwerer verworfen. Bei festem alternativem p steigt β typischerweise oder bleibt gleich."
+      ],
+      "id": "Q3.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Nicht beweisen",
+      "question": "Beurteile: Ein nicht signifikantes Ergebnis beweist, dass kein Effekt existiert.",
+      "steps": [
+        "Falsch. Die Daten reichen für die gewählte Testregel nicht zur Ablehnung aus.",
+        "Ein kleiner Effekt oder eine kleine Stichprobe kann zu geringer Teststärke führen."
+      ],
+      "id": "Q3.3-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Linksseitig",
+      "question": "n=10, p₀=0,5, α=5 %. Finde die linksseitige kritische Grenze.",
+      "steps": [
+        "P(X≤1)=11/1024≈1,074 %; P(X≤2)=56/1024≈5,469 %.",
+        "Verwerfe bei X≤1. Symmetrie der Binomialverteilung mit p=0,5."
+      ],
+      "id": "Q3.3-07"
+    },
+    {
+      "id": "Q3.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Alternative formulieren",
+      "question": "Eine Münze soll häufiger als zur Hälfte Kopf zeigen. Formuliere H₀ und H₁ für einen einseitigen Test.",
+      "hint": "Die vermutete Erhöhung gehört zur Alternative.",
+      "steps": [
+        "H₀:p≤0,5; H₁:p>0,5.",
+        "Die Richtung wird vor dem Betrachten der Stichprobe festgelegt."
+      ]
+    },
+    {
+      "id": "Q3.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Kritische Region prüfen",
+      "question": "X~B(6;0,5). Die Regel lautet: Verwerfen nur bei 6 Köpfen. Wie groß ist die Verwerfungswahrscheinlichkeit bei p=0,5?",
+      "hint": "Es gibt genau einen Weg mit sechs Köpfen.",
+      "steps": [
+        "P(X=6)=(1/2)⁶=1/64=0,015625.",
+        "Das sind 1,5625 % und damit weniger als 5 %."
+      ]
+    },
+    {
+      "id": "Q3.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Grenze verschieben",
+      "question": "Für denselben Test: Wäre Verwerfen schon ab 5 Köpfen mit α=5 % vereinbar?",
+      "hint": "Addiere die Fälle 5 und 6.",
+      "steps": [
+        "P(X≥5)=(6+1)/64=7/64≈10,94 %.",
+        "Das übersteigt 5 %, daher ist diese Regel für das Niveau ungeeignet.",
+        "Nur der Fall 6 ergibt hier einen nichtleeren rechtsseitigen Ablehnungsbereich unter 5 %."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "LK",
+  "understanding": {
+    "why": "Eine auffällige Stichprobe kann Zufall sein oder auf eine Veränderung hindeuten. Ein Hypothesentest legt vorab fest, wann die Daten unter einer Ausgangsannahme ungewöhnlich genug wären, um diese zu verwerfen.",
+    "idea": "Der Ablehnungsbereich gehört zur Entscheidungsregel. Das Signifikanzniveau begrenzt das Risiko, eine wahre Nullhypothese zu verwerfen. Es ist nicht die Wahrscheinlichkeit, dass die Nullhypothese nach Beobachtung der Daten wahr ist.",
+    "check": "Beweist ein nicht signifikantes Ergebnis die Nullhypothese?",
+    "answer": "Nein. Es bedeutet nur, dass die festgelegte Regel mit diesen Daten keinen ausreichenden Grund zum Verwerfen liefert."
+  }
+}

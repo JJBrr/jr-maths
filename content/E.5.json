@@ -1,0 +1,185 @@
+{
+  "id": "E.5",
+  "slug": "sinus-kosinus-und-schwingungen",
+  "name": "Sinus, Kosinus und Schwingungen",
+  "stage": "E-Phase",
+  "reference": "E.5",
+  "lead": "Du modellierst periodische Vorgänge und berechnest ihre Änderungsraten im Bogenmaß.",
+  "prerequisites": "Trigonometrie aus Klasse 10, Kettenregel",
+  "concepts": [
+    {
+      "title": "Bogenmaß",
+      "explanation": "Das Bogenmaß ist Bogenlänge geteilt durch Radius. Ein Vollkreis entspricht 2π, ein rechter Winkel π/2. Die üblichen Ableitungsformeln für sin und cos setzen das Bogenmaß voraus.",
+      "example": "180°=π rad; 30°=π/6 rad."
+    },
+    {
+      "title": "Parameter einer Schwingung",
+      "explanation": "Bei a·sin(b(x−c))+d ist |a| die Amplitude, d die Mittellinie, c eine horizontale Verschiebung. Für b≠0 beträgt die Periode 2π/|b|.",
+      "example": "f(t)=3sin(πt/2)+5 hat T=4 und Werte von 2 bis 8."
+    },
+    {
+      "title": "Ableitung",
+      "explanation": "Sinus wird zu Kosinus; Kosinus wird zu negativem Sinus. Bei einer veränderten Eingabe kommt die Kettenregel hinzu.",
+      "example": "(sin x)′=cos x; (cos x)′=−sin x."
+    },
+    {
+      "title": "Mehrere Lösungen",
+      "explanation": "Wegen der Periodizität haben trigonometrische Gleichungen meist unendlich viele Lösungen. In einem vorgegebenen Intervall musst du alle passenden Winkel erfassen.",
+      "example": "sin x=1/2 auf [0;2π]: x=π/6 oder 5π/6."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Periode ablesen",
+      "question": "Bestimme Amplitude, Periode und Mittellinie von f(x)=−2cos(3x)+1.",
+      "steps": [
+        "Amplitude |−2|=2; Mittellinie y=1.",
+        "T=2π/3. Wertebereich [−1;3].",
+        "Das Minus vor cos spiegelt die Schwingung an der Mittellinie."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Ableitungen",
+      "question": "Leite f(x)=4sin(2x) zweimal ab.",
+      "steps": [
+        "f′(x)=8cos(2x).",
+        "f″(x)=−16sin(2x).",
+        "Es gilt f″=−4f. Jede Ableitung enthält nochmals den inneren Faktor 2."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Wasserstand modellieren",
+      "question": "Ein Wasserstand schwankt zwischen 2 und 6 m, Periode 12 h, Maximum bei t=0. Finde ein Modell.",
+      "steps": [
+        "Mittellinie (2+6)/2=4; Amplitude (6−2)/2=2.",
+        "b=2π/12=π/6. Kosinus startet bei einem Maximum.",
+        "h(t)=4+2cos(πt/6). Bei t=6 ist h=2 m."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Umrechnen",
+      "question": "Wandle 60° und 270° in Bogenmaß um.",
+      "steps": [
+        "Mit π/180 multiplizieren: π/3 und 3π/2."
+      ],
+      "id": "E.5-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Werte",
+      "question": "Berechne sin(0), cos(0), sin(π/2), cos(π).",
+      "steps": [
+        "Die Werte sind 0, 1, 1, −1."
+      ],
+      "id": "E.5-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Ableiten",
+      "question": "Leite f(x)=3cos(4x) ab.",
+      "steps": [
+        "Kosinus wird zu −Sinus; innere Ableitung 4.",
+        "f′(x)=−12sin(4x)."
+      ],
+      "id": "E.5-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Alle Lösungen",
+      "question": "Löse cos x=0 auf [0;2π].",
+      "steps": [
+        "Der Kosinus verschwindet bei π/2 und 3π/2.",
+        "Weitere Lösungen außerhalb des Intervalls werden nicht aufgenommen."
+      ],
+      "id": "E.5-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Periode",
+      "question": "Bestimme die Periode von sin(0,5x).",
+      "steps": [
+        "T=2π/0,5=4π."
+      ],
+      "id": "E.5-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Geschwindigkeit",
+      "question": "s(t)=0,1sin(4t) in m. Wie groß ist die maximale Geschwindigkeit im Betrag?",
+      "steps": [
+        "v(t)=s′(t)=0,4cos(4t) in m/s.",
+        "Da |cos|≤1, ist der maximale Betrag 0,4 m/s."
+      ],
+      "id": "E.5-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Phase",
+      "question": "Schreibe cos x als verschobene Sinusfunktion.",
+      "steps": [
+        "cos x=sin(x+π/2).",
+        "Der Sinusgraph wird um π/2 nach links verschoben."
+      ],
+      "id": "E.5-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Modell prüfen",
+      "question": "f(t)=2sin(πt)+3. Zu welchen t in [0;2] wird die Mittellinie erreicht?",
+      "steps": [
+        "Mittellinie 3 → sin(πt)=0.",
+        "πt=kπ → t=k. Im Intervall: t=0,1,2."
+      ],
+      "id": "E.5-08"
+    },
+    {
+      "id": "E.5-verstehen-01",
+      "level": "Einfach",
+      "title": "Periode erkennen",
+      "question": "Bestimme die Periode von f(x)=sin(2x).",
+      "hint": "Der innere Winkel muss sich für eine Wiederholung um 2π ändern.",
+      "steps": [
+        "2T=2π, daher T=π.",
+        "Die Kurve schwingt auf derselben Strecke doppelt so oft wie sin(x)."
+      ]
+    },
+    {
+      "id": "E.5-verstehen-02",
+      "level": "Mittel",
+      "title": "Graph in eine Formel übersetzen",
+      "question": "Eine Sinuskurve hat Mittellinie 3, Amplitude 2 und Periode 4. Bei x=0 steigt sie durch die Mittellinie. Gib eine Formel an.",
+      "hint": "Nutze a·sin(bx)+d und b=2π/T.",
+      "steps": [
+        "a=2, d=3 und b=π/2.",
+        "f(x)=2sin((π/2)x)+3. Die positive Sinuskurve steigt bei 0."
+      ]
+    },
+    {
+      "id": "E.5-verstehen-03",
+      "level": "Schwierig",
+      "title": "Steilste Stelle",
+      "question": "f(x)=3sin(2x). Bestimme auf [0;π] alle Stellen mit größter positiver Steigung.",
+      "hint": "Maximiere die Ableitung, nicht die Funktionshöhe.",
+      "steps": [
+        "f′(x)=6cos(2x). Ihr größter Wert ist 6.",
+        "cos(2x)=1 gilt auf diesem Intervall bei x=0 und x=π.",
+        "Die Hochstelle von f bei π/4 hat dagegen Steigung 0."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Schwingungen, Tageslängen und idealisierte periodische Signale wiederholen sich. Sinus und Kosinus beschreiben solche Verläufe mit wenigen Angaben: Mittellinie, Amplitude, Periodenlänge und Verschiebung.",
+    "idea": "Lies zuerst Hoch- und Tiefwert ab. Ihre Mitte ist die Mittellinie; der halbe Abstand ist die Amplitude. Die Periode ist eine waagerechte Länge. Verwechsle sie nicht mit der senkrecht gemessenen Amplitude.",
+    "check": "Was ist die Amplitude bei Werten zwischen 2 und 8?",
+    "answer": "Die Mittellinie liegt bei 5. Der Abstand zu Hoch- oder Tiefwert ist 3; die Amplitude ist also 3."
+  }
+}

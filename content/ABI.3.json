@@ -1,0 +1,169 @@
+{
+  "id": "ABI.3",
+  "slug": "abitur-stochastik",
+  "name": "Abiturtraining: Stochastik und Entscheidungen",
+  "stage": "Abiturtraining",
+  "reference": "Q3.1 / Q3.2 / Q3.3",
+  "lead": "Du verknüpfst Bedingung, Binomialmodell und statistische Entscheidung und formulierst die Bedeutung der Ergebnisse.",
+  "prerequisites": "Bedingte Wahrscheinlichkeit, Binomialverteilung; für LK Hypothesentests",
+  "concepts": [
+    {
+      "title": "Zufallsgröße definieren",
+      "explanation": "Schreibe auf, was X zählt und welche Werte möglich sind. Begründe die Modellwahl mit den Bedingungen und überprüfe, ob Ziehungen unabhängig sind.",
+      "example": "X=Anzahl defekter Produkte in einer Stichprobe."
+    },
+    {
+      "title": "Wortlaut übersetzen",
+      "explanation": "Eine saubere Ereignisschreibweise kommt vor dem Rechnen. Achte auf höchstens, weniger als, mindestens und mehr als.",
+      "example": "X<3 entspricht X≤2; X>3 entspricht X≥4."
+    },
+    {
+      "title": "Bedingungen nicht vertauschen",
+      "explanation": "„Positiv bei Defekt“ und „Defekt bei positivem Ergebnis“ sind verschiedene Wahrscheinlichkeiten. Eine Häufigkeitstafel verhindert, dass die Basisrate verloren geht.",
+      "example": "P(positiv|defekt) ist nicht automatisch P(defekt|positiv)."
+    },
+    {
+      "title": "LK: Entscheidungen begründen",
+      "explanation": "Nenne Hypothesen, Testgröße, Niveau, kritischen Bereich und Entscheidung. Erläutere mögliche Fehler im jeweiligen Sachzusammenhang.",
+      "example": "Eine statistische Entscheidung liefert keinen logischen Beweis der Hypothese."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Ereignis",
+      "question": "Übersetze „mindestens drei Erfolge“.",
+      "steps": [
+        "X≥3, also 1−P(X≤2)."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Faire Münze",
+      "question": "10 unabhängige Würfe: P(genau 5 Köpfe)?",
+      "steps": [
+        "C(10,5)·0,5¹⁰=252/1024.",
+        "P≈24,61 %."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Modellkritik",
+      "question": "Eine Stichprobe ohne Zurücklegen aus einer kleinen Lieferung wird binomial gerechnet. Was fehlt?",
+      "steps": [
+        "Unabhängigkeit und konstantes p sind nicht exakt erfüllt.",
+        "Bei einer sehr großen Population kann eine Näherung brauchbar sein; andernfalls hypergeometrisch rechnen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Mittel",
+      "title": "Training A · Qualität (ca. 15 min)",
+      "question": "In einem vereinfachten Modell sind Produkte unabhängig mit p=0,1 defekt. n=20. a) Bestimme μ und σ. b) Berechne P(X=0). c) P(X≥1)?",
+      "steps": [
+        "a) μ=2; σ=√1,8≈1,342.",
+        "b) P(X=0)=0,9²⁰≈0,12158.",
+        "c) 1−0,9²⁰≈0,87842."
+      ],
+      "id": "ABI.3-01"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training A · Planung (ca. 15 min)",
+      "question": "Wie viele unabhängige Produkte mit Defektwahrscheinlichkeit 0,1 müssen mindestens geprüft werden, um mit mindestens 99 % Wahrscheinlichkeit wenigstens einen Defekt zu finden?",
+      "steps": [
+        "1−0,9ⁿ≥0,99 → 0,9ⁿ≤0,01.",
+        "n≥ln0,01/ln0,9≈43,709.",
+        "Mindestens 44. Das Modell setzt eine konstante Rate und Unabhängigkeit voraus."
+      ],
+      "id": "ABI.3-02"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training B · Alarm (ca. 20 min)",
+      "question": "1 % der Teile sind fehlerhaft. Ein Alarm erkennt 95 % davon und schlägt bei 4 % der intakten Teile an. a) P(Alarm)? b) P(Fehler|Alarm)?",
+      "steps": [
+        "a) P(A)=0,01·0,95+0,99·0,04=0,0491.",
+        "b) P(F|A)=0,0095/0,0491≈0,19348.",
+        "Etwa 19,35 % der Alarmfälle sind tatsächlich fehlerhaft; der niedrige Grundanteil ist entscheidend."
+      ],
+      "id": "ABI.3-03"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Training C · Test (ca. 20 min)",
+      "question": "10 Münzwürfe: H₀:p≤0,5 gegen H₁:p>0,5, α=5 %. a) Leite die kritische Grenze her. b) Entscheide bei 9 Köpfen. c) Erläutere Fehler 1. Art.",
+      "steps": [
+        "a) P₀,₅(X≥9)=11/1024≈1,074 %≤5 %. P(X≥8)=56/1024≈5,469 %>5 %. Grenze 9.",
+        "b) 9 liegt im Ablehnungsbereich: H₀ verwerfen.",
+        "c) Man behauptet Kopflastigkeit, obwohl p≤0,5 gilt. Unter p=0,5 tritt dies mit etwa 1,074 % auf."
+      ],
+      "id": "ABI.3-04"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Training D · Normalverteilung (ca. 15 min)",
+      "question": "Längen seien N(100;2²)-verteilt (mm). Toleranz [96;104]. a) Anteil innerhalb mit Φ(2)=0,97725? b) Wie viel liegt oberhalb 104?",
+      "steps": [
+        "a) Standardisierte Grenzen −2 und 2. Wegen Symmetrie Φ(−2)=0,02275.",
+        "Anteil 0,97725−0,02275=0,9545, also 95,45 %.",
+        "b) 1−Φ(2)=0,02275=2,275 %."
+      ],
+      "id": "ABI.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training E · Erwarteter Gewinn (ca. 15 min)",
+      "question": "Ein Spiel zahlt mit Wahrscheinlichkeit 0,1 zehn Euro, sonst nichts. Einsatz 2 €. a) Erwarteter Nettogewinn? b) Fairer Einsatz?",
+      "steps": [
+        "a) Erwartete Auszahlung 0,1·10=1 €. Nettogewinn 1−2=−1 € je Spiel.",
+        "b) Fairer Einsatz im Erwartungswert 1 €. Das garantiert keinen Gewinn in einer endlichen Spielserie."
+      ],
+      "id": "ABI.3-06"
+    },
+    {
+      "id": "ABI.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Gegenereignis übersetzen",
+      "question": "X zählt die Treffer in zehn Versuchen. Was ist das Gegenereignis zu X≥1?",
+      "hint": "Das Gegenereignis enthält genau die ausgeschlossenen Fälle.",
+      "steps": [
+        "Da X eine nichtnegative ganze Zahl ist, bleibt nur X=0.",
+        "P(X≥1)=1−P(X=0)."
+      ]
+    },
+    {
+      "id": "ABI.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Modellrechnung",
+      "question": "X~B(10;0,2). Berechne P(X≥1).",
+      "hint": "Rechne über keinen Treffer.",
+      "steps": [
+        "P(X=0)=0,8¹⁰≈0,107374.",
+        "P(X≥1)≈0,892626, also rund 89,26 %."
+      ]
+    },
+    {
+      "id": "ABI.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Stichprobengröße planen",
+      "question": "Unabhängige Versuche haben p=0,2. Wie viele brauchst du mindestens für mindestens 99 % Chance auf einen Treffer?",
+      "hint": "Löse 1−0,8ⁿ≥0,99 und beachte das Vorzeichen des Logarithmus.",
+      "steps": [
+        "0,8ⁿ≤0,01. Logarithmieren gibt n·ln(0,8)≤ln(0,01).",
+        "Da ln(0,8)<0, dreht sich die Ungleichung beim Teilen um: n≥ln(0,01)/ln(0,8)≈20,64.",
+        "Mindestens 21 Versuche. Bei 20 liegt die Chance noch unter 99 %."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Eine Wahrscheinlichkeit zu berechnen ist nur ein Teil der Aufgabe. Du musst auch entscheiden, welches Modell zur Situation passt und welche Aussage das Ergebnis tatsächlich erlaubt.",
+    "idea": "Übersetze Wörter sorgfältig: mindestens, höchstens, genau und unter der Bedingung führen zu unterschiedlichen Rechnungen. Bei Entscheidungen erklärst du zusätzlich das Fehlerrisiko. Runde erst am Ende, damit Schwellenwerte nicht durch Rundungsfehler kippen.",
+    "check": "Ist mindestens ein Treffer dasselbe wie genau ein Treffer?",
+    "answer": "Nein. Mindestens ein Treffer umfasst 1, 2 und alle weiteren möglichen Trefferzahlen. Oft rechnest du dafür 1 minus die Wahrscheinlichkeit für keinen Treffer."
+  }
+}

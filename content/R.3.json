@@ -1,0 +1,178 @@
+{
+  "id": "R.3",
+  "slug": "realschule-trigonometrie",
+  "name": "Realschule: Seiten und Winkel bestimmen",
+  "stage": "Realschule",
+  "reference": "RS 10.3",
+  "lead": "Du entscheidest anhand bekannter Seiten, ob Sinus, Kosinus oder Tangens zur gesuchten Größe führt.",
+  "prerequisites": "Rechtwinklige Dreiecke, Pythagoras, Brüche",
+  "concepts": [
+    {
+      "title": "Seiten benennen",
+      "explanation": "Die Hypotenuse liegt gegenüber dem rechten Winkel und ist die längste Seite. Gegen- und Ankathete beziehen sich auf den betrachteten spitzen Winkel.",
+      "example": "sinα=G/H, cosα=A/H, tanα=G/A."
+    },
+    {
+      "title": "Eine Seite finden",
+      "explanation": "Wähle eine Formel, die die gesuchte und eine bekannte Seite enthält. Stelle zunächst symbolisch um und setze dann Zahlen ein.",
+      "example": "G=H·sinα."
+    },
+    {
+      "title": "Einen Winkel finden",
+      "explanation": "Die Umkehrfunktionen arcsin, arccos und arctan bestimmen einen passenden Winkel aus einem Verhältnis. Bei Dreiecksaufgaben mit Gradangaben muss der Taschenrechner im Gradmodus stehen.",
+      "example": "α=arctan(G/A)."
+    },
+    {
+      "title": "Allgemeine Dreiecke",
+      "explanation": "Der Sinussatz verbindet Seiten und gegenüberliegende Winkel, der Kosinussatz erweitert Pythagoras. Eine Skizze verhindert falsche Zuordnungen. Bei Sinussatz-Aufgaben kann es mehr als eine geometrische Lösung geben.",
+      "example": "a/sinα=b/sinβ; c²=a²+b²−2ab cosγ."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Gegenkathete",
+      "question": "H=10 cm, α=30°. Bestimme G.",
+      "steps": [
+        "G=10·sin30°=5 cm."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Winkel",
+      "question": "Eine Rampe steigt 1 m auf 5 m horizontaler Strecke. Bestimme α.",
+      "steps": [
+        "tanα=1/5=0,2.",
+        "α=arctan0,2≈11,31°. Die horizontale Strecke ist nicht die Rampenlänge."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Kosinussatz",
+      "question": "Zwei Seiten sind 5 und 7 cm, ihr eingeschlossener Winkel 60°. Bestimme die dritte Seite.",
+      "steps": [
+        "c²=25+49−2·5·7·cos60°=39.",
+        "c=√39≈6,24 cm."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Hypotenuse",
+      "question": "Katheten 6 und 8 cm. Bestimme H.",
+      "steps": [
+        "H=√(36+64)=10 cm."
+      ],
+      "id": "R.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Sinus",
+      "question": "G=4 cm,H=5 cm. Bestimme sinα.",
+      "steps": [
+        "sinα=4/5=0,8."
+      ],
+      "id": "R.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Winkel",
+      "question": "G=4,H=5. Bestimme den spitzen Winkel.",
+      "steps": [
+        "α=arcsin0,8≈53,13°."
+      ],
+      "id": "R.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Ankathete",
+      "question": "H=12 cm, α=60°. Bestimme A.",
+      "steps": [
+        "A=12cos60°=6 cm."
+      ],
+      "id": "R.3-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Sinussatz",
+      "question": "a=8 cm, α=40°, β=60°. Bestimme b.",
+      "steps": [
+        "b=8·sin(60°)/sin(40°)≈10,78 cm."
+      ],
+      "id": "R.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Turmhöhe",
+      "question": "Du stehst 20 m waagerecht vom Turm entfernt. Blickwinkel zur Spitze 35°, Augenhöhe 1,6 m. Bestimme die Höhe.",
+      "steps": [
+        "Höhenunterschied 20tan35°≈14,00 m.",
+        "Turmhöhe ≈15,60 m bei ebenem Boden."
+      ],
+      "id": "R.3-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Leiter",
+      "question": "Eine 5 m lange Leiter lehnt unter 70° zum Boden. Welche Höhe erreicht sie?",
+      "steps": [
+        "Höhe=5sin70°≈4,70 m."
+      ],
+      "id": "R.3-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Fehler finden",
+      "question": "Jemand rechnet sinα=Hypotenuse/Gegenkathete=5/3. Warum ist das falsch?",
+      "steps": [
+        "Das Verhältnis ist vertauscht. Ein Sinuswert liegt zwischen −1 und 1.",
+        "Richtig sinα=3/5; für einen spitzen Winkel positiv."
+      ],
+      "id": "R.3-08"
+    },
+    {
+      "id": "R.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Verhältnis wählen",
+      "question": "Du kennst Gegenkathete und Ankathete zu α. Welche trigonometrische Funktion verbindet sie?",
+      "hint": "Die Hypotenuse ist hier nicht beteiligt.",
+      "steps": [
+        "tan α=G/A.",
+        "Für den Winkel verwendest du arctan(G/A)."
+      ]
+    },
+    {
+      "id": "R.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Leiterhöhe",
+      "question": "Eine 4 m lange Leiter steht im Winkel 30° zum Boden. Welche Höhe erreicht sie?",
+      "hint": "Die Leiter ist die Hypotenuse.",
+      "steps": [
+        "h=4·sin(30°)=4·1/2=2 m.",
+        "Die Höhe ist die Gegenkathete zum Bodenwinkel."
+      ]
+    },
+    {
+      "id": "R.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Augenhöhe mitdenken",
+      "question": "Du bist 10 m waagerecht von einem Turm entfernt. Der Höhenwinkel zur Spitze ist 45°, die Augenhöhe 1,6 m. Turmhöhe?",
+      "hint": "Der Winkel liefert nur die Höhe oberhalb deiner Augen.",
+      "steps": [
+        "Höhendifferenz=10·tan(45°)=10 m.",
+        "Die Augenhöhe muss addiert werden.",
+        "Turmhöhe 11,6 m."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Realschule",
+  "course": "MSA",
+  "understanding": {
+    "why": "Winkel und eine bekannte Strecke reichen oft aus, um eine unzugängliche Höhe oder Entfernung zu berechnen. Dafür übersetzt du die Situation zuerst in ein geeignetes Dreieck.",
+    "idea": "Die Hypotenuse liegt immer gegenüber dem rechten Winkel. Gegen- und Ankathete hängen davon ab, welchen spitzen Winkel du betrachtest. Wähle das Verhältnis, das die bekannte und die gesuchte Seite miteinander verbindet.",
+    "check": "Warum kann der Sinus eines spitzen Winkels nicht größer als 1 sein?",
+    "answer": "Die Gegenkathete ist kürzer als die Hypotenuse. Ihr Verhältnis liegt daher zwischen 0 und 1."
+  }
+}

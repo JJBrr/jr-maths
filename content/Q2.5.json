@@ -1,0 +1,162 @@
+{
+  "id": "Q2.5",
+  "slug": "lineare-abbildungen",
+  "name": "Geometrische Abbildungen mit Matrizen",
+  "stage": "Q2",
+  "reference": "Q2.5 · Wahlthema",
+  "lead": "Spiegeln, drehen und strecken werden zu Matrixrechnungen. Du untersuchst die Reihenfolge von Abbildungen.",
+  "prerequisites": "Matrizenmultiplikation, Koordinaten",
+  "concepts": [
+    {
+      "title": "Spalten als Bilder",
+      "explanation": "Die Spalten einer Abbildungsmatrix sind die Bilder der Einheitsvektoren. Daraus kannst du geometrische Wirkungen erkennen.",
+      "example": "A·(1;0)=erste Spalte, A·(0;1)=zweite Spalte."
+    },
+    {
+      "title": "Skalieren und spiegeln",
+      "explanation": "Diagonalmatrizen verändern die Koordinaten getrennt. Ein negativer Faktor spiegelt die entsprechende Koordinate.",
+      "example": "diag(1;−1) spiegelt an der x-Achse."
+    },
+    {
+      "title": "Drehen",
+      "explanation": "Eine Drehung um den Ursprung lässt Längen und Winkel unverändert. Positive Winkel drehen gegen den Uhrzeigersinn.",
+      "example": "R(α) hat Zeilen (cosα;−sinα) und (sinα;cosα)."
+    },
+    {
+      "title": "Reihenfolge",
+      "explanation": "Bei B·A·v wird A zuerst angewendet, dann B. Allgemein ist BA nicht gleich AB. Reine 2×2-Matrizen können keine Verschiebung um einen von 0 verschiedenen Vektor darstellen.",
+      "example": "Eine lineare Abbildung lässt den Ursprung fest."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Spiegelung",
+      "question": "Spiegele P(3|2) an der x-Achse.",
+      "steps": [
+        "Mit diag(1;−1) wird (3;2) zu (3;−2).",
+        "P′(3|−2)."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "90°-Drehung",
+      "question": "Drehe P(2|1) um 90° gegen den Uhrzeigersinn.",
+      "steps": [
+        "R hat Zeilen (0;−1),(1;0).",
+        "R·(2;1)=(−1;2)."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Nicht vertauschbar",
+      "question": "Vergleiche Streckung S=diag(2;1) und Drehung R um 90° für v=(1;0).",
+      "steps": [
+        "Erst S, dann R: (1;0)→(2;0)→(0;2).",
+        "Erst R, dann S: (1;0)→(0;1)→(0;1).",
+        "Die Ergebnisse unterscheiden sich."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Strecken",
+      "question": "S=diag(3;2). Bestimme S·(1;4).",
+      "steps": [
+        "(3;8)."
+      ],
+      "id": "Q2.5-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Spiegeln",
+      "question": "Welche Matrix spiegelt an der y-Achse?",
+      "steps": [
+        "diag(−1;1), denn x wechselt das Vorzeichen und y bleibt gleich."
+      ],
+      "id": "Q2.5-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Halbe Drehung",
+      "question": "Wie lautet die Matrix einer 180°-Drehung?",
+      "steps": [
+        "diag(−1;−1). Jeder Vektor wird negiert."
+      ],
+      "id": "Q2.5-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Inverse",
+      "question": "Wie macht man eine Streckung diag(2;3) rückgängig?",
+      "steps": [
+        "Durch diag(1/2;1/3). Das Produkt ist die Einheitsmatrix."
+      ],
+      "id": "Q2.5-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Fläche",
+      "question": "Ein Rechteck wird durch diag(2;3) abgebildet. Wie verändert sich seine Fläche?",
+      "steps": [
+        "Die beiden Seitenrichtungen werden mit 2 und 3 skaliert.",
+        "Die Fläche wächst um Faktor 6."
+      ],
+      "id": "Q2.5-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Verschiebung",
+      "question": "Warum lässt sich v→v+(1;0) nicht durch eine reine 2×2-Matrix darstellen?",
+      "steps": [
+        "Jede Matrix bildet den Nullvektor auf den Nullvektor ab.",
+        "Die Verschiebung bildet (0;0) jedoch auf (1;0) ab. Ein zusätzlicher Summand ist erforderlich."
+      ],
+      "id": "Q2.5-06"
+    },
+    {
+      "id": "Q2.5-verstehen-01",
+      "level": "Einfach",
+      "title": "Spiegelung erkennen",
+      "question": "Was wird aus P(2|−3) bei Spiegelung an der x-Achse?",
+      "hint": "Die waagerechte Koordinate bleibt gleich.",
+      "steps": [
+        "Nur das Vorzeichen der y-Koordinate wechselt.",
+        "P′(2|3); die Matrix ist diag(1;−1)."
+      ]
+    },
+    {
+      "id": "Q2.5-verstehen-02",
+      "level": "Mittel",
+      "title": "Flächenfaktor",
+      "question": "Ein Dreieck hat Fläche 7 FE. Es wird in x-Richtung mit Faktor 2, in y-Richtung mit Faktor 3 gestreckt. Neue Fläche?",
+      "hint": "Beide unabhängigen Richtungen tragen zum Flächenfaktor bei.",
+      "steps": [
+        "Flächenfaktor 2·3=6.",
+        "Die neue Fläche ist 42 FE."
+      ]
+    },
+    {
+      "id": "Q2.5-verstehen-03",
+      "level": "Schwierig",
+      "title": "Reihenfolge testen",
+      "question": "S=diag(2;1), R ist die Drehung um 90° gegen den Uhrzeigersinn. Vergleiche R(S(1;0)) und S(R(1;0)).",
+      "hint": "Eine Vierteldrehung bildet (x;y) auf (−y;x) ab.",
+      "steps": [
+        "Erst S: (1;0)→(2;0), dann R: (0;2).",
+        "Erst R: (1;0)→(0;1), dann S: (0;1).",
+        "Die Ergebnisse unterscheiden sich. Die Reihenfolge ist entscheidend."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Bilder und geometrische Figuren lassen sich strecken, spiegeln oder drehen. Eine Matrix beschreibt, wie diese Abbildung auf Koordinaten wirkt. So kannst du die Veränderung präzise berechnen.",
+    "idea": "Die Spalten zeigen, wohin die Einheitsvektoren gelangen. Aus diesen beiden Richtungen setzt sich jedes Bild eines Punktes zusammen. Bei mehreren Abbildungen ist die Reihenfolge wichtig: Erst strecken und dann drehen kann ein anderes Ergebnis liefern als umgekehrt.",
+    "check": "Kann eine reine lineare Abbildung den Ursprung verschieben?",
+    "answer": "Nein. Jede Matrix bildet den Nullvektor auf den Nullvektor ab. Eine Verschiebung braucht einen zusätzlichen Summanden."
+  }
+}

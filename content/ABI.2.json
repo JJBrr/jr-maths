@@ -1,0 +1,169 @@
+{
+  "id": "ABI.2",
+  "slug": "abitur-geometrie",
+  "name": "Abiturtraining: Analytische Geometrie",
+  "stage": "Abiturtraining",
+  "reference": "Q2.2 / Q2.3",
+  "lead": "Du bearbeitest räumliche Figuren und Flugbahnen mit Vektoren, Ebenen und begründeten Lageaussagen.",
+  "prerequisites": "Vektoren, Skalarprodukt, Geraden, Ebenen und LGS",
+  "concepts": [
+    {
+      "title": "Skizze und Koordinaten",
+      "explanation": "Markiere Achsen und beschrifte Punkte. Eine Skizze zeigt die Situation; die Rechnung bestätigt Eigenschaften. Einheiten werden in diesen Aufgaben ausdrücklich festgelegt.",
+      "example": "LE bedeutet Längeneinheit, FE Flächeneinheit, VE Volumeneinheit."
+    },
+    {
+      "title": "Parameter deuten",
+      "explanation": "Ein Geradenparameter ist zunächst nur eine Zahl. Wird er als Zeit definiert, kann der Richtungsvektor die Geschwindigkeit beschreiben. Beschränke den Parameter passend zum betrachteten Vorgang.",
+      "example": "x(t)=p+tv mit t in Sekunden und v in m/s."
+    },
+    {
+      "title": "Prüfe alle Gleichungen",
+      "explanation": "Zwei Koordinatengleichungen können einen scheinbaren Schnittpunkt liefern, der die dritte nicht erfüllt. Das Ergebnis des LGS muss im gesamten System stimmen.",
+      "example": "Unterschiedliche Parameter zweier Geraden sind unabhängig voneinander."
+    },
+    {
+      "title": "Schnittpunkt versus Kollision",
+      "explanation": "Zwei Flugbahnen können denselben Punkt zu verschiedenen Zeiten erreichen. Eine Kollision verlangt gleiche Orte zur gleichen Zeit und zusätzlich passende Modellannahmen.",
+      "example": "Geometrischer Schnitt genügt nicht für Gleichzeitigkeit."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Volumen",
+      "question": "Ein Quader hat Kantenlängen 4,3,5 LE. Bestimme V.",
+      "steps": [
+        "V=4·3·5=60 VE."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Dachebene",
+      "question": "Eine Ebene enthält (0|0|3), (4|0|3) und (0|2|5). Bestimme eine Gleichung.",
+      "steps": [
+        "Richtungen (4;0;0),(0;2;2). Normalenvektor (0;−1;1).",
+        "−y+z=3. Einsetzen aller Punkte bestätigt die Ebene."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Zeitgleich?",
+      "question": "A(t)=(t;0;0), B(t)=(2;t−3;0). Kollidieren sie?",
+      "steps": [
+        "Gemeinsamer Ort müsste x=2 und y=0 erfüllen.",
+        "A ist bei t=2 am Ort (2|0|0); B bei t=3.",
+        "Keine Kollision trotz geometrischem Schnitt der Bahnen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Mittel",
+      "title": "Training A · Dreieck (ca. 15 min)",
+      "question": "A(0|0|0), B(4|0|0), C(0|3|0). a) Begründe den rechten Winkel. b) Bestimme BC und den Flächeninhalt.",
+      "steps": [
+        "a) AB·AC=(4;0;0)·(0;3;0)=0.",
+        "b) BC=(−4;3;0), Länge 5 LE. Fläche 4·3/2=6 FE."
+      ],
+      "id": "ABI.2-01"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training A · Pyramide (ca. 15 min)",
+      "question": "Über dem Dreieck ABC aus der vorigen Aufgabe liegt S(0|0|6). a) Bestimme das Volumen. b) Stelle die Seitenebene BCS auf.",
+      "steps": [
+        "a) Höhe zur Grundebene z=0 beträgt 6. V=6·6/3=12 VE.",
+        "b) B,C,S besitzen Achsenabschnitte 4,3,6. x/4+y/3+z/6=1.",
+        "Äquivalent E: 3x+4y+2z=12. Alle drei Punktproben stimmen."
+      ],
+      "id": "ABI.2-02"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training B · Gerade und Ebene (ca. 15 min)",
+      "question": "g: x=(1;0;0)+t(1;1;1), E: x+2y+z=9. a) Bestimme den Durchstoßpunkt. b) Bestimme den Schnittwinkel.",
+      "steps": [
+        "a) 1+t+2t+t=9 → t=2. S(3|2|2).",
+        "b) u=(1;1;1), n=(1;2;1). sinα=4/(√3√6)=4/√18.",
+        "α≈70,53°. Dies ist der Winkel zur Ebene."
+      ],
+      "id": "ABI.2-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training C · Bewegung (ca. 20 min)",
+      "question": "Drohnen: A(t)=(t;2t;1), B(t)=(4−t;2;1), t≥0 in s, Koordinaten in m. a) Schneiden sich die Bahnen? b) Kollidieren sie?",
+      "steps": [
+        "a) Nutze unabhängige Parameter t,s: 2t=2 → t=1 und t=4−s → s=3. Schnittpunkt (1|2|1).",
+        "b) Am Schnittpunkt sind sie zu verschiedenen Zeiten. Für gleiche Zeit würde x-Gleichheit t=2 verlangen, y-Gleichheit t=1.",
+        "Keine Kollision im Modell."
+      ],
+      "id": "ABI.2-04"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Training A · Abstand (ca. 10 min)",
+      "question": "Bestimme den Abstand des Ursprungs zur Seitenebene 3x+4y+2z=12.",
+      "steps": [
+        "n=(3;4;2), |n|=√29.",
+        "Abstand |0−12|/√29=12/√29≈2,228 LE."
+      ],
+      "id": "ABI.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training D · Ebenenschnitt (ca. 15 min)",
+      "question": "Bestimme die Schnittgerade von E: x+y+z=3 und F: x−y+z=1.",
+      "steps": [
+        "Subtraktion: 2y=2 → y=1. Dann x+z=2.",
+        "Setze z=t, dann x=2−t.",
+        "g: x=(2;1;0)+t(−1;0;1). Probe erfüllt beide Ebenengleichungen."
+      ],
+      "id": "ABI.2-06"
+    },
+    {
+      "id": "ABI.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Parameter als Zeit",
+      "question": "P(t)=(1;2;0)+t(3;0;0), Koordinaten in m und t in s. Wo startet das Objekt und wie groß ist seine Geschwindigkeit?",
+      "hint": "Startwert und Richtungsvektor haben unterschiedliche Aufgaben.",
+      "steps": [
+        "P(0)=(1;2;0).",
+        "Der Geschwindigkeitsvektor ist (3;0;0) m/s; sein Betrag ist 3 m/s."
+      ]
+    },
+    {
+      "id": "ABI.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Treffen zur selben Zeit",
+      "question": "A(t)=(t;0;0), B(t)=(6−t;0;0) für t≥0. Wann und wo treffen sie sich?",
+      "hint": "Nutze in beiden Positionen denselben Zeitparameter.",
+      "steps": [
+        "t=6−t ergibt t=3 s.",
+        "Beide befinden sich dann im Punkt (3|0|0)."
+      ]
+    },
+    {
+      "id": "ABI.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Bahnkreuzung ohne Kollision",
+      "question": "A(t)=(t;0;0), B(t)=(2;t−1;0), t≥0. Kreuzen sich die Bahnen? Gibt es eine Kollision?",
+      "hint": "Prüfe zuerst den geometrischen Schnitt, dann die Ankunftszeiten.",
+      "steps": [
+        "Die Bahnen schneiden sich in (2|0|0).",
+        "A erreicht diesen Punkt bei t=2, B bei t=1.",
+        "Keine Kollision: Die Objekte sind nicht gleichzeitig am Schnittpunkt."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Räumliche Abituraufgaben verbinden Koordinaten mit einer Geschichte: Baukörper, Flugbahnen oder Schatten. Du brauchst sowohl eine geometrische Vorstellung als auch eine Rechnung, die alle Bedingungen erfüllt.",
+    "idea": "Trenne Ort, Richtung und Zeit. Zwei Flugbahnen können sich geometrisch schneiden, obwohl die Flugobjekte den Schnittpunkt zu unterschiedlichen Zeiten erreichen. Halte außerdem fest, ob ein Parameter alle reellen Werte oder nur einen Sachbereich annehmen darf.",
+    "check": "Bedeutet ein gemeinsamer Bahnpunkt automatisch eine Kollision?",
+    "answer": "Nein. Beide Objekte müssen denselben Punkt zur selben Zeit erreichen."
+  }
+}

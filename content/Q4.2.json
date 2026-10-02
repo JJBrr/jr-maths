@@ -1,0 +1,164 @@
+{
+  "id": "Q4.2",
+  "slug": "argumentieren-und-problemloesen",
+  "name": "Begründen, widerlegen und Probleme lösen",
+  "stage": "Q4",
+  "reference": "Q4.2 · Wahlthema / Abiturtraining",
+  "lead": "Du trainierst den Unterschied zwischen Rechnung, Begründung und Beweis – quer durch Analysis, Geometrie und Stochastik.",
+  "prerequisites": "Grundlagen aus Q1–Q3",
+  "concepts": [
+    {
+      "title": "Aussagen genau lesen",
+      "explanation": "Prüfe Quantoren wie immer, mindestens und genau. Ein Gegenbeispiel widerlegt eine allgemeine Behauptung. Ein einzelnes passendes Beispiel beweist sie nicht.",
+      "example": "„Alle Funktionen mit f′(0)=0 haben dort ein Extremum“ wird durch x³ widerlegt."
+    },
+    {
+      "title": "Vorwärts und rückwärts",
+      "explanation": "Vorwärtsarbeiten startet bei gegebenen Größen. Rückwärtsarbeiten fragt, welche Bedingung das Ziel erfüllen muss. Kombiniere beide Wege und kontrolliere, ob jeder Umformungsschritt äquivalent ist.",
+      "example": "Gesuchte Fläche → Integralgleichung → gesuchter Parameter."
+    },
+    {
+      "title": "Darstellungen wechseln",
+      "explanation": "Eine Gleichung, ein Graph und eine Sachsituation zeigen verschiedene Seiten desselben Zusammenhangs. Ein passender Wechsel kann eine lange Rechnung ersetzen.",
+      "example": "Ein positives f′ auf einem Intervall begründet das Steigen von f."
+    },
+    {
+      "title": "Operatoren beachten",
+      "explanation": "Berechnen verlangt einen nachvollziehbaren Rechenweg; begründen eine tragfähige mathematische Erklärung; beurteilen ein begründetes Urteil. Modellieren umfasst Annahmen, Rechnung und Rückbezug auf die Realität.",
+      "example": "Ein Ergebnis ohne Einheit und Kontext beantwortet eine Sachfrage häufig noch nicht."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Gegenbeispiel",
+      "question": "Widerlege: Ein Integral ist immer ein Flächeninhalt.",
+      "steps": [
+        "f(x)=−1 auf [0;1] hat Integral −1.",
+        "Ein geometrischer Flächeninhalt kann nicht negativ sein. Daher ist die Aussage falsch."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Symmetrie nutzen",
+      "question": "Begründe ∫₋₂²x³dx=0 ohne Stammfunktion.",
+      "steps": [
+        "x³ ist ungerade: f(−x)=−f(x).",
+        "Auf dem symmetrischen Intervall heben sich gleich große positive und negative Beiträge auf."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Eine notwendige Bedingung",
+      "question": "Ist f′(x₀)=0 notwendig für jedes Maximum?",
+      "steps": [
+        "Nur für ein inneres lokales Maximum einer dort differenzierbaren Funktion gilt diese Bedingung.",
+        "Bei f(x)=x auf [0;1] liegt das globale Maximum am Rand x=1, obwohl f′(1)=1.",
+        "Auch eine nicht differenzierbare Spitze wie −|x| zeigt die Bedeutung der Voraussetzungen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Falsch oder richtig",
+      "question": "„Jede quadratische Funktion hat zwei reelle Nullstellen.“",
+      "steps": [
+        "Falsch: f(x)=x²+1 hat keine reelle Nullstelle."
+      ],
+      "id": "Q4.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Begründung",
+      "question": "Warum sind Vektoren (1;2;3) und (2;4;6) parallel?",
+      "steps": [
+        "Der zweite ist das Zweifache des ersten. Die Vektoren sind kollinear."
+      ],
+      "id": "Q4.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Integralargument",
+      "question": "Begründe: Für stetiges f≥0 auf [a;b] mit a<b ist das Integral nichtnegativ.",
+      "steps": [
+        "Alle Rechteckbeiträge in passenden Riemannsummen sind nichtnegativ.",
+        "Auch ihr Grenzwert, das Integral, ist nichtnegativ."
+      ],
+      "id": "Q4.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wahrscheinlichkeit",
+      "question": "Kann P(A∩B) größer sein als P(A)? Begründe.",
+      "steps": [
+        "Nein, A∩B ist eine Teilmenge von A.",
+        "Die Wahrscheinlichkeit einer Teilmenge kann nicht größer als die der Gesamtmenge sein."
+      ],
+      "id": "Q4.2-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Nullstellen",
+      "question": "Warum hat x³+x genau eine reelle Nullstelle?",
+      "steps": [
+        "x³+x=x(x²+1); x²+1 ist immer positiv.",
+        "Nur x=0 ist möglich. Alternativ: f′=3x²+1>0 und f(0)=0."
+      ],
+      "id": "Q4.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Gleiche Ableitung",
+      "question": "Begründe, warum zwei Stammfunktionen auf einem Intervall sich nur um eine Konstante unterscheiden.",
+      "steps": [
+        "Für H=F−G gilt H′=F′−G′=0.",
+        "Eine differenzierbare Funktion mit überall verschwindender Ableitung auf einem Intervall ist konstant. Also F−G=C."
+      ],
+      "id": "Q4.2-06"
+    },
+    {
+      "id": "Q4.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Gegenbeispiel finden",
+      "question": "Widerlege: Jede Funktion hat eine Nullstelle.",
+      "hint": "Suche eine Funktion, deren Werte immer positiv sind.",
+      "steps": [
+        "f(x)=x²+1 ist für alle reellen x mindestens 1.",
+        "Damit hat sie keine reelle Nullstelle. Ein Gegenbeispiel genügt."
+      ]
+    },
+    {
+      "id": "Q4.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Aussage verbessern",
+      "question": "„Wenn f′(a)=0, liegt ein Extremum vor.“ Gib ein Gegenbeispiel und eine geeignete Zusatzprüfung an.",
+      "hint": "Eine waagerechte Tangente kann auch mitten in einem steigenden Verlauf liegen.",
+      "steps": [
+        "f(x)=x³ hat f′(0)=0, aber kein Extremum.",
+        "Ein Vorzeichenwechsel von f′ von + nach − zeigt einen Hochpunkt; von − nach + einen Tiefpunkt, unter den üblichen lokalen Differenzierbarkeitsbedingungen."
+      ]
+    },
+    {
+      "id": "Q4.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Eindeutigkeit begründen",
+      "question": "Begründe ohne Näherungsrechnung, dass x³+x−2 genau eine reelle Nullstelle hat.",
+      "hint": "Kombiniere einen gefundenen Wert mit strengem Steigen.",
+      "steps": [
+        "f(1)=1+1−2=0: Mindestens eine Nullstelle existiert.",
+        "f′(x)=3x²+1>0 für alle reellen x.",
+        "f ist streng steigend und kann den Wert 0 daher höchstens einmal annehmen."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "In Mathematik reicht es nicht immer, dass ein Ergebnis plausibel aussieht. Du sollst erklären, warum eine Aussage unter bestimmten Voraussetzungen gilt, oder zeigen, warum sie scheitert.",
+    "idea": "Ein Gegenbeispiel widerlegt eine Aussage über alle Fälle. Ein einzelnes bestätigendes Beispiel beweist sie dagegen nicht. Wechsle bei schwierigen Aufgaben zwischen Skizze, Formel, Tabelle und Worten: Jede Darstellung macht andere Eigenschaften sichtbar.",
+    "check": "Beweisen zehn passende Beispiele eine Aussage für alle reellen Zahlen?",
+    "answer": "Nein. Es bleiben unendlich viele ungeprüfte Fälle. Ein allgemeiner Beweis muss die ganze behauptete Menge erfassen."
+  }
+}

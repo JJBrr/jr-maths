@@ -1,0 +1,181 @@
+{
+  "id": "10.3",
+  "slug": "pyramide-kegel-kugel",
+  "name": "Pyramide, Kegel, Kugel",
+  "lead": "Volumen und Oberfläche räumlicher Körper Schritt für Schritt berechnen.",
+  "time": "16 Unterrichtsstunden im G9-Lehrplan",
+  "concepts": [
+    {
+      "title": "1 · Pyramide",
+      "explanation": "Das Volumen ist ein Drittel aus Grundfläche mal Höhe. Höhe meint die senkrechte Strecke zur Grundfläche.",
+      "example": "V = (1/3)·G·h"
+    },
+    {
+      "title": "2 · Kegel",
+      "explanation": "Auch beim Kegel ist das Volumen ein Drittel aus Grundfläche mal Höhe; für den Kreis gilt G=πr².",
+      "example": "V = (1/3)πr²h"
+    },
+    {
+      "title": "3 · Kugel",
+      "explanation": "Für die Kugel gelten eigene Formeln. Wird der Radius verdoppelt, vervierfacht sich die Oberfläche und verachtfacht sich das Volumen.",
+      "example": "O = 4πr² ··· V = (4/3)πr³"
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Pyramide",
+      "question": "Eine Pyramide hat G=30 cm² und h=6 cm. Berechne V.",
+      "solution": "V=(1/3)·30·6=60 cm³.",
+      "id": "10.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Kegel",
+      "question": "Ein Kegel hat r=3 cm und h=4 cm. Berechne V.",
+      "solution": "V=(1/3)π·3²·4=12π cm³≈37,70 cm³.",
+      "id": "10.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Kugelvolumen",
+      "question": "Eine Kugel hat r=2 cm. Berechne V.",
+      "solution": "V=(4/3)π·2³=(32/3)π cm³≈33,51 cm³.",
+      "id": "10.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Kugeloberfläche",
+      "question": "Eine Kugel hat r=2 cm. Berechne O.",
+      "solution": "O=4π·2²=16π cm²≈50,27 cm².",
+      "id": "10.3-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Skalierung",
+      "question": "Wie verändern sich Oberfläche und Volumen, wenn der Kugelradius verdoppelt wird?",
+      "solution": "Die Oberfläche hängt von r² ab: Faktor 2²=4. Das Volumen hängt von r³ ab: Faktor 2³=8.",
+      "id": "10.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Kegelmantel",
+      "question": "Ein Kegel hat r=3 cm und Mantellinie s=5 cm. Berechne die Mantelfläche.",
+      "solution": "M=πrs=π·3·5=15π cm²≈47,12 cm².",
+      "id": "10.3-06"
+    },
+    {
+      "level": "Einfach",
+      "title": "Zylindervergleich",
+      "question": "Ein Kegel und ein Zylinder haben gleiche Grundfläche und Höhe. Vergleiche V.",
+      "steps": [
+        "Das Kegelvolumen ist ein Drittel des Zylindervolumens."
+      ],
+      "id": "10.3-neu-01"
+    },
+    {
+      "level": "Mittel",
+      "title": "Pyramidenoberfläche",
+      "question": "Quadratische Pyramide: Grundkante 6 cm, senkrechte Höhe 4 cm, Spitze über dem Mittelpunkt. Bestimme O.",
+      "steps": [
+        "Seitenhöhe √(4²+3²)=5 cm. Vier Dreiecke mit je 6·5/2=15 cm².",
+        "O=36+4·15=96 cm²."
+      ],
+      "id": "10.3-neu-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Hohlkugel",
+      "question": "Eine Hohlkugel hat Außenradius 3 cm, Innenradius 2 cm. Materialvolumen?",
+      "steps": [
+        "Differenz der Kugelvolumina: 4π(27−8)/3=76π/3≈79,59 cm³."
+      ],
+      "id": "10.3-neu-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Doppeltes Volumen",
+      "question": "Mit welchem Faktor muss der Kugelradius wachsen, damit sich das Volumen verdoppelt?",
+      "steps": [
+        "k³=2 → k=∛2≈1,25992.",
+        "Der Radius wächst um etwa 26 %, nicht um 100 %."
+      ],
+      "id": "10.3-neu-04"
+    },
+    {
+      "id": "10.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Passende Einheit",
+      "question": "Ein Behälter fasst 2,5 Liter. Wie viele cm³ sind das?",
+      "hint": "Ein Liter entspricht einem Kubikdezimeter.",
+      "steps": [
+        "1 L=1000 cm³.",
+        "2,5 L=2500 cm³. Es geht um einen Rauminhalt, nicht um eine Fläche."
+      ]
+    },
+    {
+      "id": "10.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Kegelhöhe zurückrechnen",
+      "question": "Ein Kegel hat V=48π cm³ und r=4 cm. Berechne h.",
+      "hint": "Stelle V=πr²h/3 nach h um.",
+      "steps": [
+        "h=3V/(πr²).",
+        "h=(3·48π)/(16π)=9 cm."
+      ]
+    },
+    {
+      "id": "10.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Zwei Arten von Verdopplung",
+      "question": "Ein Kegel soll doppeltes Volumen bekommen. Vergleiche: nur h verdoppeln oder nur r verdoppeln.",
+      "hint": "Prüfe, mit welcher Potenz jede Länge in der Formel steht.",
+      "steps": [
+        "V=πr²h/3 enthält h nur einfach. Doppelte Höhe ergibt doppeltes Volumen.",
+        "Doppelter Radius ergibt wegen r² vierfaches Volumen.",
+        "Für doppeltes Volumen bei fester Höhe müsste r mit √2 multipliziert werden."
+      ]
+    }
+  ],
+  "stage": "Klasse 10",
+  "track": "Gymnasium",
+  "course": "G9",
+  "reference": "G9 10.3",
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Einheiten",
+      "question": "Eine Pyramide hat G=24 cm² und h=5 cm. Bestimme V.",
+      "steps": [
+        "V=24·5/3=40 cm³.",
+        "Quadrateinheit mal Längeneinheit ergibt Kubikeinheit."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Oberfläche",
+      "question": "Ein Kegel hat r=3,h=4 cm. Berechne seine gesamte Oberfläche.",
+      "steps": [
+        "Mantellinie s=√(9+16)=5 cm.",
+        "M=πrs=15π; G=9π. Gesamt O=24π≈75,40 cm²."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Kugelradius",
+      "question": "Eine Kugel besitzt 36π cm² Oberfläche. Bestimme Radius und Volumen.",
+      "steps": [
+        "4πr²=36π → r²=9 → r=3 cm.",
+        "V=4π·27/3=36π≈113,10 cm³."
+      ]
+    }
+  ],
+  "prerequisites": "Grundrechenarten, Terme, Gleichungen und passende Grundlagen aus Klasse 9",
+  "note": "G9-Orientierung; die konkrete Reihenfolge richtet sich nach dem Schulcurriculum.",
+  "understanding": {
+    "why": "Wie viel passt in einen Behälter, wie viel Material braucht seine Hülle? Das sind zwei verschiedene Fragen. Das Volumen misst den Innenraum in Kubikeinheiten. Die Oberfläche misst die zu bedeckende Fläche in Quadrateinheiten.",
+    "idea": "Zeichne zuerst eine Skizze und markiere die senkrechte Höhe. Bei einem Kegel ist sie nicht dieselbe Strecke wie die schräge Mantellinie. Eine Formel hilft erst dann, wenn du weißt, welche Länge in ihr gemeint ist.",
+    "check": "Warum reicht die Verdopplung des Radius nicht für doppeltes Kugelvolumen?",
+    "answer": "Das Volumen enthält r³. Der Faktor 2 wirkt daher dreimal: 2³=8. Die Oberfläche wächst wegen r² dagegen um den Faktor 4."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "id": "Q2.2",
+  "slug": "vektoren-und-skalarprodukt",
+  "name": "Vektoren, Längen und Winkel im Raum",
+  "stage": "Q2",
+  "reference": "Q2.2",
+  "lead": "Mit Vektoren beschreibst du Verschiebungen im Raum und begründest geometrische Eigenschaften durch Rechnen.",
+  "prerequisites": "Koordinaten, Satz des Pythagoras, Kosinus",
+  "concepts": [
+    {
+      "title": "Punkt und Vektor",
+      "explanation": "Ein Punkt gibt einen Ort an, ein Vektor eine Verschiebung. Der Verbindungsvektor von A nach B entsteht durch Ziel minus Start. In dieser Seite stehen Vektorkomponenten in runden Klammern mit Semikolon.",
+      "example": "A(1|2|3), B(4|2|1) → AB=(3;0;−2)."
+    },
+    {
+      "title": "Rechnen und Länge",
+      "explanation": "Vektoren werden komponentenweise addiert und skaliert. Die Länge folgt aus dem räumlichen Pythagoras. Vielfache eines Vektors liegen parallel zu ihm.",
+      "example": "|(a;b;c)|=√(a²+b²+c²)."
+    },
+    {
+      "title": "Skalarprodukt",
+      "explanation": "Multipliziere die entsprechenden Komponenten und addiere. Das Ergebnis ist eine Zahl. Bei zwei von 0 verschiedenen Vektoren zeigt das Ergebnis 0 einen rechten Winkel an.",
+      "example": "u·v=u₁v₁+u₂v₂+u₃v₃; u·v=|u||v|cos α."
+    },
+    {
+      "title": "Figuren begründen",
+      "explanation": "Belege eine behauptete Form über Seitenvektoren, Längen und Winkel. Ein Bild allein ist kein Beweis. Für den Mittelpunkt halbierst du die Summe der Ortsvektoren.",
+      "example": "M=(A+B)/2; Rechteck: gegenüberliegende Seiten parallel und ein rechter Winkel."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Abstand",
+      "question": "A(1|2|0), B(4|6|0). Bestimme AB und den Abstand.",
+      "steps": [
+        "AB=(3;4;0).",
+        "|AB|=√(9+16)=5 LE."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Rechter Winkel",
+      "question": "Prüfe u=(1;2;−1) und v=(2;0;2) auf Orthogonalität.",
+      "steps": [
+        "u·v=1·2+2·0+(−1)·2=0.",
+        "Beide Vektoren sind ungleich 0, also stehen sie senkrecht aufeinander."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Winkel",
+      "question": "Bestimme den Winkel zwischen u=(1;0;0) und v=(1;1;0).",
+      "steps": [
+        "u·v=1, |u|=1, |v|=√2.",
+        "cos α=1/√2 → α=45°.",
+        "Für den Vektorwinkel verwendet man den Wert ohne Betrag; er kann bis 180° reichen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Differenz",
+      "question": "A(−1|2|4), B(3|0|5). Bestimme AB.",
+      "steps": [
+        "B−A=(4;−2;1)."
+      ],
+      "id": "Q2.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Addition",
+      "question": "Berechne 2(1;−2;3)+(0;4;−1).",
+      "steps": [
+        "(2;−4;6)+(0;4;−1)=(2;0;5)."
+      ],
+      "id": "Q2.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Länge",
+      "question": "Bestimme |(2;−3;6)|.",
+      "steps": [
+        "√(4+9+36)=7."
+      ],
+      "id": "Q2.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Mittelpunkt",
+      "question": "Bestimme den Mittelpunkt von A(2|0|−2), B(4|6|2).",
+      "steps": [
+        "Koordinaten mitteln: M(3|3|0)."
+      ],
+      "id": "Q2.2-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Parallel",
+      "question": "Sind (1;−2;3) und (−2;4;−6) parallel?",
+      "steps": [
+        "Der zweite Vektor ist −2-mal der erste. Ja, entgegengesetzt orientiert."
+      ],
+      "id": "Q2.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Parameter für Orthogonalität",
+      "question": "Für welches a stehen (1;a;2) und (2;3;−1) senkrecht?",
+      "steps": [
+        "Skalarprodukt 2+3a−2=3a.",
+        "3a=0 → a=0."
+      ],
+      "id": "Q2.2-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Dreieck prüfen",
+      "question": "A(0|0|0), B(3|0|0), C(0|4|0). Beweise, dass das Dreieck rechtwinklig ist und bestimme A.",
+      "steps": [
+        "AB=(3;0;0), AC=(0;4;0); Skalarprodukt 0.",
+        "Rechter Winkel bei A. Fläche =3·4/2=6 FE."
+      ],
+      "id": "Q2.2-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Pyramidenvolumen",
+      "question": "Eine Pyramide hat quadratische Grundfläche mit Eckpunkten (±2|±2|0) und Spitze S(0|0|6). Bestimme V.",
+      "steps": [
+        "Die Grundseite hat Länge 4, also G=16. Senkrechte Höhe h=6.",
+        "V=G·h/3=32 VE."
+      ],
+      "id": "Q2.2-08"
+    },
+    {
+      "id": "Q2.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Ziel minus Start",
+      "question": "A(1|−2|0), B(4|2|0). Bestimme AB.",
+      "hint": "Subtrahiere jede Startkoordinate von der Zielkoordinate.",
+      "steps": [
+        "AB=(4−1;2−(−2);0−0)=(3;4;0).",
+        "Der Vektor beschreibt drei Einheiten in x- und vier in y-Richtung."
+      ]
+    },
+    {
+      "id": "Q2.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Abstand kontrollieren",
+      "question": "Bestimme den Abstand zwischen A(1|−2|0) und B(4|2|0).",
+      "hint": "Der Abstand ist die Länge des Verbindungsvektors.",
+      "steps": [
+        "AB=(3;4;0).",
+        "|AB|=√(3²+4²+0²)=5 LE."
+      ]
+    },
+    {
+      "id": "Q2.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Winkel mit Parameter",
+      "question": "u=(1;a;0), v=(2;−1;0). Für welches a sind sie senkrecht? Sind die Vektoren dann beide von null verschieden?",
+      "hint": "Senkrecht bedeutet Skalarprodukt null.",
+      "steps": [
+        "u·v=2−a. Daraus folgt a=2.",
+        "Dann ist u=(1;2;0), v=(2;−1;0). Beide haben Länge √5 und sind nicht null.",
+        "Das verschwindende Skalarprodukt zeigt einen rechten Winkel."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Mit Koordinaten beschreibst du einen Ort. Mit einem Vektor beschreibst du eine Verschiebung: Wie weit geht es in jede Richtung? Dadurch kannst du Längen, Winkel und Formen im Raum berechnen.",
+    "idea": "Zeichne zunächst, welche Punkte und Pfeile gemeint sind. Der Vektor von A nach B entsteht durch Ziel minus Start. Das Skalarprodukt prüft, wie stark zwei Richtungen zusammenpassen; bei senkrechten Richtungen wird es null.",
+    "check": "Ist der Vektor AB dasselbe wie der Punkt B?",
+    "answer": "Nein. AB=B−A beschreibt die Verschiebung von A nach B. Er hängt auch vom Startpunkt A ab."
+  }
+}

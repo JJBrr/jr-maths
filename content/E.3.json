@@ -1,0 +1,190 @@
+{
+  "id": "E.3",
+  "slug": "kurvendiskussion-und-optimierung",
+  "name": "Extrema, Wendepunkte und Optimierung",
+  "stage": "E-Phase",
+  "reference": "E.3",
+  "lead": "Du untersuchst den Verlauf einer Funktion und löst mit Ableitungen Fragen nach größten Flächen oder höchsten Gewinnen.",
+  "prerequisites": "Ableitungen, Gleichungen lösen, Tangenten",
+  "concepts": [
+    {
+      "title": "Extremstellen nachweisen",
+      "explanation": "f′(x)=0 liefert nur Kandidaten für innere Extremstellen. Ein Vorzeichenwechsel von + nach − bedeutet ein Maximum, von − nach + ein Minimum. Alternativ entscheidet f″(x₀), wenn es ungleich 0 ist.",
+      "example": "f′(x₀)=0 und f″(x₀)>0 → lokales Minimum."
+    },
+    {
+      "title": "Wendestellen",
+      "explanation": "Hier wechselt die Krümmung. f″(x)=0 liefert bei hinreichend glatten Funktionen Kandidaten. Ein Vorzeichenwechsel von f″ weist die Wendestelle nach; f‴(x₀)≠0 ist ein hinreichendes Kriterium.",
+      "example": "f(x)=x³: f″(x)=6x wechselt bei 0 das Vorzeichen."
+    },
+    {
+      "title": "Optimieren mit Kontext",
+      "explanation": "Definiere Variablen und Einheiten, stelle eine Zielfunktion auf und nutze Nebenbedingungen. Lege den zulässigen Bereich fest. Vergleiche innere Kandidaten und Randwerte; am Ende steht eine Antwort im Sachzusammenhang.",
+      "example": "Rechteck mit Umfang 20: A(x)=x(10−x), 0≤x≤10."
+    },
+    {
+      "title": "Aus Bedingungen eine Funktion finden",
+      "explanation": "Unbekannte Koeffizienten lassen sich aus Punkten, Steigungen und Extremstellen bestimmen. Jede Information wird zu einer Gleichung. Prüfe danach, ob alle Bedingungen erfüllt sind.",
+      "example": "Hochpunkt bei x=2 verlangt f′(2)=0 und einen Maximumsnachweis."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Ein Tiefpunkt",
+      "question": "Untersuche f(x)=x²−4x+1.",
+      "steps": [
+        "f′(x)=2x−4=0 → x=2.",
+        "f″(x)=2>0, also Minimum. f(2)=−3.",
+        "T(2|−3); links von 2 fällt, rechts von 2 steigt f."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Kubische Funktion",
+      "question": "Bestimme Extrema und Wendepunkt von f(x)=x³−3x.",
+      "steps": [
+        "f′=3x²−3 → x=−1 und 1. f″=6x.",
+        "f″(−1)<0 → H(−1|2); f″(1)>0 → T(1|−2).",
+        "f″=0 bei x=0, f‴=6≠0 → W(0|0)."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Rechteck optimieren",
+      "question": "20 m Zaun begrenzen ein Rechteck. Wann ist die Fläche maximal?",
+      "steps": [
+        "2x+2y=20 → y=10−x. A=x(10−x), 0≤x≤10.",
+        "A′=10−2x=0 → x=5; A″=−2<0.",
+        "A(0)=A(10)=0, A(5)=25. Optimal sind 5 m × 5 m und 25 m²."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Extremstelle",
+      "question": "f(x)=x²+6x. Bestimme den Tiefpunkt.",
+      "steps": [
+        "f′=2x+6=0 → x=−3. f″=2>0.",
+        "f(−3)=9−18=−9, also T(−3|−9)."
+      ],
+      "id": "E.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Zweite Ableitung",
+      "question": "Bestimme f″ für f(x)=2x⁴−3x².",
+      "steps": [
+        "f′=8x³−6x.",
+        "f″=24x²−6."
+      ],
+      "id": "E.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wendepunkt",
+      "question": "Bestimme den Wendepunkt von f(x)=x³−6x².",
+      "steps": [
+        "f″=6x−12=0 → x=2; f‴=6≠0.",
+        "f(2)=8−24=−16. Also W(2|−16)."
+      ],
+      "id": "E.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Stationär, aber kein Extremum",
+      "question": "Untersuche f(x)=x³ bei 0.",
+      "steps": [
+        "f′=3x² ist links und rechts positiv. Trotz f′(0)=0 kein Vorzeichenwechsel.",
+        "Kein Extremum; wegen Krümmungswechsel liegt ein Sattelpunkt W(0|0) vor."
+      ],
+      "id": "E.3-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Steckbrief",
+      "question": "Eine Parabel f(x)=ax²+bx+c hat f(0)=1, f(1)=0 und f′(1)=0. Bestimme f.",
+      "steps": [
+        "c=1; a+b+1=0; 2a+b=0.",
+        "Subtrahieren ergibt a=1, b=−2. f(x)=(x−1)²."
+      ],
+      "id": "E.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Gewinn",
+      "question": "G(x)=−2x²+80x−200, 0≤x≤30. Bestimme den maximalen Gewinn.",
+      "steps": [
+        "G′=−4x+80=0 → x=20, G″=−4.",
+        "G(20)=600; Randwerte −200 und 400. Maximum 600 Geldeinheiten bei 20 Mengeneinheiten."
+      ],
+      "id": "E.3-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Zaun am Fluss",
+      "question": "Für drei Seiten eines Rechtecks stehen 24 m Zaun bereit. Eine Längsseite ist der Fluss. Bestimme das größte Areal.",
+      "steps": [
+        "Mit zwei Breiten x gilt Länge y=24−2x, 0≤x≤12.",
+        "A=24x−2x²; A′=24−4x=0 → x=6, y=12.",
+        "A″=−4 und Randflächen 0: Maximum 72 m²."
+      ],
+      "id": "E.3-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Falsches Kriterium",
+      "question": "Widerlege: f″(x₀)=0 bedeutet immer Wendepunkt.",
+      "steps": [
+        "f(x)=x⁴ hat f″(x)=12x² und f″(0)=0.",
+        "f″ ist auf beiden Seiten positiv; kein Krümmungswechsel und kein Wendepunkt."
+      ],
+      "id": "E.3-08"
+    },
+    {
+      "id": "E.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Minimum sehen und rechnen",
+      "question": "Bestimme den Tiefpunkt von f(x)=(x−3)²+2.",
+      "hint": "Ein Quadrat ist niemals negativ.",
+      "steps": [
+        "Der kleinste quadratische Term ist 0, erreicht bei x=3.",
+        "Der Tiefpunkt ist (3|2)."
+      ]
+    },
+    {
+      "id": "E.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Randwerte ernst nehmen",
+      "question": "f(x)=−x²+4x auf [0;1]. Wo liegt das globale Maximum auf diesem Intervall?",
+      "hint": "Die normale Scheitelstelle liegt möglicherweise außerhalb.",
+      "steps": [
+        "f′(x)=−2x+4 ist auf [0;1] positiv.",
+        "Die Funktion steigt im ganzen erlaubten Intervall; größter Wert am rechten Rand.",
+        "f(1)=3. Die Stelle x=2 liegt außerhalb und ist hier nicht zulässig."
+      ]
+    },
+    {
+      "id": "E.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Rechteck optimieren",
+      "question": "Ein Rechteck hat Umfang 24 cm. Bestimme die größte Fläche und begründe, warum sie maximal ist.",
+      "hint": "Drücke eine Seite durch die andere aus.",
+      "steps": [
+        "2x+2y=24 gibt y=12−x und A(x)=12x−x², 0<x<12.",
+        "A′(x)=12−2x=0 bei x=6. A″(x)=−2<0.",
+        "Beide Seiten sind 6 cm; A=36 cm². Gegen die Randwerte 0 fällt die Fläche ab."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Wie erhält man mit begrenztem Material die größte Fläche? Wo erreicht ein Modell seinen größten Wert? Optimierungsaufgaben verbinden eine Sachfrage mit einer Funktion. Die Ableitung hilft, die Stellen zu finden, an denen sich ihre Richtung ändert.",
+    "idea": "Eine Gleichung f′(x)=0 liefert zunächst nur Kandidaten. Prüfe danach den Verlauf und bei einem begrenzten Intervall auch die Randpunkte. Eine Wendestelle bedeutet einen Wechsel der Krümmung, nicht automatisch einen Wechsel zwischen Steigen und Fallen.",
+    "check": "Warum ist f′(0)=0 bei x³ kein Extremum?",
+    "answer": "Links und rechts von 0 steigt x³ weiter. Die Tangente ist waagerecht, aber die Richtung des Verlaufs wechselt nicht."
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "id": "Q3.2",
+  "slug": "binomial-und-normalverteilung",
+  "name": "Zufallsgrößen, Binomial- und Normalverteilung",
+  "stage": "Q3",
+  "reference": "Q3.2",
+  "lead": "Du berechnest Wahrscheinlichkeiten für Trefferzahlen und deutest Erwartungswert und Streuung. Die Normalverteilung ergänzt den LK-Bereich.",
+  "prerequisites": "Wahrscheinlichkeiten, Potenzen, Kombinatorik",
+  "concepts": [
+    {
+      "title": "Zufallsgröße und Erwartungswert",
+      "explanation": "Eine Zufallsgröße weist jedem Ergebnis eine Zahl zu. Ihr Erwartungswert ist das mit Wahrscheinlichkeiten gewichtete Mittel möglicher Werte. Er muss kein tatsächlich möglicher Einzelwert sein.",
+      "example": "E(X)=Σ xᵢpᵢ; Var(X)=Σ(xᵢ−μ)²pᵢ; σ=√Var(X)."
+    },
+    {
+      "title": "Wann binomial?",
+      "explanation": "Du brauchst n festgelegte unabhängige Versuche, jeweils genau zwei relevante Ausgänge und dieselbe Trefferwahrscheinlichkeit p. Ziehen ohne Zurücklegen ist im Allgemeinen nicht exakt binomialverteilt.",
+      "example": "X~B(n,p): P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ."
+    },
+    {
+      "title": "Wortlaut übersetzen",
+      "explanation": "Genau k bedeutet P(X=k); höchstens k summiert von 0 bis k. Mindestens k ist 1−P(X≤k−1). Die Grenzverschiebung um 1 ist eine häufige Fehlerquelle.",
+      "example": "μ=np; σ=√(np(1−p))."
+    },
+    {
+      "title": "LK: Stetige Normalverteilung",
+      "explanation": "Bei einer stetigen Zufallsgröße ist die Wahrscheinlichkeit ein Flächeninhalt unter der Dichte. Ein einzelner Punkt hat Wahrscheinlichkeit 0. Standardisieren mit z=(x−μ)/σ führt zur Standardnormalverteilung.",
+      "example": "P(a≤X≤b)=Φ((b−μ)/σ)−Φ((a−μ)/σ)."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Kombinationen",
+      "question": "Wie viele Gruppen aus 2 Personen lassen sich aus 5 Personen bilden?",
+      "steps": [
+        "Die Reihenfolge spielt keine Rolle. C(5,2)=5!/(2!3!).",
+        "C(5,2)=10."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Genau zwei Treffer",
+      "question": "X~B(5;0,2). Berechne P(X=2).",
+      "steps": [
+        "C(5,2)=10; zwei Treffer tragen 0,2² bei, drei Nieten 0,8³.",
+        "P=10·0,04·0,512=0,2048=20,48 %."
+      ]
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Normalverteilung",
+      "question": "X ist normalverteilt mit μ=100, σ=15. Berechne näherungsweise P(85≤X≤115).",
+      "steps": [
+        "Standardisieren: Grenzen z=−1 und z=1.",
+        "Φ(1)−Φ(−1)≈0,84134−0,15866=0,68268.",
+        "Etwa 68,27 % der Modellwerte liegen in diesem Intervall."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Erwartungswert",
+      "question": "X nimmt 0 und 10 jeweils mit Wahrscheinlichkeit 1/2 an. Bestimme E(X).",
+      "steps": [
+        "0·0,5+10·0,5=5. Dieser Wert wird in keinem einzelnen Versuch erzielt."
+      ],
+      "id": "Q3.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Binomialparameter",
+      "question": "20 unabhängige Versuche mit Trefferchance 0,3. Bestimme μ.",
+      "steps": [
+        "μ=np=20·0,3=6."
+      ],
+      "id": "Q3.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Streuung",
+      "question": "Bestimme σ für X~B(100;0,5).",
+      "steps": [
+        "σ=√(100·0,5·0,5)=5."
+      ],
+      "id": "Q3.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Kein Treffer",
+      "question": "X~B(4;0,25). Berechne P(X=0).",
+      "steps": [
+        "P=(0,75)⁴=0,31640625≈31,64 %."
+      ],
+      "id": "Q3.2-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Mindestens einer",
+      "question": "X~B(4;0,25). Berechne P(X≥1).",
+      "steps": [
+        "1−P(X=0)=1−0,75⁴≈0,68359375."
+      ],
+      "id": "Q3.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Mindestens zwei",
+      "question": "X~B(5;0,2). Berechne P(X≥2).",
+      "steps": [
+        "1−P(X=0)−P(X=1).",
+        "1−0,8⁵−5·0,2·0,8⁴=0,26272."
+      ],
+      "id": "Q3.2-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Versuchszahl planen",
+      "question": "Wie viele unabhängige Versuche mit p=0,2 sind nötig, damit mindestens ein Treffer mit mindestens 95 % Wahrscheinlichkeit eintritt?",
+      "steps": [
+        "1−0,8ⁿ≥0,95 → 0,8ⁿ≤0,05.",
+        "n≥ln(0,05)/ln(0,8)≈13,425. Aufrunden: n=14."
+      ],
+      "id": "Q3.2-07"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Standardisieren",
+      "question": "X~N(50;10²). Berechne P(X≤70) mit Φ(2)≈0,97725.",
+      "steps": [
+        "z=(70−50)/10=2.",
+        "P≈97,725 %."
+      ],
+      "id": "Q3.2-08"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Stetigkeitskorrektur",
+      "question": "Wie approximierst du P(X≤60) für X~B(100;0,5) mit einer Normalverteilung?",
+      "steps": [
+        "μ=50, σ=5. Mit Stetigkeitskorrektur wird die Grenze 60,5.",
+        "z=(60,5−50)/5=2,1. Gesucht näherungsweise Φ(2,1)≈0,9821. Die Approximation ist hier wegen großer np und n(1−p) brauchbar."
+      ],
+      "id": "Q3.2-09"
+    },
+    {
+      "id": "Q3.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Erwartungswert",
+      "question": "X~B(12;0,25). Bestimme den Erwartungswert und deute ihn.",
+      "hint": "Für die Binomialverteilung gilt μ=np.",
+      "steps": [
+        "μ=12·0,25=3.",
+        "Über viele Wiederholungen liegt die mittlere Trefferzahl nahe 3; ein einzelner Versuch mit 12 Schritten kann andere Werte liefern."
+      ]
+    },
+    {
+      "id": "Q3.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Balkenhöhe berechnen",
+      "question": "X~B(4;0,5). Bestimme P(X=2).",
+      "hint": "Es gibt sechs Anordnungen mit genau zwei Treffern.",
+      "steps": [
+        "P(X=2)=6·(1/2)²·(1/2)²=6/16=3/8.",
+        "Der Balken bei k=2 hat Höhe 0,375."
+      ]
+    },
+    {
+      "id": "Q3.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Höchstens und mindestens",
+      "question": "X~B(4;0,5). Vergleiche P(X≤1) und P(X≥1).",
+      "hint": "Das Gegenereignis muss zur jeweiligen Frage passen.",
+      "steps": [
+        "P(X≤1)=P(X=0)+P(X=1)=(1+4)/16=5/16.",
+        "P(X≥1)=1−P(X=0)=15/16.",
+        "„Mindestens 1“ ist nicht das Gegenereignis von „höchstens 1“; beide enthalten den Fall X=1."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Ein einzelner Zufallsversuch ist unsicher. Für viele gleichartige Versuche lässt sich aber die Verteilung der Trefferzahlen beschreiben. So untersuchst du, welche Ergebnisse typisch und welche ungewöhnlich sind.",
+    "idea": "Ein Balken der Binomialverteilung gehört zu einer ganzen Trefferzahl. Seine Höhe ist deren Wahrscheinlichkeit. Der Erwartungswert beschreibt die langfristige Mitte, nicht ein garantiertes Ergebnis. Bei einer stetigen Verteilung entsprechen Wahrscheinlichkeiten Flächen, nicht einzelnen Kurvenhöhen.",
+    "check": "Ist der Erwartungswert eine sichere Vorhersage?",
+    "answer": "Nein. Bei sechs fairen Münzwürfen ist der Erwartungswert der Kopfzahl 3. Trotzdem sind auch 0, 1, 2, 4, 5 und 6 möglich."
+  }
+}

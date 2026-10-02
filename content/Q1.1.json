@@ -1,0 +1,186 @@
+{
+  "id": "Q1.1",
+  "slug": "integrale-verstehen",
+  "name": "Vom Änderungsverlauf zum Integral",
+  "stage": "Q1",
+  "reference": "Q1.1",
+  "lead": "Du rekonstruierst eine gesamte Änderung aus vielen kleinen Beiträgen und berechnest bestimmte Integrale mit Stammfunktionen.",
+  "prerequisites": "Ableitungen, Potenzregeln, Funktionen",
+  "concepts": [
+    {
+      "title": "Viele kleine Beiträge",
+      "explanation": "Ist eine Geschwindigkeit v(t) gegeben, beschreibt v(t)·Δt näherungsweise die Ortsänderung in einem kurzen Zeitabschnitt. Die Summe immer schmalerer Rechtecke führt zum Integral. Flächen unterhalb der Achse zählen negativ.",
+      "example": "Ortsänderung = ∫ von a bis b v(t) dt."
+    },
+    {
+      "title": "Stammfunktionen",
+      "explanation": "F heißt Stammfunktion von f, wenn F′=f. Weil Konstanten beim Ableiten verschwinden, unterscheiden sich Stammfunktionen auf einem Intervall nur um eine Konstante.",
+      "example": "f(x)=3x² → F(x)=x³+C."
+    },
+    {
+      "title": "Hauptsatz",
+      "explanation": "Das bestimmte Integral berechnest du als F(b)−F(a). Die Integrationskonstante hebt sich auf. Das Ergebnis ist eine Zahl mit einer zum Kontext passenden Einheit.",
+      "example": "∫₀² 3x² dx=[x³]₀²=8."
+    },
+    {
+      "title": "Grundregeln",
+      "explanation": "Summen integrierst du gliedweise; konstante Faktoren ziehst du heraus. Grenzen vertauschen ändert das Vorzeichen. Bei Potenzen erhöhst du den Exponenten um 1 und teilst durch den neuen Exponenten, außer bei x⁻¹.",
+      "example": "∫xⁿ dx=xⁿ⁺¹/(n+1)+C, n≠−1; ∫eˣ dx=eˣ+C."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Stammfunktion finden",
+      "question": "Integriere f(x)=4x³−2x+5.",
+      "steps": [
+        "4x³ wird zu x⁴, −2x zu −x² und 5 zu 5x.",
+        "F(x)=x⁴−x²+5x+C.",
+        "Probe: F′(x)=4x³−2x+5."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Bestimmtes Integral",
+      "question": "Berechne ∫₁³(2x+1) dx.",
+      "steps": [
+        "F(x)=x²+x.",
+        "F(3)−F(1)=(9+3)−(1+1)=10.",
+        "Die Konstante C muss für das bestimmte Integral nicht mitgeschrieben werden."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Bilanz statt Weglänge",
+      "question": "v(t)=2t−2 m/s für 0≤t≤2. Bestimme die Ortsänderung.",
+      "steps": [
+        "∫₀²(2t−2)dt=[t²−2t]₀²=0 m.",
+        "Zunächst bewegt sich der Körper in negativer, dann in positiver Richtung.",
+        "Die Ortsänderung ist 0, obwohl eine Strecke zurückgelegt wurde."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Potenzregel",
+      "question": "Bestimme eine Stammfunktion zu 6x².",
+      "steps": [
+        "F(x)=2x³; Probe F′=6x²."
+      ],
+      "id": "Q1.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Konstante",
+      "question": "Berechne ∫₂⁵4 dx.",
+      "steps": [
+        "[4x]₂⁵=20−8=12."
+      ],
+      "id": "Q1.1-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Polynom",
+      "question": "Berechne ∫₀²(x²+1) dx.",
+      "steps": [
+        "F=x³/3+x.",
+        "F(2)−F(0)=8/3+2=14/3."
+      ],
+      "id": "Q1.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Exponentialfunktion",
+      "question": "Berechne ∫₀¹eˣ dx.",
+      "steps": [
+        "Eine Stammfunktion ist eˣ.",
+        "Ergebnis e−1≈1,7183."
+      ],
+      "id": "Q1.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Vorzeichen",
+      "question": "Berechne ∫₀²(x−1) dx.",
+      "steps": [
+        "F=x²/2−x.",
+        "F(2)−F(0)=0. Positive und negative Beiträge heben sich auf."
+      ],
+      "id": "Q1.1-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Anfangsbedingung",
+      "question": "F′(x)=2x und F(1)=5. Bestimme F.",
+      "steps": [
+        "F=x²+C.",
+        "1+C=5 → C=4. Also F=x²+4."
+      ],
+      "id": "Q1.1-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Grenze gesucht",
+      "question": "Für b>0 gilt ∫₀ᵇ2x dx=9. Bestimme b.",
+      "steps": [
+        "[x²]₀ᵇ=b²=9.",
+        "Wegen b>0 gilt b=3."
+      ],
+      "id": "Q1.1-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Summen deuten",
+      "question": "Was approximiert Σ v(tᵢ)·Δt bei gleich breiten Zeitabschnitten?",
+      "steps": [
+        "Jeder Summand approximiert eine Ortsänderung in einem kleinen Intervall.",
+        "Die Summe approximiert die gesamte Ortsänderung. Für stetiges v geht sie bei geeigneter Verfeinerung in das Integral über."
+      ],
+      "id": "Q1.1-08"
+    },
+    {
+      "id": "Q1.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Rechteck statt Formel",
+      "question": "Eine konstante Rate beträgt 3 L/min. Wie viel fließt in 4 Minuten zu?",
+      "hint": "Rate mal Zeit ergibt eine Menge.",
+      "steps": [
+        "3 L/min·4 min=12 L.",
+        "Im Graphen ist das eine Rechteckfläche mit Höhe 3 und Breite 4."
+      ]
+    },
+    {
+      "id": "Q1.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Anfangsbestand mitnehmen",
+      "question": "B(0)=5 L und B′(t)=2t L/min. Berechne B(3).",
+      "hint": "Integriere zunächst die Rate und addiere dann den Startbestand.",
+      "steps": [
+        "Die Änderung ist ∫₀³2t dt=[t²]₀³=9 L.",
+        "B(3)=5+9=14 L."
+      ]
+    },
+    {
+      "id": "Q1.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Gleiche Ableitung, andere Höhe",
+      "question": "F′(x)=3x² und F(2)=10. Bestimme F und ∫₀²F′(x)dx.",
+      "hint": "Alle Stammfunktionen unterscheiden sich um eine Konstante.",
+      "steps": [
+        "F(x)=x³+C. Aus 8+C=10 folgt C=2.",
+        "Das Integral der Ableitung ist F(2)−F(0)=10−2=8.",
+        "Die Änderung ist 8, der Endwert aber 10."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Ein Wasserhahn liefert jede Minute unterschiedlich viel Wasser. Wie viel ist insgesamt hinzugekommen? Dazu musst du viele kleine Beiträge sammeln. Genau diese Idee steckt hinter dem Integral.",
+    "idea": "In einem Rate-Zeit-Graphen steht die Höhe für die Rate, nicht für den Bestand. Höhe mal kleine Zeitbreite ergibt eine kleine Bestandsänderung. Die Summe dieser Beiträge wird zum Integral. Negative Raten ziehen etwas von der Bilanz ab.",
+    "check": "Liefert ein Integral der Zuflussrate direkt den gesamten Tankinhalt?",
+    "answer": "Es liefert die Änderung im betrachteten Zeitraum. Den Anfangsinhalt musst du noch addieren."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "id": "10.4",
+  "slug": "trigonometrie",
+  "name": "Trigonometrie und trigonometrische Funktionen",
+  "lead": "Seiten, Winkel und periodische Verläufe miteinander verbinden.",
+  "time": "24 Unterrichtsstunden im G9-Lehrplan",
+  "concepts": [
+    {
+      "title": "1 · Im rechtwinkligen Dreieck",
+      "explanation": "Die Seiten heißen bezogen auf einen betrachteten spitzen Winkel Gegenkathete, Ankathete und Hypotenuse.",
+      "example": "sin α = Gegenkathete / Hypotenuse"
+    },
+    {
+      "title": "2 · Drei Verhältnisse",
+      "explanation": "Sinus, Kosinus und Tangens setzen verschiedene Seiten zueinander ins Verhältnis. Einheiten kürzen sich dabei heraus.",
+      "example": "cos α = Ankathete / Hypotenuse ··· tan α = Gegenkathete / Ankathete"
+    },
+    {
+      "title": "3 · Periodische Funktionen",
+      "explanation": "Sinus und Kosinus wiederholen sich nach einer vollen Umdrehung. Im Bogenmaß beträgt die Periode 2π.",
+      "example": "sin(x+2π)=sin(x)"
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Sinus",
+      "question": "Gegenkathete 3 cm, Hypotenuse 5 cm. Wie groß ist sin α?",
+      "solution": "sin α=3/5=0,6.",
+      "id": "10.4-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Kosinus",
+      "question": "Ankathete 4 cm, Hypotenuse 5 cm. Wie groß ist cos α?",
+      "solution": "cos α=4/5=0,8.",
+      "id": "10.4-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Tangens",
+      "question": "Gegenkathete 3 cm, Ankathete 4 cm. Wie groß ist tan α?",
+      "solution": "tan α=3/4=0,75.",
+      "id": "10.4-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Seite berechnen",
+      "question": "Hypotenuse 10 cm, Winkel α=30°. Berechne die Gegenkathete.",
+      "solution": "Gegenkathete=10·sin(30°)=10·0,5=5 cm.",
+      "id": "10.4-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Periodizität",
+      "question": "Wie groß ist sin(π/2+2π)?",
+      "solution": "Sinus hat die Periode 2π. Daher sin(π/2+2π)=sin(π/2)=1.",
+      "id": "10.4-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Winkel finden",
+      "question": "Im rechtwinkligen Dreieck gilt sin α=0,5. Wie groß kann der spitze Winkel α sein?",
+      "solution": "Der spitze Winkel ist α=30°. Hier ist sin(30°)=0,5.",
+      "id": "10.4-06"
+    },
+    {
+      "level": "Einfach",
+      "title": "Bogenmaß",
+      "question": "Wandle 90° und 180° in Bogenmaß um.",
+      "steps": [
+        "π/2 und π."
+      ],
+      "id": "10.4-neu-01"
+    },
+    {
+      "level": "Mittel",
+      "title": "Winkel bestimmen",
+      "question": "tanα=0,75 im rechtwinkligen Dreieck. Bestimme α.",
+      "steps": [
+        "α=arctan0,75≈36,87°."
+      ],
+      "id": "10.4-neu-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Sinusgleichung",
+      "question": "Löse sin x=1/2 auf [0;2π].",
+      "steps": [
+        "x=π/6 oder 5π/6. Beide Winkel liegen im Intervall."
+      ],
+      "id": "10.4-neu-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Schwingungsmodell",
+      "question": "Ein Verlauf schwankt zwischen −2 und 6 mit Periode 4. Bei t=0 liegt er auf der Mittellinie und steigt. Gib ein Modell an.",
+      "steps": [
+        "Mittellinie 2, Amplitude 4, b=2π/4=π/2.",
+        "f(t)=4sin(πt/2)+2."
+      ],
+      "id": "10.4-neu-04"
+    },
+    {
+      "id": "10.4-verstehen-01",
+      "level": "Einfach",
+      "title": "Verhältnis in Worten",
+      "question": "Im rechtwinkligen Dreieck ist sin α=3/5. Die Hypotenuse ist 10 cm. Wie lang ist die Gegenkathete?",
+      "hint": "Das Verhältnis bleibt auch im vergrößerten Dreieck gleich.",
+      "steps": [
+        "G/H=3/5, also G=10·3/5=6 cm.",
+        "Die Hypotenuse wurde gegenüber 5 verdoppelt; die Gegenkathete wird ebenfalls verdoppelt."
+      ]
+    },
+    {
+      "id": "10.4-verstehen-02",
+      "level": "Mittel",
+      "title": "Sinusgraph kennzeichnen",
+      "question": "f(x)=2sin(x)+1. Gib Mittellinie, Höchstwert und Tiefstwert an.",
+      "hint": "sin(x) liegt immer zwischen −1 und 1.",
+      "steps": [
+        "2sin(x) liegt zwischen −2 und 2.",
+        "Durch +1 liegt die Mittellinie bei 1, der Höchstwert bei 3 und der Tiefstwert bei −1."
+      ]
+    },
+    {
+      "id": "10.4-verstehen-03",
+      "level": "Schwierig",
+      "title": "Zwei Lösungen verstehen",
+      "question": "Löse sin(x)=1/2 auf [0;2π] und erkläre die zwei Schnittpunkte im Graphen.",
+      "hint": "Die Sinuskurve steigt zunächst und fällt nach ihrem Hochpunkt wieder.",
+      "steps": [
+        "Die erste Lösung ist x=π/6.",
+        "Die zweite liegt spiegelbildlich zu π/2 bei x=5π/6.",
+        "Im negativen Halbzyklus gibt es keine weitere Lösung, weil der Sinus dort negativ ist."
+      ]
+    }
+  ],
+  "stage": "Klasse 10",
+  "track": "Gymnasium",
+  "course": "G9",
+  "reference": "G9 10.4",
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Dreieck",
+      "question": "Katheten 3 und 4 cm. Berechne die Hypotenuse und den Winkel gegenüber der 3-cm-Seite.",
+      "steps": [
+        "H=√(9+16)=5 cm.",
+        "sinα=3/5, also α≈36,87°."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Sinusfunktion",
+      "question": "f(x)=2sin(3x)+1. Bestimme Amplitude, Periode und Wertebereich.",
+      "steps": [
+        "Amplitude 2; Periode 2π/3.",
+        "Mittellinie 1; Wertebereich [−1;3]."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Allgemeines Dreieck",
+      "question": "a=5 cm,b=7 cm, eingeschlossener Winkel γ=60°. Bestimme c.",
+      "steps": [
+        "Kosinussatz c²=25+49−70·0,5=39.",
+        "c=√39≈6,24 cm."
+      ]
+    }
+  ],
+  "prerequisites": "Grundrechenarten, Terme, Gleichungen und passende Grundlagen aus Klasse 9",
+  "note": "G9-Orientierung; die konkrete Reihenfolge richtet sich nach dem Schulcurriculum.",
+  "understanding": {
+    "why": "Du möchtest die Höhe eines Baums bestimmen, kommst aber nicht an seine Spitze. Ein gemessener Abstand und ein Winkel können genügen. Sinus, Kosinus und Tangens verbinden Winkel mit Seitenverhältnissen.",
+    "idea": "Ein Verhältnis sagt nicht, wie groß das Dreieck insgesamt ist. Es sagt, wie seine Seiten zueinander passen. Der Sinusgraph erweitert diese Idee zu wiederkehrenden Bewegungen: eine ganze Drehung entspricht einer vollständigen Wiederholung.",
+    "check": "Ändert sich sin α, wenn alle Seiten verdoppelt werden?",
+    "answer": "Nein. Zähler und Nenner werden beide verdoppelt. Das Verhältnis und damit der Winkel bleiben gleich."
+  }
+}

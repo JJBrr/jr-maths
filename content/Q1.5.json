@@ -1,0 +1,164 @@
+{
+  "id": "Q1.5",
+  "slug": "differenzialgleichungen",
+  "name": "Differenzialgleichungen als Modelle",
+  "stage": "Q1",
+  "reference": "Q1.5 · Wahlthema",
+  "lead": "Gesucht ist eine Funktion, deren Änderungsrate eine Bedingung erfüllt. Du prüfst Lösungen und bestimmst sie aus Anfangswerten.",
+  "prerequisites": "Ableitungen, Exponentialfunktionen, Integration",
+  "concepts": [
+    {
+      "title": "Was ist die Unbekannte?",
+      "explanation": "Bei einer Differenzialgleichung suchst du eine Funktion. Ihre Ableitung steht mit der Funktion oder der unabhängigen Variablen in Beziehung. Eine Anfangsbedingung wählt meist eine bestimmte Lösung aus einer Familie.",
+      "example": "y′=2y hat y=Ce^(2t); y(0)=3 setzt C=3."
+    },
+    {
+      "title": "Lösungen nachweisen",
+      "explanation": "Leite die vorgeschlagene Funktion ab und setze Funktion und Ableitung in die Gleichung ein. Prüfe außerdem den Anfangswert und den Definitionsbereich.",
+      "example": "y=5e^(−t) → y′=−5e^(−t)=−y."
+    },
+    {
+      "title": "Variablen trennen",
+      "explanation": "Bei y′=g(t)h(y) können getrennte Integrale helfen. Wenn du durch h(y) teilst, musst du konstante Lösungen mit h(y)=0 zusätzlich prüfen.",
+      "example": "y′=ky: dy/y=k dt → ln|y|=kt+C; auch y=0 ist Lösung."
+    },
+    {
+      "title": "Richtungsfeld und Gleichgewicht",
+      "explanation": "Jedem Punkt (t,y) ordnet die Gleichung eine Steigung zu. Gleichgewichtslösungen haben überall Steigung 0. Beim begrenzten Wachstum ist y=S ein solches Gleichgewicht.",
+      "example": "y′=k(S−y): unter S positive, über S negative Steigung bei k>0."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Anfangswert",
+      "question": "Löse y′=3y, y(0)=2.",
+      "steps": [
+        "Allgemeine Lösung y=Ce^(3t).",
+        "y(0)=C=2, also y=2e^(3t)."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Abkühlen",
+      "question": "T′=−0,1(T−20), T(0)=80. Finde T.",
+      "steps": [
+        "Der Abstand U=T−20 erfüllt U′=−0,1U und U(0)=60.",
+        "U=60e^(−0,1t), also T=20+60e^(−0,1t).",
+        "Die Temperatur nähert sich 20; das Modell setzt konstante Umgebung voraus."
+      ]
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Schwingung prüfen",
+      "question": "Prüfe y(t)=2sin(3t) für y″=−9y.",
+      "steps": [
+        "y′=6cos(3t), y″=−18sin(3t).",
+        "−9y=−18sin(3t), also ist die Gleichung erfüllt.",
+        "Die Funktion hat y(0)=0 und y′(0)=6."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Prüfen",
+      "question": "Ist y=4e^(2t) eine Lösung von y′=2y?",
+      "steps": [
+        "y′=8e^(2t)=2·4e^(2t). Ja."
+      ],
+      "id": "Q1.5-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Konstante",
+      "question": "Welche konstante Lösung besitzt y′=5y?",
+      "steps": [
+        "Bei einer Konstanten ist y′=0. Also 5y=0 → y=0."
+      ],
+      "id": "Q1.5-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Anfangswert",
+      "question": "Löse y′=−2y mit y(0)=7.",
+      "steps": [
+        "y=Ce^(−2t), C=7. Also y=7e^(−2t)."
+      ],
+      "id": "Q1.5-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Nur integrieren",
+      "question": "Löse y′=6t mit y(0)=4.",
+      "steps": [
+        "y=3t²+C. Anfangswert ergibt C=4."
+      ],
+      "id": "Q1.5-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Richtungen",
+      "question": "Beschreibe das Richtungsfeld y′=10−y bei y=5,10,15.",
+      "steps": [
+        "Die Steigungen sind 5,0,−5.",
+        "Lösungen unter 10 steigen, über 10 fallen sie; y=10 ist Gleichgewicht."
+      ],
+      "id": "Q1.5-05"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Zwei Anfangswerte",
+      "question": "Finde y=Acos(2t)+Bsin(2t) mit y(0)=3 und y′(0)=4.",
+      "steps": [
+        "y(0)=A=3. y′=−2Asin(2t)+2Bcos(2t).",
+        "y′(0)=2B=4 → B=2. y=3cos(2t)+2sin(2t)."
+      ],
+      "id": "Q1.5-06"
+    },
+    {
+      "id": "Q1.5-verstehen-01",
+      "level": "Einfach",
+      "title": "Gleichgewicht finden",
+      "question": "Welche konstante Lösung besitzt y′=3(5−y)?",
+      "hint": "Bei einer konstanten Funktion ist die Ableitung null.",
+      "steps": [
+        "0=3(5−y) liefert y=5.",
+        "Der Verlauf y(t)=5 bleibt dauerhaft im Gleichgewicht."
+      ]
+    },
+    {
+      "id": "Q1.5-verstehen-02",
+      "level": "Mittel",
+      "title": "Anfangsbedingung nutzen",
+      "question": "Löse y′=2y mit y(0)=4.",
+      "hint": "Die Lösungsfamilie lautet Ce^(2t).",
+      "steps": [
+        "y(t)=Ce^(2t). Bei t=0 gilt y(0)=C.",
+        "Mit C=4 folgt y(t)=4e^(2t).",
+        "Probe: y′=8e^(2t)=2y."
+      ]
+    },
+    {
+      "id": "Q1.5-verstehen-03",
+      "level": "Schwierig",
+      "title": "Lösung und Verlauf prüfen",
+      "question": "Zeige, dass y(t)=5+2e^(−3t) die Gleichung y′=3(5−y) erfüllt. Beschreibe den Verlauf für t≥0.",
+      "hint": "Vergleiche Ableitung und rechte Seite.",
+      "steps": [
+        "y′=−6e^(−3t). Die rechte Seite ergibt ebenfalls −6e^(−3t).",
+        "y(0)=7 und y′<0: Die Lösung fällt.",
+        "Sie nähert sich 5 von oben; sie unterschreitet 5 nie."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Manchmal kennt man nicht den gesamten Verlauf, sondern nur eine Änderungsregel: Je größer ein Bestand ist, desto stärker wächst er. Eine Differenzialgleichung formuliert genau diese Regel. Gesucht ist eine Funktion.",
+    "idea": "Eine Anfangsbedingung wählt aus vielen möglichen Verläufen den passenden aus. Im Richtungsfeld zeigt jedes kleine Strichstück, welche Steigung eine Lösung an dieser Stelle haben müsste. Eine Gleichgewichtslösung bleibt konstant, weil ihre Rate null ist.",
+    "check": "Was unterscheidet y′=2y von y=2t?",
+    "answer": "y′=2y beschreibt eine Rate, die vom aktuellen Bestand abhängt. y=2t ist bereits eine konkrete Funktion mit konstanter Rate 2."
+  }
+}

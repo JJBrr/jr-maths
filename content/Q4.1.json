@@ -1,0 +1,194 @@
+{
+  "id": "Q4.1",
+  "slug": "funktionenscharen",
+  "name": "Funktionenscharen und Parameter",
+  "stage": "Q4",
+  "reference": "Q4.1",
+  "lead": "Ein Parameter erzeugt eine ganze Familie von Graphen. Du untersuchst Fälle, integrierst Scharen und bestimmst im LK Ortskurven.",
+  "prerequisites": "Kurvendiskussion, Produkt- und Kettenregel, Integrale",
+  "concepts": [
+    {
+      "title": "Parameter oder Variable?",
+      "explanation": "Beim Ableiten nach x wird der Parameter a wie eine Konstante behandelt. Untersuche zunächst seinen zulässigen Bereich. Besondere Werte können den Funktionstyp und die Anzahl der Extremstellen verändern.",
+      "example": "fₐ(x)=x³−3ax → fₐ′(x)=3x²−3a."
+    },
+    {
+      "title": "Fallunterscheidung",
+      "explanation": "Aus x²=a folgen bei a>0 zwei reelle Lösungen, bei a=0 eine und bei a<0 keine. Erst mit Vorzeichenwechsel oder zweiter Ableitung entscheidest du über die Art der stationären Stellen.",
+      "example": "Bei fₐ=x³−3ax gibt es für a>0 zwei Extremstellen, bei a=0 einen Sattelpunkt."
+    },
+    {
+      "title": "Integrale mit Parametern",
+      "explanation": "Integriere nach x wie gewohnt und behandle a als Konstante. Sind die Grenzen selbst abhängig von a, setze sie vollständig ein. Ein vorgegebener Flächeninhalt kann dann eine Gleichung für a liefern.",
+      "example": "∫₀¹a x²dx=a/3. Als geometrische Fläche wäre bei a<0 der Betrag nötig."
+    },
+    {
+      "title": "LK: Ortskurven",
+      "explanation": "Ein besonderer Punkt hat Koordinaten x(a), y(a). Löse die erste Beziehung nach a auf und setze in die zweite ein. Beachte Einschränkungen des Parameters und des betrachteten Punktzweigs.",
+      "example": "Tₐ=(a;−a²) → Ortskurve y=−x², mit dem zu a passenden x-Bereich."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Parameter einsetzen",
+      "question": "fₐ(x)=ax²+1. Bestimme f₂(3) und fₐ′(x).",
+      "steps": [
+        "Für a=2 und x=3: f₂(3)=2·9+1=19.",
+        "Beim Ableiten bleibt a konstant: fₐ′(x)=2ax."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Drei Fälle",
+      "question": "Untersuche fₐ(x)=x³−3ax auf stationäre Stellen.",
+      "steps": [
+        "fₐ′=3(x²−a). Für a<0 ist sie überall positiv: keine stationäre Stelle.",
+        "Für a=0 liegt bei x=0 ein Sattelpunkt.",
+        "Für a>0: x=±√a. fₐ″=6x → Hochpunkt (−√a|2a√a), Tiefpunkt (√a|−2a√a)."
+      ]
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Ortskurve des Tiefpunkts",
+      "question": "Bestimme die Ortskurve der Tiefpunkte von fₐ(x)=x³−3ax für a>0.",
+      "steps": [
+        "T hat x=√a, also a=x² und x>0.",
+        "y=−2a√a=−2x³.",
+        "Ortskurve y=−2x³ für x>0. Die Einschränkung verhindert, dass der Hochpunktzweig mitgemeint wird."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Ableiten",
+      "question": "Leite fₐ(x)=ax³−a²x+5 ab.",
+      "steps": [
+        "fₐ′(x)=3ax²−a². a² bleibt als Konstante stehen."
+      ],
+      "id": "Q4.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Parabelschar",
+      "question": "Gib den Scheitel von fₐ(x)=(x−a)²+2 an.",
+      "steps": [
+        "S(a|2). Alle Scheitel liegen auf y=2."
+      ],
+      "id": "Q4.1-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Nullstellen nach Fällen",
+      "question": "Bestimme die Nullstellen von fₐ(x)=x²−a.",
+      "steps": [
+        "a>0: ±√a. a=0: 0 (doppelt). a<0: keine reellen Nullstellen."
+      ],
+      "id": "Q4.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Schar integrieren",
+      "question": "Berechne ∫₀²(ax+1)dx.",
+      "steps": [
+        "F=ax²/2+x.",
+        "Ergebnis 2a+2."
+      ],
+      "id": "Q4.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Parameter bestimmen",
+      "question": "Für a>0 gilt ∫₀³ax²dx=18. Bestimme a.",
+      "steps": [
+        "Integral =a·27/3=9a.",
+        "9a=18 → a=2."
+      ],
+      "id": "Q4.1-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Exponentielle Schar",
+      "question": "fₐ(x)=xe^(−ax), a>0, x≥0. Bestimme das Maximum.",
+      "steps": [
+        "fₐ′=(1−ax)e^(−ax)=0 → x=1/a.",
+        "Vorzeichenwechsel + zu −: Maximum. y=(1/a)e⁻¹=1/(ae)."
+      ],
+      "id": "Q4.1-06"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Exponentielle Ortskurve",
+      "question": "Bestimme die Ortskurve der Maxima der vorigen Schar für a>0.",
+      "steps": [
+        "x=1/a → a=1/x, x>0.",
+        "y=1/(ae)=x/e. Ortskurve ist der positive Teil der Geraden y=x/e."
+      ],
+      "id": "Q4.1-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Stammfunktionsnachweis",
+      "question": "a>0. Prüfe Fₐ(x)=−(x/a+1/a²)e^(−ax) als Stammfunktion von xe^(−ax).",
+      "steps": [
+        "Produkt- und Kettenregel: Fₐ′=−(1/a)e^(−ax)+(x+1/a)e^(−ax).",
+        "Die 1/a-Terme heben sich auf: Fₐ′=xe^(−ax)."
+      ],
+      "id": "Q4.1-08"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Sonderfall",
+      "question": "Warum darf man bei fₐ(x)=ax²−2ax die Extremstelle nicht blind durch Division durch a bestimmen?",
+      "steps": [
+        "Für a=0 ist f₀(x)=0 konstant; jede Stelle ist stationär.",
+        "Für a≠0 ist fₐ′=2a(x−1), also x=1. Tiefpunkt bei a>0, Hochpunkt bei a<0."
+      ],
+      "id": "Q4.1-09"
+    },
+    {
+      "id": "Q4.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Parameter einsetzen",
+      "question": "fₐ(x)=ax²+1. Berechne f₂(3).",
+      "hint": "Zuerst ist a=2 fest gewählt, danach x=3.",
+      "steps": [
+        "f₂(x)=2x²+1.",
+        "f₂(3)=2·9+1=19."
+      ]
+    },
+    {
+      "id": "Q4.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Gemeinsamer Punkt",
+      "question": "Zeige, dass alle Graphen von fₐ(x)=ax²+1 durch (0|1) gehen.",
+      "hint": "Setze x=0 ein und beobachte, was mit a passiert.",
+      "steps": [
+        "fₐ(0)=a·0²+1=1.",
+        "Das Ergebnis hängt nicht von a ab. Daher liegt (0|1) auf jeder Kurve."
+      ]
+    },
+    {
+      "id": "Q4.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Sonderfall a=0",
+      "question": "Untersuche die Nullstellen von fₐ(x)=ax²+1 für alle reellen a.",
+      "hint": "Teile erst nach einer Fallunterscheidung durch a.",
+      "steps": [
+        "a=0: f=1, also keine Nullstelle.",
+        "a>0: x²=−1/a wäre negativ, keine reelle Lösung.",
+        "a<0: x=±√(−1/a), also zwei reelle Nullstellen."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Ein Modell soll für verschiedene Situationen gelten, etwa für unterschiedliche Wachstumsraten oder Formen einer Kurve. Ein Parameter bündelt viele einzelne Funktionen in einer Familie.",
+    "idea": "Beim Ableiten nach x bleibt der Parameter zunächst konstant. Erst danach untersuchst du, wie das Ergebnis von ihm abhängt. Sonderfälle wie a=0 können die Art der Funktion ändern und müssen vor einer Division durch a geprüft werden.",
+    "check": "Was ist der Unterschied zwischen x und a in fₐ(x)?",
+    "answer": "Für ein fest gewähltes a läuft x über die Punkte einer Kurve. Ein anderes a kann die gesamte Kurve verändern."
+  }
+}

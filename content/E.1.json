@@ -1,0 +1,189 @@
+{
+  "id": "E.1",
+  "slug": "funktionen-und-modelle",
+  "name": "Funktionen lesen und modellieren",
+  "stage": "E-Phase",
+  "reference": "E.1",
+  "lead": "Von der Wertetabelle zum Graphen: Du erkennst Funktionstypen, bestimmst Nullstellen und übersetzt Alltagssituationen in Gleichungen.",
+  "prerequisites": "Terme umformen, lineare Gleichungen, quadratische Gleichungen",
+  "concepts": [
+    {
+      "title": "Was ordnet eine Funktion zu?",
+      "explanation": "Eine Funktion weist jedem erlaubten x genau einen Wert y zu. Die Definitionsmenge enthält die erlaubten Eingaben; die Wertemenge enthält alle tatsächlich erreichten Ausgaben. Bei einem Sachmodell schränkt der Kontext die Eingaben zusätzlich ein.",
+      "example": "f(x)=x²: D=ℝ, W=[0;∞). Bei einer Länge gilt oft x≥0."
+    },
+    {
+      "title": "Nullstellen und Schnittpunkte",
+      "explanation": "Für den Schnitt mit der x-Achse setzt du f(x)=0. Für zwei Graphen löst du f(x)=g(x). Den y-Wert erhältst du anschließend durch Einsetzen. Nicht jede Nullstelle kann durch einfaches Wurzelziehen gefunden werden.",
+      "example": "x²=2x → x(x−2)=0 → x=0 oder x=2."
+    },
+    {
+      "title": "Verschieben und strecken",
+      "explanation": "Bei a·f(x−c)+d verschiebt c den Graphen nach rechts und d nach oben. a multipliziert die y-Werte; a<0 spiegelt zusätzlich an der x-Achse. Die Änderung innerhalb der Klammer wirkt auf die Eingabe.",
+      "example": "g(x)=−2(x−3)²+1: Scheitel S(3|1), nach unten geöffnet."
+    },
+    {
+      "title": "Symmetrie und Randverhalten",
+      "explanation": "Vergleiche f(−x) mit f(x) und −f(x). Bei Polynomen bestimmt der höchste Exponent mit seinem Vorfaktor das Verhalten für sehr große |x|. Ein Modell muss außerdem zu Einheiten und Messbereich passen.",
+      "example": "f(x)=x³−4x ist punktsymmetrisch zum Ursprung; für x→∞ gilt f(x)→∞."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Eine Gerade aus zwei Punkten",
+      "question": "Bestimme die Gerade durch A(1|3) und B(4|9).",
+      "steps": [
+        "Steigung m=(9−3)/(4−1)=2.",
+        "Mit A: 3=2·1+b, also b=1.",
+        "f(x)=2x+1. Probe mit B: f(4)=9."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Nullstellen und Scheitel",
+      "question": "Untersuche f(x)=x²−6x+5.",
+      "steps": [
+        "Quadratisch ergänzen: f(x)=(x−3)²−4. Daher S(3|−4).",
+        "Für Nullstellen: (x−3)²=4. Also x=1 oder x=5.",
+        "Die Symmetrieachse ist x=3. D=ℝ und W=[−4;∞)."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Ein sinnvolles Modell",
+      "question": "Ein Taxi kostet 4 € Grundpreis und 2,50 € je Kilometer. Wie weit kommst du mit 24 €?",
+      "steps": [
+        "Modell K(s)=4+2,5s mit s≥0, K in Euro und s in km.",
+        "24=4+2,5s → s=8.",
+        "Das Modell beschreibt 8 km. Wartezeit, Zuschläge und Rundungen sind darin nicht enthalten."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Funktionswerte",
+      "question": "f(x)=2x²−3. Berechne f(−2), f(0), f(3).",
+      "steps": [
+        "f(−2)=2·4−3=5; f(0)=−3; f(3)=18−3=15.",
+        "Klammern um negative Eingaben verhindern Vorzeichenfehler."
+      ],
+      "id": "E.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Definitionsmenge",
+      "question": "Bestimme D für f(x)=1/(x−2).",
+      "steps": [
+        "Der Nenner darf nicht 0 sein: x−2≠0.",
+        "D=ℝ ohne {2}."
+      ],
+      "id": "E.1-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Faktorisieren",
+      "question": "Bestimme die Nullstellen von f(x)=x³−9x.",
+      "steps": [
+        "x ausklammern: x(x²−9)=x(x−3)(x+3).",
+        "Ein Produkt ist 0, wenn mindestens ein Faktor 0 ist: x=−3,0,3."
+      ],
+      "id": "E.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Parabel verschieben",
+      "question": "Beschreibe g(x)=3(x+2)²−5 und gib den Scheitel an.",
+      "steps": [
+        "2 nach links, 5 nach unten, y-Werte mit 3 multiplizieren.",
+        "S(−2|−5); nach oben geöffnet; W=[−5;∞)."
+      ],
+      "id": "E.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Schnittpunkte",
+      "question": "Berechne die Schnittpunkte von f(x)=x² und g(x)=x+2.",
+      "steps": [
+        "x²−x−2=0 → (x−2)(x+1)=0.",
+        "x=2 oder x=−1; y=4 oder y=1. Also (2|4) und (−1|1)."
+      ],
+      "id": "E.1-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Zwei Tarife",
+      "question": "A kostet 12 €+0,10 € je Einheit, B kostet 4 €+0,30 € je Einheit. Vergleiche.",
+      "steps": [
+        "12+0,1x=4+0,3x → x=40. Beide kosten dann 16 €.",
+        "Für 0≤x<40 ist B günstiger; für x>40 A. Nur nichtnegative x sind sinnvoll."
+      ],
+      "id": "E.1-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Gegenbeispiel",
+      "question": "Beurteile: Wenn f(−2)=f(2), ist f sicher achsensymmetrisch.",
+      "steps": [
+        "Die Behauptung ist falsch; zwei Werte reichen nicht aus.",
+        "Gegenbeispiel f(x)=x³−4x: f(−2)=f(2)=0, aber f(−1)=3 und f(1)=−3."
+      ],
+      "id": "E.1-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Modell bestimmen",
+      "question": "Eine Parabel hat S(2|−1) und geht durch P(0|7). Bestimme sie.",
+      "steps": [
+        "Ansatz f(x)=a(x−2)²−1.",
+        "7=4a−1 → a=2. Also f(x)=2(x−2)²−1."
+      ],
+      "id": "E.1-08"
+    },
+    {
+      "id": "E.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Einsetzen oder rückwärts lösen?",
+      "question": "f(x)=2x+3. Berechne f(4) und löse anschließend f(x)=4.",
+      "hint": "Die erste Frage gibt x vor, die zweite y.",
+      "steps": [
+        "f(4)=2·4+3=11.",
+        "Für f(x)=4 gilt 2x+3=4, also x=1/2."
+      ]
+    },
+    {
+      "id": "E.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Nullstellen und Scheitel",
+      "question": "f(x)=(x−2)²−4. Gib Scheitel und Nullstellen an.",
+      "hint": "Die Scheitelform liefert den Scheitel direkt.",
+      "steps": [
+        "Scheitel S(2|−4).",
+        "Für Nullstellen: (x−2)²=4, also x−2=±2.",
+        "Damit x=0 und x=4. Die Nullstellen liegen symmetrisch um x=2."
+      ]
+    },
+    {
+      "id": "E.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Zwei Kostenmodelle deuten",
+      "question": "A(x)=20+2x und B(x)=5+5x für x≥0. Wann sind die Kosten gleich, welches Angebot ist vorher günstiger?",
+      "hint": "Setze die Funktionen gleich und vergleiche einen Wert vor dem Schnitt.",
+      "steps": [
+        "20+2x=5+5x ergibt x=5. Beide kosten dort 30.",
+        "Bei x=0 kostet A 20 und B 5: B ist für 0≤x<5 günstiger.",
+        "A hat die kleinere Steigung und ist für x>5 günstiger."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Eine Funktion übersetzt eine Eingabe in eine Ausgabe: Zeit in Tankinhalt, Stückzahl in Kosten oder Seitenlänge in Fläche. Formel, Wertetabelle und Graph beschreiben denselben Zusammenhang auf verschiedene Weise.",
+    "idea": "Frage beim Graphen zuerst: Was bedeuten die Achsen und welche Einheiten haben sie? Ein Punkt (3|8) sagt nur dann etwas Nützliches, wenn klar ist, ob das zum Beispiel 3 Minuten und 8 Liter sind. Eine Nullstelle ist eine Eingabe, bei der die Ausgabe null wird.",
+    "check": "Ist f(3) dasselbe wie eine Lösung von f(x)=3?",
+    "answer": "Nein. Bei f(3) ist die Eingabe vorgegeben. Bei f(x)=3 ist die gewünschte Ausgabe vorgegeben; die passende Eingabe wird gesucht."
+  }
+}

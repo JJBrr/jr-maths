@@ -1,0 +1,188 @@
+{
+  "id": "Q1.3",
+  "slug": "wachstumsmodelle-und-analysis",
+  "name": "Analysis im Kontext und Wachstumsmodelle",
+  "stage": "Q1",
+  "reference": "Q1.3",
+  "lead": "Du verbindest Ableitungen und Integrale mit exponentiellem, begrenztem und logistischem Wachstum.",
+  "prerequisites": "Produkt- und Kettenregel, Integrale, Logarithmen",
+  "concepts": [
+    {
+      "title": "Eine Kurve systematisch lesen",
+      "explanation": "Kläre zuerst Definitionsbereich und Einheiten. Nullstellen, Extrema, Wendestellen und Grenzwerte beantworten jeweils unterschiedliche Sachfragen. Ein rechnerischer Punkt außerhalb des Modellbereichs ist keine gültige Sachlösung.",
+      "example": "f′=0: Kandidat für größten Bestand; f″=0: Kandidat für größte Änderungsrate."
+    },
+    {
+      "title": "Begrenztes Wachstum",
+      "explanation": "Ein Bestand nähert sich einer Schranke S. Die Änderungsrate ist proportional zum noch fehlenden Abstand. Bei k>0 beschreibt S−ce^(−kt) diese Annäherung.",
+      "example": "B(t)=S−(S−B₀)e^(−kt); B′=k(S−B)."
+    },
+    {
+      "title": "Stammfunktion prüfen",
+      "explanation": "Eine vorgegebene Stammfunktion weist du durch Ableiten nach. Das ist auch möglich, wenn du selbst noch keine Integrationsmethode für das Produkt kennst.",
+      "example": "F(x)=−(x+1)e^(−x) → F′(x)=xe^(−x)."
+    },
+    {
+      "title": "LK: Logistisches Wachstum",
+      "explanation": "Der Bestand wächst zunächst schnell und später langsamer. Das Modell verbindet einen bestandsabhängigen Wachstumsanteil mit begrenzten Ressourcen. Für positive Parameter liegt die größte Zunahme bei der halben Schranke.",
+      "example": "B(t)=S/(1+ce^(−kt)), c,k>0; B′=kB(1−B/S)."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Schranke erkennen",
+      "question": "B(t)=200−150e^(−0,1t). Bestimme Anfangswert und Schranke.",
+      "steps": [
+        "B(0)=200−150=50.",
+        "Für t→∞ geht e^(−0,1t) gegen 0, also B→200.",
+        "Der Bestand startet bei 50 und nähert sich 200 von unten."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Schwellenwert",
+      "question": "Wann erreicht derselbe Bestand 125?",
+      "steps": [
+        "125=200−150e^(−0,1t) → e^(−0,1t)=1/2.",
+        "t=ln(2)/0,1≈6,93 Zeiteinheiten.",
+        "Eine exakte Schranke 200 wird in diesem Modell erst im Grenzwert erreicht."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Integral eines Produkts",
+      "question": "Berechne ∫₀²xe^(−x)dx mit F(x)=−(x+1)e^(−x).",
+      "steps": [
+        "Ableitungsprobe: F′=−e^(−x)+(x+1)e^(−x)=xe^(−x).",
+        "F(2)−F(0)=−3e^(−2)+1.",
+        "Ergebnis ≈0,5940."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Anfang und Grenze",
+      "question": "B(t)=80−60e^(−0,2t). Bestimme B(0) und den Grenzwert.",
+      "steps": [
+        "B(0)=20; Grenzwert 80."
+      ],
+      "id": "Q1.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Rate",
+      "question": "Leite B(t)=80−60e^(−0,2t) ab.",
+      "steps": [
+        "B′(t)=12e^(−0,2t).",
+        "Sie ist positiv und nimmt mit der Zeit ab."
+      ],
+      "id": "Q1.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Zeitpunkt",
+      "question": "Wann gilt bei diesem Modell B(t)=50?",
+      "steps": [
+        "50=80−60e^(−0,2t) → e^(−0,2t)=1/2.",
+        "t=ln(2)/0,2≈3,47."
+      ],
+      "id": "Q1.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Maximum einer Kurve",
+      "question": "f(t)=4te^(−t), t≥0. Bestimme das Maximum.",
+      "steps": [
+        "f′=4(1−t)e^(−t), Vorzeichenwechsel + zu − bei t=1.",
+        "f(1)=4/e≈1,4715."
+      ],
+      "id": "Q1.3-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Stammfunktion nachweisen",
+      "question": "Prüfe F(x)=(x−1)eˣ als Stammfunktion von xeˣ.",
+      "steps": [
+        "F′=eˣ+(x−1)eˣ=xeˣ.",
+        "Damit ist die Behauptung bewiesen."
+      ],
+      "id": "Q1.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Integral im Kontext",
+      "question": "Eine Zuflussrate r(t)=6e^(−t) L/min wirkt 0 bis 2 min. Bestimme den zugeflossenen Inhalt.",
+      "steps": [
+        "∫₀²6e^(−t)dt=6(1−e^(−2))≈5,188 L.",
+        "Einheit Rate × Zeit = Liter; erst am Ende runden."
+      ],
+      "id": "Q1.3-06"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Logistischer Wendepunkt",
+      "question": "B(t)=100/(1+9e^(−t)). Wann ist B=50 und die Zunahme maximal?",
+      "steps": [
+        "50=100/(1+9e^(−t)) → 9e^(−t)=1.",
+        "t=ln9≈2,197. Dort ist B′=1·50·(1−0,5)=25 je Zeiteinheit."
+      ],
+      "id": "Q1.3-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Modellvergleich",
+      "question": "Wie unterscheiden sich exponentielles und begrenztes Wachstum langfristig bei positiver Rate?",
+      "steps": [
+        "Exponentielles Wachstum ae^(kt) wächst bei a,k>0 unbeschränkt.",
+        "Begrenztes Wachstum S−ce^(−kt) nähert sich S; die Rate geht gegen 0."
+      ],
+      "id": "Q1.3-08"
+    },
+    {
+      "id": "Q1.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Start und Schranke",
+      "question": "B(t)=12−9e^(−t). Nenne Anfangswert und langfristige Schranke.",
+      "hint": "Bei t=0 ist der Exponentialfaktor 1.",
+      "steps": [
+        "B(0)=12−9=3.",
+        "Für t→∞ geht e^(−t) gegen 0, daher B→12."
+      ]
+    },
+    {
+      "id": "Q1.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Halber Restabstand",
+      "question": "Für B(t)=12−9e^(−t): Wann ist der noch fehlende Abstand zur Schranke nur halb so groß wie am Anfang?",
+      "hint": "Der Restabstand ist 12−B(t).",
+      "steps": [
+        "Anfangs fehlen 9, gesucht sind 4,5.",
+        "9e^(−t)=4,5 ergibt e^(−t)=1/2.",
+        "t=ln(2)≈0,693 Zeiteinheiten."
+      ]
+    },
+    {
+      "id": "Q1.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Rate und Bestand koppeln",
+      "question": "B(t)=12−9e^(−t). Zeige B′=12−B und deute die Gleichung.",
+      "hint": "Berechne beide Seiten unabhängig.",
+      "steps": [
+        "B′(t)=9e^(−t). Auch 12−B(t)=9e^(−t).",
+        "Je größer der verbleibende Abstand zur Schranke, desto größer die Änderungsrate.",
+        "Das Modell nähert sich der Schranke, ohne sie in endlicher Zeit zu überschreiten."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Ein Bestand kann immer weiter wachsen und trotzdem immer langsamer zunehmen. Das tritt auf, wenn sich ein System einer Kapazitätsgrenze nähert. Der Graph hilft dir, Bestand und Änderungsrate auseinanderzuhalten.",
+    "idea": "Lies nacheinander: Wo startet das Modell? Welche Werte sind im Sachzusammenhang erlaubt? Steigt die Kurve? Wird sie steiler oder flacher? Welchem Wert nähert sie sich? Erst danach wählst du die Rechnung, die deine konkrete Frage beantwortet.",
+    "check": "Wenn die Rate abnimmt, muss dann auch der Bestand abnehmen?",
+    "answer": "Nein. Solange die Rate positiv bleibt, wächst der Bestand. Er wächst lediglich langsamer."
+  }
+}

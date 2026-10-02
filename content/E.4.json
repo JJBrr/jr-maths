@@ -1,0 +1,188 @@
+{
+  "id": "E.4",
+  "slug": "e-funktion-und-ableitungsregeln",
+  "name": "e-Funktion, Produkt- und Kettenregel",
+  "stage": "E-Phase",
+  "reference": "E.4",
+  "lead": "Exponentielles Wachstum wird mit e beschrieben. Mit Produkt- und Kettenregel leitest du auch zusammengesetzte Funktionen ab.",
+  "prerequisites": "Exponentialfunktionen aus Klasse 10, Ableitungsbegriff",
+  "concepts": [
+    {
+      "title": "Warum die Zahl e?",
+      "explanation": "Bei eˣ stimmen Funktionswert und lokale Änderungsrate überein. e ist ungefähr 2,71828. Ein Modell a·e^(kt) beschreibt einen Anfangswert a und eine konstante relative Änderungsrate k.",
+      "example": "(eˣ)′=eˣ; N′(t)=k·N(t)."
+    },
+    {
+      "title": "Kettenregel",
+      "explanation": "Bei einer Verkettung leitest du zuerst die äußere Funktion ab und multiplizierst dann mit der Ableitung der inneren Funktion. Die innere Funktion bleibt zunächst stehen.",
+      "example": "(e^(3x−1))′=3e^(3x−1)."
+    },
+    {
+      "title": "Produktregel",
+      "explanation": "Bei einem Produkt verändern sich beide Faktoren. Deshalb entstehen zwei Summanden. Erst einen Faktor ableiten, dann den anderen.",
+      "example": "(u·v)′=u′·v+u·v′; (xeˣ)′=(1+x)eˣ."
+    },
+    {
+      "title": "Exponentielle Modelle lösen",
+      "explanation": "Zum Bestimmen einer Zeit isolierst du zunächst die Potenz und logarithmierst dann. Der natürliche Logarithmus ln ist die Umkehrung von eˣ. Zeit und Wachstumsrate müssen in zusammenpassenden Einheiten stehen.",
+      "example": "a·e^(kt)=b → t=ln(b/a)/k für a,b>0 und k≠0."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Kette erkennen",
+      "question": "Leite f(x)=4e^(−0,5x) ab.",
+      "steps": [
+        "Äußere Ableitung: Die e-Funktion bleibt erhalten.",
+        "Innere Ableitung: (−0,5x)′=−0,5.",
+        "f′(x)=4·(−0,5)e^(−0,5x)=−2e^(−0,5x)."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Produkt ableiten",
+      "question": "Leite f(x)=x²e^(−x) ab.",
+      "steps": [
+        "u=x², u′=2x; v=e^(−x), v′=−e^(−x).",
+        "f′=2xe^(−x)−x²e^(−x).",
+        "Zusammenfassen: f′=x(2−x)e^(−x)."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Halbierungszeit",
+      "question": "N(t)=80e^(−0,2t), t in Stunden. Wann sind noch 40 Einheiten vorhanden?",
+      "steps": [
+        "40=80e^(−0,2t) → 0,5=e^(−0,2t).",
+        "ln(0,5)=−0,2t → t=ln(2)/0,2≈3,47 h.",
+        "Die Halbierungszeit hängt bei diesem Modell nicht vom Anfangswert ab."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "e-Funktion",
+      "question": "Leite 3eˣ−2 ab.",
+      "steps": [
+        "f′(x)=3eˣ; die Konstante fällt weg."
+      ],
+      "id": "E.4-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Innere Ableitung",
+      "question": "Leite e^(2x+3) ab.",
+      "steps": [
+        "Innere Ableitung 2.",
+        "f′(x)=2e^(2x+3)."
+      ],
+      "id": "E.4-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Potenz einer Klammer",
+      "question": "Leite (3x−1)⁴ ab.",
+      "steps": [
+        "Äußere Ableitung 4(3x−1)³, innere Ableitung 3.",
+        "f′(x)=12(3x−1)³."
+      ],
+      "id": "E.4-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Produkt",
+      "question": "Leite (x+1)e^(2x) ab.",
+      "steps": [
+        "f′=e^(2x)+2(x+1)e^(2x).",
+        "f′=(2x+3)e^(2x)."
+      ],
+      "id": "E.4-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wachstumsrate",
+      "question": "Schreibe 100·1,04ᵗ als 100e^(kt).",
+      "steps": [
+        "eᵏ=1,04 → k=ln(1,04)≈0,03922.",
+        "k ist nicht genau 0,04; die zeitdiskrete Zunahme beträgt 4 %."
+      ],
+      "id": "E.4-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Maximum",
+      "question": "Bestimme das Maximum von f(x)=xe^(−x) auf [0;∞).",
+      "steps": [
+        "f′=(1−x)e^(−x), also x=1.",
+        "e^(−x)>0: f′ wechselt von + nach −. f(1)=1/e.",
+        "Am Rand f(0)=0, und für x→∞ geht f gegen 0. Globales Maximum 1/e."
+      ],
+      "id": "E.4-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Parameter finden",
+      "question": "N(0)=50, N(4)=100 und N(t)=ae^(kt). Bestimme a,k.",
+      "steps": [
+        "a=50. 100=50e^(4k) → 2=e^(4k).",
+        "k=ln(2)/4≈0,17329 je Zeiteinheit."
+      ],
+      "id": "E.4-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Grenzen eines Modells",
+      "question": "Warum ist unbegrenztes exponentielles Wachstum einer Population langfristig meist ungeeignet?",
+      "steps": [
+        "Das Modell setzt konstante relative Zunahme voraus.",
+        "Begrenzte Nahrung, Platz oder andere Einflüsse ändern die Rate. Ein passender Zeitraum und ein Vergleich mit Daten sind notwendig."
+      ],
+      "id": "E.4-08"
+    },
+    {
+      "id": "E.4-verstehen-01",
+      "level": "Einfach",
+      "title": "Innere Ableitung",
+      "question": "Leite f(x)=e^(4x) ab.",
+      "hint": "Die innere Funktion 4x hat Ableitung 4.",
+      "steps": [
+        "f′(x)=4e^(4x).",
+        "Der Faktor 4 stammt aus der Kettenregel."
+      ]
+    },
+    {
+      "id": "E.4-verstehen-02",
+      "level": "Mittel",
+      "title": "Zwei Regeln kombinieren",
+      "question": "Leite f(x)=x·e^(−2x) ab.",
+      "hint": "Produktregel außen, Kettenregel beim Exponentialfaktor.",
+      "steps": [
+        "f′(x)=1·e^(−2x)+x·(−2e^(−2x)).",
+        "Zusammengefasst f′(x)=(1−2x)e^(−2x)."
+      ]
+    },
+    {
+      "id": "E.4-verstehen-03",
+      "level": "Schwierig",
+      "title": "Wachsende Höhe, fallende Rate",
+      "question": "B(t)=10−8e^(−t) für t≥0. Zeige, dass der Bestand steigt, während die Rate fällt.",
+      "hint": "Untersuche die Vorzeichen der ersten beiden Ableitungen.",
+      "steps": [
+        "B′(t)=8e^(−t)>0: Der Bestand steigt.",
+        "B″(t)=−8e^(−t)<0: Die Änderungsrate nimmt ab.",
+        "B(0)=2 und langfristig B→10. Der Graph wird flacher, fällt aber nicht."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Reale Modelle bestehen oft aus mehreren Bausteinen: Zeit mal Abklingfaktor, oder eine Exponentialfunktion mit einer veränderten Zeitskala. Einzelne Ableitungsregeln reichen dann nicht mehr aus.",
+    "idea": "Lies zunächst die Struktur. Werden zwei veränderliche Ausdrücke multipliziert, brauchst du die Produktregel. Steckt eine Funktion in einer anderen, brauchst du die Kettenregel. Bei e^(3x) läuft die innere Eingabe dreimal so schnell; das erklärt den zusätzlichen Faktor 3.",
+    "check": "Darf man (x·eˣ) einfach als 1·eˣ ableiten?",
+    "answer": "Nein. Beide Faktoren ändern sich. Die Produktregel ergibt eˣ+x·eˣ."
+  }
+}

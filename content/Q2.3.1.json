@@ -1,0 +1,188 @@
+{
+  "id": "Q2.3.1",
+  "slug": "gauss-ebenenformen-und-abstaende",
+  "name": "Gauß-Verfahren, Ebenenformen und Abstände",
+  "stage": "Q2",
+  "reference": "Q2.3 · Vertiefung",
+  "lead": "Du löst größere Gleichungssysteme systematisch, wechselst zwischen Ebenenformen und vertiefst im LK Abstandsprobleme.",
+  "prerequisites": "Vektoren, Geraden, Ebenen, lineare Gleichungssysteme",
+  "concepts": [
+    {
+      "title": "Gauß-Verfahren",
+      "explanation": "Vertausche Gleichungen, multipliziere eine Gleichung mit einer Zahl ungleich 0 oder addiere ein Vielfaches einer Gleichung zu einer anderen. Diese Schritte erhalten die Lösungsmenge. Erzeuge eine Stufenform und setze von unten nach oben ein.",
+      "example": "I: x+y+z=6; II: y+2z=8; III: z=3 → y=2, x=1."
+    },
+    {
+      "title": "Wie viele Lösungen?",
+      "explanation": "Eine Zeile 0=5 zeigt einen Widerspruch. Eine Zeile 0=0 enthält keine neue Bedingung. Freie Variablen können eine Gerade oder Ebene als Lösungsmenge erzeugen. Auch bei mehr Gleichungen als Variablen ist eine Lösung möglich.",
+      "example": "Drei Gleichungen bedeuten nicht automatisch genau eine Lösung."
+    },
+    {
+      "title": "Ebenenform wechseln",
+      "explanation": "Aus E:p+ru+sv bestimmst du einen Normalenvektor n durch n·u=0 und n·v=0. Dann gilt n·x=n·p. In Gegenrichtung wählst du zwei freie Variablen und löst die Koordinatengleichung nach der dritten auf.",
+      "example": "x+y+z=3 → (3;0;0)+r(−1;1;0)+s(−1;0;1)."
+    },
+    {
+      "title": "LK: Lot und Abstand",
+      "explanation": "Ein Abstand ist die kürzeste Verbindung. Zum Abstand Punkt–Gerade bestimmst du den Lotfuß auf der Geraden mit einer Orthogonalitätsbedingung. Bei parallelen Ebenen genügt der Abstand eines Punkts der einen Ebene zur anderen.",
+      "example": "Lotfuß F=p+tu: (P−F)·u=0. Danach d=|P−F|."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Stufenform rückwärts",
+      "question": "Löse x+y+z=6, y+2z=8, z=3.",
+      "steps": [
+        "Aus der letzten Zeile z=3.",
+        "In Zeile 2: y+6=8 → y=2.",
+        "Zeile 1: x+2+3=6 → x=1. Lösung (1;2;3)."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Gauß ausführlich",
+      "question": "Löse I: x+y+z=6; II: 2x+y−z=1; III: x−y+2z=5.",
+      "steps": [
+        "II−2I ergibt −y−3z=−11. III−I ergibt −2y+z=−1.",
+        "Neue III minus zweimal neue II: 7z=21 → z=3.",
+        "−y−9=−11 → y=2. Aus I folgt x=1. Probe in allen drei Ausgangsgleichungen bestätigt die Lösung."
+      ]
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Lotfuß auf einer Geraden",
+      "question": "P(1|2|3), g: x=(0;0;0)+t(1;1;0). Bestimme den Abstand.",
+      "steps": [
+        "F=(t;t;0). Orthogonalität: (1−t;2−t;3)·(1;1;0)=3−2t=0.",
+        "t=1,5 → F(1,5|1,5|0).",
+        "P−F=(−0,5;0,5;3); d=√9,5≈3,082 LE."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Rückwärtseinsetzen",
+      "question": "Löse z=2, y−z=1, x+y+z=9.",
+      "steps": [
+        "z=2, y=3, x=4."
+      ],
+      "id": "Q2.3.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Widerspruch",
+      "question": "Was bedeutet eine Gauß-Zeile 0x+0y+0z=4?",
+      "steps": [
+        "Ein Widerspruch: Das gesamte System hat keine Lösung."
+      ],
+      "id": "Q2.3.1-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Freie Variable",
+      "question": "Löse x+y+z=2 und y−z=0.",
+      "steps": [
+        "Setze z=t, dann y=t und x=2−2t.",
+        "Lösungsmenge (2;0;0)+t(−2;1;1), t∈ℝ."
+      ],
+      "id": "Q2.3.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Koordinatenform",
+      "question": "E: x=(1;0;0)+r(1;1;0)+s(0;1;1). Finde eine Koordinatenform.",
+      "steps": [
+        "n=(1;−1;1) ist zu beiden Richtungen orthogonal.",
+        "n·p=1 → E: x−y+z=1."
+      ],
+      "id": "Q2.3.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Ebenenwinkel",
+      "question": "E hat n=(1;0;0), F hat m=(1;1;0). Bestimme den kleineren Schnittwinkel.",
+      "steps": [
+        "cosα=|n·m|/(|n||m|)=1/√2.",
+        "α=45°."
+      ],
+      "id": "Q2.3.1-05"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Parallele Ebenen",
+      "question": "Bestimme den Abstand von E: 2x−y+2z=3 und F: 2x−y+2z=12.",
+      "steps": [
+        "Gleicher Normalenvektor mit Länge 3. Differenz der rechten Seiten 9.",
+        "Abstand 9/3=3 LE. Die einfache Differenzformel setzt gleich skalierte Normalenvektoren voraus."
+      ],
+      "id": "Q2.3.1-06"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Spiegelpunkt",
+      "question": "Spiegele P(1|2|5) an der Ebene z=2.",
+      "steps": [
+        "Lotfuß F(1|2|2).",
+        "P′=2F−P=(1;2;−1). Beide Punkte haben Abstand 3 zur Ebene."
+      ],
+      "id": "Q2.3.1-07"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Windschiefer Abstand",
+      "question": "g ist die x-Achse. h: x=(0;0;3)+t(0;1;0). Bestimme den kürzesten Abstand.",
+      "steps": [
+        "Der Verbindungsvektor (0;0;3) steht zu beiden Richtungen (1;0;0) und (0;1;0) senkrecht.",
+        "Er verbindet Punkte beider Geraden. Daher Abstand 3 LE."
+      ],
+      "id": "Q2.3.1-08"
+    },
+    {
+      "id": "Q2.3.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Rückwärts einsetzen",
+      "question": "Löse z=1, y+2z=5, x+y+z=8.",
+      "hint": "Beginne mit der bereits bestimmten letzten Variablen.",
+      "steps": [
+        "z=1 liefert y=3.",
+        "Dann x+3+1=8, also x=4.",
+        "Lösung (4;3;1)."
+      ]
+    },
+    {
+      "id": "Q2.3.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Freie Variable",
+      "question": "Löse x+y=4 und 2x+2y=8.",
+      "hint": "Die zweite Gleichung enthält keine neue Bedingung.",
+      "steps": [
+        "Die zweite Gleichung ist das Doppelte der ersten.",
+        "Setze y=t. Dann x=4−t, t∈ℝ.",
+        "Es gibt unendlich viele Lösungen, keine eindeutige."
+      ]
+    },
+    {
+      "id": "Q2.3.1-verstehen-03",
+      "level": "Schwierig · LK",
+      "title": "Lotabstand",
+      "question": "Bestimme den Abstand von P(1|2|3) zur Ebene E: z=1 und den Lotfuß.",
+      "hint": "Die kürzeste Verbindung verläuft senkrecht zur Ebene.",
+      "steps": [
+        "Ein Normalenvektor ist (0;0;1). Nur die z-Koordinate ändert sich auf dem Lot.",
+        "Lotfuß F(1|2|1).",
+        "Abstand |3−1|=2 LE."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Mehrere Bedingungen sollen gleichzeitig gelten. Das Gauß-Verfahren ordnet sie so, dass du Unbekannte nacheinander bestimmen kannst. In der Geometrie stehen dahinter oft gemeinsame Punkte von Geraden und Ebenen.",
+    "idea": "Umformen bedeutet, das Gleichungssystem übersichtlicher zu machen, ohne seine Lösungen zu verändern. Eine widersprüchliche Zeile zeigt: Es gibt keine gemeinsame Lösung. Eine Nullzeile allein sagt noch nicht, wie viele freie Variablen bleiben.",
+    "check": "Was bedeutet 0=4 am Ende einer Rechnung?",
+    "answer": "Die Bedingungen sind unvereinbar. Es gibt keine Lösung; 0=4 ist keine Gleichung, aus der man noch einen Parameter bestimmen könnte."
+  }
+}

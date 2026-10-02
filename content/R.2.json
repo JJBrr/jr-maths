@@ -1,0 +1,161 @@
+{
+  "id": "R.2",
+  "slug": "realschule-aehnlichkeit",
+  "name": "Ähnlichkeit und Strahlensätze",
+  "stage": "Realschule",
+  "reference": "RS 10.2",
+  "lead": "Gleiche Form bei anderer Größe: Du nutzt Seitenverhältnisse zum Messen und begründest passende Zuordnungen.",
+  "prerequisites": "Verhältnisse, Dreiecke, Gleichungen",
+  "concepts": [
+    {
+      "title": "Ähnliche Figuren",
+      "explanation": "Ähnliche Figuren haben gleiche entsprechende Winkel und proportional lange entsprechende Seiten. Für Dreiecke reichen zwei übereinstimmende Winkel.",
+      "example": "Wenn a′/a=b′/b=c′/c=k, ist k der Längenfaktor."
+    },
+    {
+      "title": "Richtige Seiten zuordnen",
+      "explanation": "Markiere, welche Seiten den gleichen Winkeln gegenüberliegen. Ein Verhältnis muss überall in derselben Richtung gebildet werden.",
+      "example": "klein/groß muss in beiden Brüchen gleich verwendet werden."
+    },
+    {
+      "title": "Strahlensätze",
+      "explanation": "Zwei Strahlen werden von zwei parallelen Geraden geschnitten. Die entstehenden Dreiecke sind ähnlich. Die Parallelität ist eine notwendige Voraussetzung für diesen Schluss.",
+      "example": "SA/SB=SC/SD=AC/BD bei passender Zuordnung."
+    },
+    {
+      "title": "Flächen und Rauminhalt",
+      "explanation": "Aus einem Längenfaktor k entsteht ein Flächenfaktor k² und ein Volumenfaktor k³. Gleiche Form heißt nicht gleicher Flächeninhalt.",
+      "example": "Doppelte Seitenlänge → vierfache Fläche."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Seiten ergänzen",
+      "question": "Ein Dreieck mit Seiten 3,4,5 wird mit k=2 vergrößert.",
+      "steps": [
+        "Alle Längen mit 2 multiplizieren.",
+        "Neue Seiten 6,8,10."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Schattenmessung",
+      "question": "Ein 1,5 m hoher Stab wirft 2 m Schatten. Gleichzeitig wirft ein Baum 12 m Schatten. Bestimme die Höhe bei ebenem Boden.",
+      "steps": [
+        "Durch gleiche Sonnenrichtung entstehen ähnliche rechtwinklige Dreiecke.",
+        "h/12=1,5/2 → h=9 m."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Flächenfaktor rückwärts",
+      "question": "Zwei ähnliche Figuren haben Flächen 18 und 50 cm². Bestimme den Längenfaktor von klein nach groß.",
+      "steps": [
+        "k²=50/18=25/9.",
+        "k=5/3. Es wird die positive Wurzel genommen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Maßstab",
+      "question": "Ein Modell ist 10 cm lang, das Original 2 m. Bestimme den Maßstab.",
+      "steps": [
+        "2 m=200 cm; 10:200=1:20."
+      ],
+      "id": "R.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Faktor",
+      "question": "Eine Seite wächst von 6 auf 9 cm. Bestimme k.",
+      "steps": [
+        "k=9/6=1,5."
+      ],
+      "id": "R.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Seite",
+      "question": "Ähnliche Dreiecke: 4 cm entsprechen 10 cm. Welcher großen Seite entsprechen 7 cm?",
+      "steps": [
+        "k=10/4=2,5. Gesuchte Seite 17,5 cm."
+      ],
+      "id": "R.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Fläche",
+      "question": "Eine Figur mit Fläche 12 cm² wird mit k=3 vergrößert. Neue Fläche?",
+      "steps": [
+        "12·3²=108 cm²."
+      ],
+      "id": "R.2-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Strahlensatz",
+      "question": "Zwei Dreiecke aus demselben Strahlenursprung haben parallele Grundseiten. Abstände auf einem Strahl 4 und 10 cm; kleine Grundseite 6 cm. Große Grundseite?",
+      "steps": [
+        "Vergrößerungsfaktor 10/4=2,5.",
+        "Große Grundseite 6·2,5=15 cm."
+      ],
+      "id": "R.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Rechtecke",
+      "question": "Sind Rechtecke 2×3 und 4×5 ähnlich?",
+      "steps": [
+        "Nein. Seitenverhältnisse 2/3 und 4/5 sind verschieden.",
+        "Rechte Winkel allein reichen bei Vierecken nicht aus."
+      ],
+      "id": "R.2-06"
+    },
+    {
+      "id": "R.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Faktor finden",
+      "question": "Eine Seite wird von 4 cm auf 10 cm vergrößert. Bestimme den Längenfaktor.",
+      "hint": "Neue Länge geteilt durch alte Länge.",
+      "steps": [
+        "k=10/4=2,5.",
+        "Jede entsprechende Länge wird mit 2,5 multipliziert."
+      ]
+    },
+    {
+      "id": "R.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Schatten messen",
+      "question": "Eine 1,5 m hohe Stange wirft 2 m Schatten. Gleichzeitig ist der Schatten eines Baums 8 m lang. Schätze seine Höhe bei ebenem Boden und parallelen Sonnenstrahlen.",
+      "hint": "Die rechtwinkligen Dreiecke sind ähnlich.",
+      "steps": [
+        "h/8=1,5/2.",
+        "h=8·1,5/2=6 m."
+      ]
+    },
+    {
+      "id": "R.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Fläche rückwärts",
+      "question": "Zwei ähnliche Figuren haben Flächen 18 und 50 cm². Bestimme den Längenfaktor von klein nach groß.",
+      "hint": "Der Flächenfaktor ist das Quadrat des Längenfaktors.",
+      "steps": [
+        "k²=50/18=25/9.",
+        "k=5/3, da Längenfaktoren positiv sind.",
+        "Der Faktor ist nicht 25/9; das wäre der Flächenfaktor."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Realschule",
+  "course": "MSA",
+  "understanding": {
+    "why": "Karten, Modelle und Schattenmessungen benutzen dieselbe Idee: Eine Form bleibt erhalten, während ihre Größe verändert wird. Entsprechende Längen wachsen mit demselben Faktor.",
+    "idea": "Markiere zuerst, welche Seiten zusammengehören. Schreibe alle Verhältnisse in derselben Richtung, zum Beispiel kleine Länge geteilt durch große Länge. Bei Flächen wirkt der Längenfaktor zweimal, bei Volumina dreimal.",
+    "check": "Sind zwei Rechtecke automatisch ähnlich?",
+    "answer": "Nein. Ihre Seitenverhältnisse müssen übereinstimmen. Ein langes schmales Rechteck und ein fast quadratisches haben verschiedene Formen."
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "Q2.4",
+  "slug": "matrizen-und-uebergaenge",
+  "name": "Matrizen und Übergangsprozesse",
+  "stage": "Q2",
+  "reference": "Q2.4 · Wahlthema",
+  "lead": "Du beschreibst wiederholte Wechsel zwischen Zuständen und berechnest langfristige Verteilungen.",
+  "prerequisites": "Lineare Gleichungssysteme, Vektoren, Prozentrechnung",
+  "concepts": [
+    {
+      "title": "Matrix mal Vektor",
+      "explanation": "Jede Ergebnis-Komponente entsteht aus einer Zeile der Matrix und dem Spaltenvektor. Die Anzahl der Matrixspalten muss zur Anzahl der Vektorkomponenten passen.",
+      "example": "[[a,b],[c,d]]·(x;y)=(ax+by;cx+dy)."
+    },
+    {
+      "title": "Konvention festlegen",
+      "explanation": "Hier sind Zustände Spaltenvektoren. Die Spalte j gibt an, wohin Anteile aus Zustand j wechseln. Bei einem geschlossenen Übergangsmodell addiert sich jede Spalte zu 1.",
+      "example": "vₙ₊₁=Mvₙ; M=[[0,8;0,3],[0,2;0,7]] in Zeilenschreibweise."
+    },
+    {
+      "title": "Mehrere Schritte",
+      "explanation": "Für zwei Schritte multiplizierst du zweimal mit derselben Matrix. Die Reihenfolge von Matrizen darf im Allgemeinen nicht vertauscht werden.",
+      "example": "v₂=M²v₀."
+    },
+    {
+      "title": "Stationäre Verteilung",
+      "explanation": "Ein Fixvektor erfüllt Mv=v. Ergänze die bekannte Gesamtsumme, um die Anteile zu bestimmen. Nicht jede Übergangsmatrix konvergiert von jedem Startpunkt zu einer eindeutigen Verteilung.",
+      "example": "Mv=v und v₁+v₂=N."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Ein Schritt",
+      "question": "M hat Zeilen (0,8;0,3) und (0,2;0,7). v₀=(100;0). Berechne v₁.",
+      "steps": [
+        "Erste Zeile: 0,8·100+0,3·0=80.",
+        "Zweite Zeile: 0,2·100+0,7·0=20.",
+        "v₁=(80;20); Summe bleibt 100."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Zwei Schritte",
+      "question": "Berechne für dieselbe Matrix den nächsten Zustand nach (80;20).",
+      "steps": [
+        "Erste Komponente 0,8·80+0,3·20=70.",
+        "Zweite 0,2·80+0,7·20=30.",
+        "v₂=(70;30)."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Gleichgewicht",
+      "question": "Bestimme den Fixvektor mit Summe 100.",
+      "steps": [
+        "0,8a+0,3b=a → 0,2a=0,3b → a=1,5b.",
+        "a+b=100 → 2,5b=100 → b=40, a=60.",
+        "Probe M(60;40)=(60;40)."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Matrixprodukt",
+      "question": "A hat Zeilen (1;2),(3;4). Berechne A·(2;1).",
+      "steps": [
+        "(1·2+2·1;3·2+4·1)=(4;10)."
+      ],
+      "id": "Q2.4-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Dimension",
+      "question": "Kann eine 2×3-Matrix mit einem Vektor aus 3 Komponenten multipliziert werden?",
+      "steps": [
+        "Ja. Das Ergebnis hat 2 Komponenten, eine je Zeile."
+      ],
+      "id": "Q2.4-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Spaltensummen",
+      "question": "M hat Zeilen (0,9;0,4),(0,1;0,6). Prüfe die Erhaltung der Gesamtsumme.",
+      "steps": [
+        "Spalte 1: 0,9+0,1=1; Spalte 2: 0,4+0,6=1.",
+        "Alle Einträge nichtnegativ: ein gültiges geschlossenes Übergangsmodell."
+      ],
+      "id": "Q2.4-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Fixvektor",
+      "question": "Bestimme den Fixvektor mit Summe 100 für diese Matrix.",
+      "steps": [
+        "0,1a=0,4b → a=4b.",
+        "a+b=100 → (a;b)=(80;20)."
+      ],
+      "id": "Q2.4-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Grenze der Aussage",
+      "question": "M vertauscht zwei Zustände: Zeilen (0;1),(1;0). Start (1;0). Konvergiert die Folge?",
+      "steps": [
+        "Sie wechselt zwischen (1;0) und (0;1).",
+        "Nein. Obwohl (0,5;0,5) ein Fixvektor ist, wird er von diesem Start aus nicht erreicht."
+      ],
+      "id": "Q2.4-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Modellkritik",
+      "question": "Was setzt die wiederholte Rechnung vₙ=Mⁿv₀ voraus?",
+      "steps": [
+        "Dass die Übergangsanteile zeitlich gleich bleiben und die Zustände das System passend erfassen.",
+        "Ändert sich das Verhalten, müssen andere Matrizen oder zusätzliche Zustände verwendet werden."
+      ],
+      "id": "Q2.4-06"
+    },
+    {
+      "id": "Q2.4-verstehen-01",
+      "level": "Einfach",
+      "title": "Matrix anwenden",
+      "question": "M hat Zeilen (0,8;0,3) und (0,2;0,7). Berechne M·(100;0).",
+      "hint": "Multipliziere jede Zeile mit dem Vektor.",
+      "steps": [
+        "Erste Komponente 0,8·100+0,3·0=80.",
+        "Zweite Komponente 0,2·100+0,7·0=20.",
+        "Ergebnis (80;20), die Gesamtsumme bleibt 100."
+      ]
+    },
+    {
+      "id": "Q2.4-verstehen-02",
+      "level": "Mittel",
+      "title": "Zweiter Übergang",
+      "question": "Verwende dieselbe Matrix und den Zustand (80;20). Bestimme den nächsten Zustand.",
+      "hint": "Ein Übergang wirkt auch auf die inzwischen gewechselten Personen.",
+      "steps": [
+        "Erste Komponente 0,8·80+0,3·20=70.",
+        "Zweite Komponente 0,2·80+0,7·20=30.",
+        "Neuer Zustand (70;30)."
+      ]
+    },
+    {
+      "id": "Q2.4-verstehen-03",
+      "level": "Schwierig",
+      "title": "Gleichgewicht begründen",
+      "question": "Finde für M mit Zeilen (0,8;0,3),(0,2;0,7) einen stationären Vektor mit Summe 100.",
+      "hint": "Stationär heißt Mv=v.",
+      "steps": [
+        "0,8x+0,3y=x ergibt 0,2x=0,3y, also x=1,5y.",
+        "Mit x+y=100 folgt y=40, x=60.",
+        "Probe: M·(60;40)=(60;40). Es wechseln 12 in jede Richtung."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Wenn Menschen zwischen zwei Angeboten wechseln oder Bestände zwischen Zuständen wandern, beschreibt eine Übergangsmatrix viele Einzelrechnungen auf einmal. Ein Vektor hält fest, wie viele sich gerade in jedem Zustand befinden.",
+    "idea": "Die Bedeutung der Zeilen und Spalten muss zuerst feststehen. Hier geben Spalten den Ausgangszustand an. Bei einem geschlossenen System summiert sich jede Spalte zu 1. Ein stationärer Vektor verändert sich durch einen weiteren Übergang nicht.",
+    "check": "Heißt stationär, dass niemand mehr wechselt?",
+    "answer": "Nein. Es können weiterhin Wechsel stattfinden. Die gegenläufigen Mengen gleichen sich so aus, dass die Gesamtverteilung unverändert bleibt."
+  }
+}

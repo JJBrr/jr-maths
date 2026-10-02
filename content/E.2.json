@@ -1,0 +1,189 @@
+{
+  "id": "E.2",
+  "slug": "ableitung-verstehen",
+  "name": "Änderungsrate, Ableitung und Tangente",
+  "stage": "E-Phase",
+  "reference": "E.2",
+  "lead": "Eine Ableitung misst, wie schnell sich eine Größe an einer bestimmten Stelle verändert. Du verbindest den Grenzwert mit Steigung und Geschwindigkeit.",
+  "prerequisites": "Funktionswerte, Steigung einer Geraden, Bruchterme",
+  "concepts": [
+    {
+      "title": "Durchschnittliche Änderung",
+      "explanation": "Zwischen zwei Stellen misst der Differenzenquotient die mittlere Änderung pro x-Einheit. Geometrisch ist das die Steigung der Sekante durch die beiden Punkte.",
+      "example": "m=(f(b)−f(a))/(b−a), a≠b."
+    },
+    {
+      "title": "Vom Intervall zum Punkt",
+      "explanation": "Für die lokale Änderung lässt du die zweite Stelle an x heranrücken. Wenn die Sekantensteigungen einen Grenzwert besitzen, ist dieser die Ableitung. Du setzt h nicht voreilig gleich 0.",
+      "example": "f′(x)=lim(h→0) [f(x+h)−f(x)]/h."
+    },
+    {
+      "title": "Ableitungsregeln",
+      "explanation": "Konstanten fallen weg. Für ganzzahlige n≥1 gilt (xⁿ)′=n·xⁿ⁻¹. Faktoren bleiben erhalten und Summen werden gliedweise abgeleitet. Die Ableitung ist selbst wieder eine Funktion.",
+      "example": "f(x)=3x⁴−2x+7 → f′(x)=12x³−2."
+    },
+    {
+      "title": "Tangente und Normale",
+      "explanation": "Die Tangente am Punkt x₀ hat die Steigung f′(x₀). Eine Normale steht senkrecht dazu; bei einer nichtwaagerechten Tangente ist ihre Steigung −1/f′(x₀). Ist f′(x₀)=0, ist die Normale die senkrechte Gerade x=x₀.",
+      "example": "t(x)=f′(x₀)(x−x₀)+f(x₀)."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Mittlere Geschwindigkeit",
+      "question": "s(t)=t² beschreibt einen Weg in m, t in s. Bestimme die mittlere Geschwindigkeit zwischen 1 s und 3 s.",
+      "steps": [
+        "s(1)=1 m, s(3)=9 m.",
+        "Δs/Δt=(9−1)/(3−1)=4 m/s.",
+        "Das ist der Durchschnitt in diesem Zeitintervall, nicht jede Momentangeschwindigkeit."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Ableitung aus dem Grenzwert",
+      "question": "Leite f(x)=x² mit dem Differenzenquotienten ab.",
+      "steps": [
+        "[(x+h)²−x²]/h=(2xh+h²)/h=2x+h für h≠0.",
+        "Für h→0 geht 2x+h gegen 2x.",
+        "Daher f′(x)=2x. Das Kürzen geschieht vor der Grenzwertbildung."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Tangente bestimmen",
+      "question": "Bestimme die Tangente an f(x)=x² bei x₀=2.",
+      "steps": [
+        "P(2|4); f′(x)=2x liefert m=4.",
+        "t(x)=4(x−2)+4=4x−4.",
+        "Die Normale hat m=−1/4 und n(x)=−(x−2)/4+4."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Ableiten",
+      "question": "Leite f(x)=5x³−4x²+7 ab.",
+      "steps": [
+        "Potenz- und Summenregel: f′(x)=15x²−8x.",
+        "Die Konstante 7 wird zu 0."
+      ],
+      "id": "E.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Steigung am Punkt",
+      "question": "f(x)=x³. Berechne f′(−2).",
+      "steps": [
+        "f′(x)=3x².",
+        "f′(−2)=3·4=12; der Graph steigt dort."
+      ],
+      "id": "E.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Sekante",
+      "question": "Bestimme für f(x)=x³ die mittlere Änderung auf [1;2].",
+      "steps": [
+        "f(2)=8 und f(1)=1.",
+        "(8−1)/(2−1)=7."
+      ],
+      "id": "E.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Tangente",
+      "question": "Bestimme die Tangente an f(x)=x³ bei x₀=1.",
+      "steps": [
+        "P(1|1), f′(1)=3.",
+        "t(x)=3(x−1)+1=3x−2."
+      ],
+      "id": "E.2-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Normale",
+      "question": "Bestimme die Normale an f(x)=x² bei x₀=1.",
+      "steps": [
+        "P(1|1), Tangentensteigung 2, Normalensteigung −1/2.",
+        "n(x)=−0,5(x−1)+1=−0,5x+1,5."
+      ],
+      "id": "E.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Einheiten erklären",
+      "question": "Ein Tankinhalt V(t) wird in Litern gemessen, t in Minuten. Was bedeutet V′(5)=−3?",
+      "steps": [
+        "Die Einheit ist Liter pro Minute.",
+        "Nach 5 Minuten nimmt der Inhalt momentan mit 3 L/min ab. Der Inhalt selbst ist damit nicht bekannt."
+      ],
+      "id": "E.2-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Grafisch argumentieren",
+      "question": "f steigt zunächst immer steiler, dann weiter, aber flacher. Was sagt das über f′ aus?",
+      "steps": [
+        "Solange f steigt, ist f′ im beschriebenen glatten Verlauf positiv.",
+        "Beim Steilerwerden wächst f′; beim Flacherwerden sinkt f′, bleibt aber zunächst positiv."
+      ],
+      "id": "E.2-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Nicht differenzierbar",
+      "question": "Warum besitzt f(x)=|x| bei x=0 keine Ableitung?",
+      "steps": [
+        "Links ist die Steigung −1, rechts +1.",
+        "Die einseitigen Grenzwerte stimmen nicht überein. Die Spitze hat keine eindeutige Tangentensteigung."
+      ],
+      "id": "E.2-08"
+    },
+    {
+      "id": "E.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Steigung in einer Aussage",
+      "question": "V(t) ist ein Tankinhalt in Litern, t in Minuten. Was sagt V′(2)=4?",
+      "hint": "Die Einheit der Ableitung ist die Einheit der Höhe geteilt durch die der Zeit.",
+      "steps": [
+        "Nach 2 Minuten wächst der Tankinhalt momentan mit 4 L/min.",
+        "Das bedeutet weder V(2)=4 L noch einen zwingend konstanten Zufluss im ganzen Intervall."
+      ]
+    },
+    {
+      "id": "E.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Sekante und Tangente vergleichen",
+      "question": "f(x)=x². Vergleiche die mittlere Steigung auf [1;3] mit f′(1).",
+      "hint": "Für die mittlere Steigung brauchst du zwei Höhen.",
+      "steps": [
+        "Mittlere Steigung: (9−1)/(3−1)=4.",
+        "f′(x)=2x, also f′(1)=2.",
+        "Die Sekante erfasst ein ganzes Intervall; die Tangente nur die lokale Änderung bei 1."
+      ]
+    },
+    {
+      "id": "E.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Tangente durch einen Punkt",
+      "question": "An f(x)=x² soll eine Tangente durch P(0|−4) gehen. Bestimme alle Berührstellen.",
+      "hint": "Die Tangente an der Stelle a ist y=2ax−a².",
+      "steps": [
+        "Für P muss −4=−a² gelten. Also a=−2 oder a=2.",
+        "Die Berührpunkte sind (−2|4) und (2|4).",
+        "Tangenten: y=−4x−4 und y=4x−4."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Eine Autofahrt kann im Durchschnitt 60 Kilometer pro Stunde schnell sein, obwohl das Auto zwischendurch steht oder viel schneller fährt. Der Durchschnitt beschreibt ein Intervall. Die Ableitung beschreibt die Änderung an einer Stelle.",
+    "idea": "Im Graphen ist die Höhe der aktuelle Funktionswert. Die Steigung zeigt, wie stark dieser Wert gerade zunimmt oder abnimmt. Eine Tangente macht die lokale Richtung sichtbar. Ein hoher Punkt kann eine negative Steigung haben.",
+    "check": "Was bedeutet eine waagerechte Tangente?",
+    "answer": "Die momentane Änderungsrate ist null. Der Funktionswert muss nicht null sein, und es muss auch kein Hoch- oder Tiefpunkt vorliegen."
+  }
+}

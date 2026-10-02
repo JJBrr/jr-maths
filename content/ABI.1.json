@@ -1,0 +1,175 @@
+{
+  "id": "ABI.1",
+  "slug": "abitur-analysis",
+  "name": "Abiturtraining: Analysis vernetzen",
+  "stage": "Abiturtraining",
+  "reference": "Q1 / Q2.1 / Q4.1",
+  "lead": "Mehrteilige, eigens erstellte Trainingsaufgaben verbinden Kurvendiskussion, Integral und Parameter. Keine Original-Abituraufgaben und keine vollständige Prüfungssimulation.",
+  "prerequisites": "E-Phase, Q1, Q2.1, Q4.1",
+  "concepts": [
+    {
+      "title": "Arbeitsweise",
+      "explanation": "Lies zuerst alle Teilfragen. Frühere Ergebnisse werden häufig später benötigt. Notiere Definitionsbereich, Einheiten und sinnvolle Genauigkeit. Bei einem Nachweis zählt der Rechenweg.",
+      "example": "Ableitung → Extremstelle → Kontextantwort."
+    },
+    {
+      "title": "Hilfsmittelfrei üben",
+      "explanation": "Rechne zunächst mit exakten Brüchen, e und π. Erst wenn eine Näherung gefragt ist, runde. Ein Taschenrechnerbild ersetzt keine Begründung.",
+      "example": "1−3/e² ist ein exakter Wert."
+    },
+    {
+      "title": "Mit Hilfsmitteln arbeiten",
+      "explanation": "Verwende ein Werkzeug zum Prüfen von Nullstellen oder Integralen. Dokumentiere trotzdem Ansatz, Intervall, Ergebnis und Interpretation. Prüfe, ob ein numerisch gefundener Wert alle Bedingungen erfüllt.",
+      "example": "Eine Nullstelle außerhalb des Sachbereichs wird nicht als Sachlösung übernommen."
+    },
+    {
+      "title": "Selbstkontrolle",
+      "explanation": "Kontrolliere Vorzeichen, Randwerte, Einheiten und Größenordnung. In den Aufgaben werden Zeitvorschläge verwendet; sie sind keine amtlichen Prüfungszeiten.",
+      "example": "Rate in L/min integriert über Minuten ergibt Liter."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Kurzcheck",
+      "question": "f(x)=x³−3x. Gib f′ und die stationären Stellen an.",
+      "steps": [
+        "f′=3x²−3.",
+        "x=±1; den Typ bestimmt erst ein weiterer Nachweis."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Zusammenhänge nutzen",
+      "question": "Was bedeutet f′(2)=0 und f″(2)<0 für einen Bestandsgraphen?",
+      "steps": [
+        "Bei t=2 liegt ein lokales Maximum des Bestands, sofern die üblichen Differenzierbarkeitsvoraussetzungen gelten.",
+        "Es ist keine Aussage über ein Maximum der Zuwachsrate; dafür untersucht man f′."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Parameter und Fläche",
+      "question": "fₐ(x)=ax(2−x), a>0. Bestimme a für Flächeninhalt 8 zwischen den Nullstellen.",
+      "steps": [
+        "Nullstellen 0 und 2; Graph liegt dazwischen oberhalb der Achse.",
+        "A=a∫₀²(2x−x²)dx=a·4/3.",
+        "a·4/3=8 → a=6."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Mittel",
+      "title": "Training A · Kurve (ca. 15 min)",
+      "question": "f(x)=x³−3x. a) Bestimme Nullstellen, Extrema und Wendepunkt. b) Bestimme die Tangente im Wendepunkt.",
+      "steps": [
+        "a) x(x²−3)=0 → x=−√3,0,√3.",
+        "f′=3x²−3; f″=6x. Hochpunkt (−1|2), Tiefpunkt (1|−2).",
+        "f″=0 bei 0 und f‴=6: W(0|0).",
+        "b) f′(0)=−3 → t(x)=−3x."
+      ],
+      "id": "ABI.1-01"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training A · Fläche und Begründung (ca. 15 min)",
+      "question": "Zur Funktion x³−3x: a) Berechne die Fläche zwischen Graph und x-Achse von 0 bis √3. b) Begründe, warum das Integral von −√3 bis √3 null ist.",
+      "steps": [
+        "a) Auf (0;√3) ist f negativ. F=x⁴/4−3x²/2.",
+        "Integral F(√3)−F(0)=9/4−9/2=−9/4. Fläche 9/4 FE.",
+        "b) f ist ungerade und das Intervall symmetrisch. Positive und negative Beiträge heben sich auf; die gesamte geometrische Fläche ist 9/2 FE."
+      ],
+      "id": "ABI.1-02"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training B · Zufluss (ca. 20 min)",
+      "question": "r(t)=8te^(−t) L/min für t≥0. a) Wann ist der Zufluss am größten? b) Zeige, dass R(t)=−8(t+1)e^(−t) eine Stammfunktion ist. c) Bestimme den Zufluss von 0 bis 2 min.",
+      "steps": [
+        "a) r′=8(1−t)e^(−t); Wechsel von + zu − bei t=1. Maximum 8/e≈2,943 L/min.",
+        "b) R′=−8e^(−t)+8(t+1)e^(−t)=8te^(−t).",
+        "c) R(2)−R(0)=8−24e^(−2)≈4,752 L."
+      ],
+      "id": "ABI.1-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training B · Bestand und Modell (ca. 15 min)",
+      "question": "Zum Zufluss r(t)=8te^(−t): Anfangsbestand 10 L, keine Abflüsse. a) Gib B(t) an. b) Welchem Bestand nähert sich der Tank? c) Kann dieses Modell Überlaufen bei 15 L Kapazität ausschließen?",
+      "steps": [
+        "a) B(t)=10+∫₀ᵗr(s)ds=18−8(t+1)e^(−t).",
+        "b) (t+1)e^(−t)→0, deshalb B→18 L.",
+        "c) Nein. B steigt stetig von 10 in Richtung 18 und überschreitet irgendwann 15. Ab dort muss ein Modell ohne Überlauf angepasst werden."
+      ],
+      "id": "ABI.1-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Training C · Schar (ca. 20 min)",
+      "question": "fₐ(x)=x³−3a²x, a>0. a) Bestimme die Extrempunkte. b) Berechne das Integral auf [−a;a]. c) Ist die geometrische Fläche dort null?",
+      "steps": [
+        "a) fₐ′=3x²−3a²; x=±a. fₐ″=6x. H(−a|2a³), T(a|−2a³).",
+        "b) Wegen ungerader Symmetrie Integral 0.",
+        "c) Nein. Auf [0;a] ist f≤0. Integral dort a⁴/4−3a⁴/2=−5a⁴/4.",
+        "Gesamtfläche 2·5a⁴/4=5a⁴/2."
+      ],
+      "id": "ABI.1-05"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Training C · Ortskurve (ca. 10 min)",
+      "question": "Bestimme die Ortskurven der Hoch- und Tiefpunkte der Schar x³−3a²x, a>0.",
+      "steps": [
+        "Tiefpunkte: x=a>0, y=−2a³ → y=−2x³ für x>0.",
+        "Hochpunkte: x=−a<0, y=2a³=−2x³ → gleiche Gleichung für x<0.",
+        "Der Ursprung gehört bei a>0 nicht zu den Extrempunkten."
+      ],
+      "id": "ABI.1-06"
+    },
+    {
+      "id": "ABI.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Frage dem Werkzeug zuordnen",
+      "question": "Ein Bestand B(t) ist gegeben. Welche Rechnung beantwortet „Wie schnell ändert er sich bei t=2?“ und welche „Wie viel ist bei t=2 vorhanden?“?",
+      "hint": "Bestand und Rate sind verschiedene Größen.",
+      "steps": [
+        "Die momentane Änderung liefert B′(2).",
+        "Den vorhandenen Bestand liefert B(2). Die Einheiten unterscheiden sich um die Zeiteinheit."
+      ]
+    },
+    {
+      "id": "ABI.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Rate aufsummieren",
+      "question": "B(0)=10 und B′(t)=6t−3 für 0≤t≤2. Bestimme B(2) und den Zeitpunkt des kleinsten Bestands.",
+      "hint": "Das Vorzeichen der Rate bestimmt Steigen oder Fallen.",
+      "steps": [
+        "B(t)=10+3t²−3t, also B(2)=16.",
+        "B′=0 bei t=1/2, mit Wechsel von negativ zu positiv.",
+        "Der kleinste Bestand ist B(1/2)=37/4=9,25."
+      ]
+    },
+    {
+      "id": "ABI.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Graph und Integral vernetzen",
+      "question": "f(x)=x³−3x. Berechne die geometrische Fläche zwischen Kurve und x-Achse auf [−√3;√3]. Warum ist das Integral trotzdem null?",
+      "hint": "Nutze Punktsymmetrie und trenne an der Nullstelle 0.",
+      "steps": [
+        "Auf [0;√3] ist f≤0. Eine Stammfunktion ist F=x⁴/4−3x²/2.",
+        "F(√3)−F(0)=−9/4; die rechte Fläche ist also 9/4.",
+        "Links liegt die gleich große Fläche oberhalb. Gesamtfläche 9/2 FE, Integral 0."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Abituraufgaben verbinden mehrere Ideen: Eine Kurve beschreiben, eine Rate deuten und eine Gesamtänderung berechnen. Der erste Schritt ist deshalb nicht die längste Rechnung, sondern die richtige Frage an das Modell.",
+    "idea": "Markiere, welche Größe gegeben und welche gesucht ist. Bestand → Höhe, Änderungsrate → Ableitung, aufsummierte Änderung → Integral. Diese Zuordnung hilft, auch bei einer ungewohnten Geschichte den mathematischen Kern zu erkennen.",
+    "check": "Wann suchst du das Maximum von f und wann das von f′?",
+    "answer": "Das hängt von der Sachfrage ab. Der größte Bestand liegt bei einem Maximum von f; die größte Zunahme pro Zeit bei einem Maximum von f′."
+  }
+}

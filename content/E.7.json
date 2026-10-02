@@ -1,0 +1,162 @@
+{
+  "id": "E.7",
+  "slug": "folgen-und-reihen",
+  "name": "Folgen, Summen und Grenzwerte",
+  "stage": "E-Phase",
+  "reference": "E.7 · Wahlthema",
+  "lead": "Folgen beschreiben geordnete Zahlenlisten. Du unterscheidest feste Differenzen von festen Faktoren und verstehst unendliche Summen.",
+  "prerequisites": "Potenzen, Brüche, lineares und exponentielles Wachstum",
+  "concepts": [
+    {
+      "title": "Arithmetische Folge",
+      "explanation": "Zwischen aufeinanderfolgenden Gliedern liegt dieselbe Differenz d. Lege fest, ob die Zählung bei 0 oder 1 beginnt.",
+      "example": "aₙ=a₁+(n−1)d für n≥1."
+    },
+    {
+      "title": "Geometrische Folge",
+      "explanation": "Aufeinanderfolgende Glieder entstehen durch Multiplikation mit q. Dies ist die diskrete Form exponentiellen Wachstums.",
+      "example": "aₙ=a₁qⁿ⁻¹."
+    },
+    {
+      "title": "Endliche Summen",
+      "explanation": "Eine Reihe ist die Summe von Folgengliedern. Arithmetische Summen nutzt du etwa bei gleichmäßig steigenden Beträgen; geometrische bei wiederholter Skalierung.",
+      "example": "Sₙ=n(a₁+aₙ)/2; geometrisch Sₙ=a₁(1−qⁿ)/(1−q) für q≠1."
+    },
+    {
+      "title": "Grenzwert",
+      "explanation": "Eine Folge konvergiert, wenn ihre Werte einem festen Wert beliebig nahe kommen und nahe bleiben. Für |q|<1 verschwindet qⁿ im Grenzwert.",
+      "example": "1+1/2+1/4+…=2; die Partialsummen nähern sich 2."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Feste Differenz",
+      "question": "Bestimme das 10. Glied von 3,7,11,… .",
+      "steps": [
+        "a₁=3, d=4.",
+        "a₁₀=3+9·4=39."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Summe",
+      "question": "Addiere die Zahlen 1 bis 100.",
+      "steps": [
+        "S=100(1+100)/2.",
+        "S=5050. Paarweise haben die äußeren Summanden stets die Summe 101."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Unendliche Summe",
+      "question": "Berechne 3+1,5+0,75+… .",
+      "steps": [
+        "Geometrische Reihe mit a₁=3 und q=1/2.",
+        "Weil |q|<1: S=3/(1−1/2)=6."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Folge fortsetzen",
+      "question": "Gib die nächsten zwei Glieder von 2,6,18,… an.",
+      "steps": [
+        "Jeweils Faktor 3: 54 und 162."
+      ],
+      "id": "E.7-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Explizite Form",
+      "question": "a₁=5, d=−2. Bestimme a₆.",
+      "steps": [
+        "a₆=5+5·(−2)=−5."
+      ],
+      "id": "E.7-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Geometrisch",
+      "question": "a₁=4, q=2. Berechne a₅ und S₅.",
+      "steps": [
+        "a₅=4·2⁴=64.",
+        "S₅=4+8+16+32+64=124."
+      ],
+      "id": "E.7-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Grenzwert",
+      "question": "Bestimme lim(n→∞)(3+2/n).",
+      "steps": [
+        "2/n→0, daher Grenzwert 3."
+      ],
+      "id": "E.7-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Keine Konvergenz",
+      "question": "Warum konvergiert (−1)ⁿ nicht?",
+      "steps": [
+        "Die Werte wechseln zwischen −1 und 1.",
+        "Sie bleiben nicht beliebig nahe bei einem einzigen Wert."
+      ],
+      "id": "E.7-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Sprungball",
+      "question": "Ein Ball fällt zunächst 2 m und erreicht nach jedem Aufprall 1/2 der vorherigen Höhe. Welche Gesamtstrecke legt er idealisiert zurück?",
+      "steps": [
+        "Erster Fall 2 m, danach Auf- und Abwege: 2·(1+1/2+1/4+…).",
+        "Geometrische Reihe =2, daher Strecke 2+2·2=6 m. Das ist ein idealisiertes unendliches Modell."
+      ],
+      "id": "E.7-06"
+    },
+    {
+      "id": "E.7-verstehen-01",
+      "level": "Einfach",
+      "title": "Index sauber lesen",
+      "question": "aₙ=3·2ⁿ für n≥0. Bestimme a₀, a₁ und a₂.",
+      "hint": "Setze die Schrittzahlen nacheinander ein.",
+      "steps": [
+        "a₀=3·1=3, a₁=6 und a₂=12.",
+        "Die Zählung beginnt hier bei 0."
+      ]
+    },
+    {
+      "id": "E.7-verstehen-02",
+      "level": "Mittel",
+      "title": "Endliche Summe",
+      "question": "Addiere die ersten fünf Glieder der Folge 2,6,18,… .",
+      "hint": "Der Faktor ist 3, aber gefragt ist die Summe.",
+      "steps": [
+        "Die fünf Glieder sind 2,6,18,54,162.",
+        "Die Summe beträgt 242. Das fünfte Glied allein ist 162."
+      ]
+    },
+    {
+      "id": "E.7-verstehen-03",
+      "level": "Schwierig",
+      "title": "Grenze und Einzelwerte",
+      "question": "aₙ=2+(−1)ⁿ/n für n≥1. Beschreibe das Verhalten und den Grenzwert.",
+      "hint": "Der wechselnde Zusatz wird betragsmäßig kleiner.",
+      "steps": [
+        "Gerade n liefern Werte über 2, ungerade n Werte unter 2.",
+        "Der Abstand zu 2 ist 1/n und geht gegen 0.",
+        "Die Folge konvergiert trotz des Wechsels gegen 2."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Sparbeträge pro Monat oder die Sprunghöhen eines Balls bilden geordnete Zahlenfolgen. Anders als eine kontinuierliche Kurve verwenden sie einzelne, meist ganzzahlige Schrittzahlen.",
+    "idea": "Unterscheide das einzelne Folgenglied von der Summe der bisherigen Glieder. Ein Grenzwert beschreibt, welchem Wert sich eine Folge langfristig nähert. Eine unendliche Summe kann endlich sein, wenn die Beiträge ausreichend schnell kleiner werden.",
+    "check": "Ist das fünfte Folgenglied dasselbe wie die Summe der ersten fünf?",
+    "answer": "Nein. Das Folgenglied ist ein einzelner Wert. Für die Summe addierst du fünf Werte."
+  }
+}

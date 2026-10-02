@@ -1,0 +1,162 @@
+{
+  "id": "Q4.3",
+  "slug": "komplexe-zahlen",
+  "name": "Komplexe Zahlen entdecken",
+  "stage": "Q4",
+  "reference": "Q4.3 · Wahlthema",
+  "lead": "Du erweiterst die reellen Zahlen, damit auch Gleichungen wie x²+1=0 lösbar werden.",
+  "prerequisites": "Quadratische Gleichungen, Koordinaten, Trigonometrie",
+  "concepts": [
+    {
+      "title": "Die neue Einheit i",
+      "explanation": "Die imaginäre Einheit erfüllt i²=−1. Eine komplexe Zahl hat die Form z=a+bi mit reellen a,b. a ist Realteil, b Imaginärteil.",
+      "example": "z=3+2i → Re(z)=3, Im(z)=2."
+    },
+    {
+      "title": "Rechnen",
+      "explanation": "Addiere Real- und Imaginärteile getrennt. Beim Multiplizieren verwendest du die üblichen Klammerregeln und ersetzt i² durch −1.",
+      "example": "(1+i)²=1+2i+i²=2i."
+    },
+    {
+      "title": "Konjugierte und Betrag",
+      "explanation": "Die konjugierte Zahl spiegelt den Imaginärteil. Das Produkt z·z̄ ist reell und gleich dem Quadrat des Betrags. Dies hilft bei der Division.",
+      "example": "z̄=a−bi; |z|=√(a²+b²)."
+    },
+    {
+      "title": "Geometrische Sicht",
+      "explanation": "Komplexe Zahlen sind Punkte in einer Ebene. Der Betrag ist der Abstand zum Ursprung, das Argument der Winkel zur positiven reellen Achse. Multiplikation verbindet Drehung und Streckung.",
+      "example": "z=r(cosφ+i sinφ); Multiplikation mit i dreht um 90°."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Addieren",
+      "question": "Berechne (2+3i)+(4−i).",
+      "steps": [
+        "Realteile: 2+4=6; Imaginärteile: 3−1=2.",
+        "Ergebnis 6+2i."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Multiplizieren",
+      "question": "Berechne (2+i)(3−2i).",
+      "steps": [
+        "6−4i+3i−2i².",
+        "Mit i²=−1 folgt 8−i."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Dividieren",
+      "question": "Berechne 1/(1+i).",
+      "steps": [
+        "Erweitern mit 1−i: (1−i)/((1+i)(1−i)).",
+        "Nenner 1−i²=2. Ergebnis (1−i)/2."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Potenzen",
+      "question": "Berechne i², i³, i⁴.",
+      "steps": [
+        "−1, −i, 1. Danach wiederholt sich das Muster."
+      ],
+      "id": "Q4.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Betrag",
+      "question": "Bestimme |3+4i|.",
+      "steps": [
+        "√(9+16)=5."
+      ],
+      "id": "Q4.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Gleichung",
+      "question": "Löse z²=−9 in ℂ.",
+      "steps": [
+        "z=3i oder z=−3i."
+      ],
+      "id": "Q4.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Produkt",
+      "question": "Berechne (2+i)(2−i).",
+      "steps": [
+        "4−i²=5. Es ist das Betragsquadrat."
+      ],
+      "id": "Q4.3-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Quadratisch",
+      "question": "Löse z²−2z+5=0.",
+      "steps": [
+        "(z−1)²=−4.",
+        "z=1±2i."
+      ],
+      "id": "Q4.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Drehung",
+      "question": "Was wird aus z=2+i durch Multiplikation mit i?",
+      "steps": [
+        "iz=2i+i²=−1+2i.",
+        "Der Punkt (2|1) wird um 90° gegen den Uhrzeigersinn zu (−1|2) gedreht."
+      ],
+      "id": "Q4.3-06"
+    },
+    {
+      "id": "Q4.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Real- und Imaginärteil",
+      "question": "Nenne Realteil, Imaginärteil und konjugierte Zahl von z=2−3i.",
+      "hint": "Der Imaginärteil ist der reelle Koeffizient vor i.",
+      "steps": [
+        "Re(z)=2 und Im(z)=−3.",
+        "Die konjugierte Zahl ist 2+3i."
+      ]
+    },
+    {
+      "id": "Q4.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Komplex dividieren",
+      "question": "Berechne (1+i)/(1−i).",
+      "hint": "Erweitere mit der konjugierten Zahl des Nenners.",
+      "steps": [
+        "Erweitern mit 1+i: Zähler (1+i)²=2i.",
+        "Nenner (1−i)(1+i)=1−i²=2.",
+        "Der Quotient ist i."
+      ]
+    },
+    {
+      "id": "Q4.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Drehung und Betrag",
+      "question": "z=3+4i. Berechne iz und begründe, dass der Betrag erhalten bleibt.",
+      "hint": "Nutze i²=−1 und die geometrische Bedeutung.",
+      "steps": [
+        "iz=3i+4i²=−4+3i.",
+        "Vorheriger Betrag √(3²+4²)=5; neuer Betrag √((−4)²+3²)=5.",
+        "Multiplikation mit i dreht um 90° gegen den Uhrzeigersinn, ohne zu strecken."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Die Gleichung x²=−1 hat keine reelle Lösung. Mit der Zahl i erweitert man den Zahlenbereich so, dass solche Gleichungen lösbar werden. Eine komplexe Zahl lässt sich als Punkt in einer Ebene darstellen.",
+    "idea": "Die waagerechte Achse zeigt den Realteil, die senkrechte den Imaginärteil. Dieser Zahlenplan ist kein Funktionsgraph y=f(x). Der Betrag misst den Abstand zum Ursprung, und Multiplikation mit i beschreibt eine Vierteldrehung.",
+    "check": "Ist der Betrag von 3+4i gleich 7?",
+    "answer": "Nein. Real- und Imaginärteil stehen senkrecht zueinander. Mit Pythagoras erhältst du √(3²+4²)=5."
+  }
+}

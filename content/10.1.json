@@ -1,0 +1,276 @@
+{
+  "id": "10.1",
+  "slug": "potenz-und-wurzelfunktionen",
+  "name": "Potenz- und Wurzelfunktionen",
+  "lead": "Potenzen sicher rechnen, Graphen lesen und Wurzeln als Umkehrung verstehen.",
+  "time": "30 Unterrichtsstunden im G9-Lehrplan",
+  "concepts": [
+    {
+      "title": "1 · Potenzgesetze",
+      "explanation": "Bei gleicher Basis werden beim Multiplizieren die Exponenten addiert und beim Dividieren subtrahiert. Für a ≠ 0 gilt: a⁰ = 1 und a⁻ⁿ = 1/aⁿ.",
+      "example": "a³ · a² = a⁵ ··· a³/a² = a"
+    },
+    {
+      "title": "2 · Rationale Exponenten",
+      "explanation": "Der Nenner beschreibt die Wurzel, der Zähler die Potenz: a^(m/n) = (ⁿ√a)^m. Bei geradem Wurzelexponenten muss die Basis für reelle Ergebnisse nichtnegativ sein.",
+      "example": "27^(2/3) = (∛27)² = 9"
+    },
+    {
+      "title": "3 · Potenzfunktionen",
+      "explanation": "Bei x² und x⁴ ist der Graph achsensymmetrisch zur y-Achse; bei x³ punktsymmetrisch zum Ursprung. Negative Exponenten schließen x = 0 aus.",
+      "example": "f(x)=x² ··· g(x)=x³"
+    },
+    {
+      "title": "4 · Gleichungen und Umkehrung",
+      "explanation": "x⁴ = 16 hat zwei reelle Lösungen. Um x² umzukehren, wird der Definitionsbereich auf x ≥ 0 beschränkt; die Umkehrfunktion ist dann √x.",
+      "example": "x⁴=16 → x=−2 oder x=2"
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Vorzeichen lesen",
+      "question": "Berechne (−3)² und −3².",
+      "solution": "Die Klammer gehört beim ersten Ausdruck zur Basis: (−3)² = (−3)·(−3) = 9. Beim zweiten gilt Potenz vor Vorzeichen: −3² = −(3²) = −9.",
+      "id": "10.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Produkt potenzieren",
+      "question": "Vereinfache (2a³)².",
+      "solution": "Potenz auf jeden Faktor anwenden: 2²·(a³)² = 4a⁶.",
+      "id": "10.1-02"
+    },
+    {
+      "level": "Einfach",
+      "title": "Negative Exponenten",
+      "question": "Vereinfache x⁵·x⁻².",
+      "solution": "Gleiche Basis: Exponenten addieren. x⁵·x⁻² = x³. Der Ausgangsterm verlangt x ≠ 0.",
+      "id": "10.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wurzel und Potenz",
+      "question": "Berechne 16^(3/4).",
+      "solution": "Vierte Wurzel von 16 ist 2; anschließend 2³ = 8. Also 16^(3/4) = 8.",
+      "id": "10.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Rationale Exponenten",
+      "question": "Berechne 27^(2/3).",
+      "solution": "Dritte Wurzel aus 27 ist 3; danach quadrieren: 3² = 9.",
+      "id": "10.1-05"
+    },
+    {
+      "level": "Mittel",
+      "title": "Potenzgleichung",
+      "question": "Löse x⁴ = 81 in ℝ.",
+      "solution": "3⁴ = 81 und (−3)⁴ = 81. Die Lösungsmenge ist {−3, 3}.",
+      "id": "10.1-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Graph untersuchen",
+      "question": "Für f(x) = −2x² + 1: Berechne f(−2) und nenne die Symmetrie.",
+      "solution": "f(−2) = −2·(−2)² + 1 = −8 + 1 = −7. Weil f(−x) = f(x), ist der Graph zur y-Achse symmetrisch.",
+      "id": "10.1-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Umkehrfunktion",
+      "question": "Warum ist f(x)=x² auf ganz ℝ nicht umkehrbar? Was hilft?",
+      "solution": "f(2)=f(−2)=4: Ein y-Wert gehört zu zwei x-Werten. Beschränke auf x≥0; dann ist f eindeutig und die Umkehrfunktion √x.",
+      "id": "10.1-08"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Negative Potenzfunktion",
+      "question": "Beschreibe den Definitionsbereich und das Verhalten von f(x)=x⁻².",
+      "solution": "f(x)=1/x² ist nur für x≠0 definiert. Der Graph ist y-achsensymmetrisch, nahe x=0 wächst er unbegrenzt; für große |x| nähert er sich 0.",
+      "id": "10.1-09"
+    },
+    {
+      "level": "Einfach",
+      "title": "Nullter Exponent",
+      "question": "Berechne 7⁰ und erkläre die Regel.",
+      "steps": [
+        "7⁰=1. Für a≠0 gilt aⁿ/aⁿ=1=aⁿ⁻ⁿ=a⁰."
+      ],
+      "id": "10.1-neu-01"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wurzel und Betrag",
+      "question": "Vereinfache √(x²) für alle reellen x.",
+      "steps": [
+        "Das Ergebnis ist |x|, weil die Quadratwurzel nichtnegativ ist.",
+        "Für x=−3: √9=3, nicht −3."
+      ],
+      "id": "10.1-neu-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wurzelgleichung",
+      "question": "Löse √(x+1)=x−1.",
+      "steps": [
+        "Zunächst x−1≥0 → x≥1. Quadrieren: x+1=x²−2x+1.",
+        "x²−3x=0 → x=0 oder 3. Nur x=3 erfüllt x≥1 und die Ausgangsgleichung."
+      ],
+      "id": "10.1-neu-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Substitution",
+      "question": "Löse x⁴−5x²+4=0.",
+      "steps": [
+        "u=x²≥0: u²−5u+4=(u−1)(u−4)=0.",
+        "u=1 oder 4 → x=−2,−1,1,2."
+      ],
+      "id": "10.1-neu-04"
+    },
+    {
+      "id": "10.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Brüche als Potenzen lesen",
+      "question": "Berechne 8^(1/3) und 9^(1/2).",
+      "hint": "Der Nenner im Exponenten nennt die Wurzel.",
+      "steps": [
+        "8^(1/3)=∛8=2, denn 2³=8.",
+        "9^(1/2)=√9=3, denn 3²=9. Die Wurzel bezeichnet jeweils den nichtnegativen Wert."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Kürzen mit Bedingungen",
+      "question": "Vereinfache (6x⁵)/(3x²) und nenne die Bedingung.",
+      "hint": "Teile die Zahlenfaktoren und subtrahiere die Exponenten.",
+      "steps": [
+        "6/3=2 und x⁵/x²=x³.",
+        "Ergebnis 2x³, aber nur für x≠0. Der ursprüngliche Nenner war bei 0 nicht definiert."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Formel aus zwei Eigenschaften",
+      "question": "Eine Funktion f(x)=ax²+b hat f(0)=3 und f(2)=−5. Bestimme a und b und beschreibe den Graphen.",
+      "hint": "Nutze zuerst x=0, weil der quadratische Term dann verschwindet.",
+      "steps": [
+        "f(0)=b=3.",
+        "4a+3=−5 ergibt a=−2. Also f(x)=−2x²+3.",
+        "Der Graph ist nach unten geöffnet und y-achsensymmetrisch. Sein höchster Punkt ist (0|3)."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-04",
+      "level": "Einfach",
+      "title": "Ein Punkt ist eine Aussage",
+      "question": "Liegt P(−3|9) auf dem Graphen von f(x)=x²? Begründe.",
+      "hint": "Setze die erste Koordinate ein und vergleiche mit der zweiten.",
+      "steps": [
+        "f(−3)=(−3)²=9.",
+        "Die berechnete Höhe stimmt mit der zweiten Koordinate überein. P liegt auf dem Graphen."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-05",
+      "level": "Einfach",
+      "title": "Kehrwert statt Minuszeichen",
+      "question": "Berechne 5⁻² und vergleiche mit −5².",
+      "hint": "Ein Minus im Exponenten führt zum Kehrwert.",
+      "steps": [
+        "5⁻²=1/5²=1/25.",
+        "−5²=−(5²)=−25. Die Schreibweisen haben völlig verschiedene Bedeutungen."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-06",
+      "level": "Mittel",
+      "title": "Potenzen clever bündeln",
+      "question": "Vereinfache 4¹⁰·3⁵ zu einer einzigen fünften Potenz.",
+      "hint": "Schreibe 4¹⁰ als Potenz mit Exponent 5.",
+      "steps": [
+        "4¹⁰=(4²)⁵=16⁵.",
+        "16⁵·3⁵=(16·3)⁵=48⁵. Bei gleichem Exponenten dürfen die Basen multipliziert werden."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-07",
+      "level": "Mittel",
+      "title": "Höhe rückwärts lesen",
+      "question": "Für f(x)=x²: Welche Eingaben liefern den Wert 9, und warum sind es zwei?",
+      "hint": "Suche die Schnittpunkte mit der waagerechten Linie y=9.",
+      "steps": [
+        "x²=9 hat x=−3 und x=3 als Lösungen.",
+        "Die Parabel ist zur y-Achse symmetrisch. Die Gerade y=9 schneidet sie auf beiden Seiten."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-08",
+      "level": "Schwierig",
+      "title": "Potenzen und Definitionsbereich",
+      "question": "Löse x⁻²=1/9 in ℝ.",
+      "hint": "Schreibe zuerst den Kehrwert und schließe x=0 aus.",
+      "steps": [
+        "Für x≠0 wird die Gleichung zu 1/x²=1/9.",
+        "Multiplikation mit 9x² ergibt x²=9.",
+        "x=−3 oder x=3. Beide Werte erfüllen die ursprüngliche Gleichung."
+      ]
+    },
+    {
+      "id": "10.1-verstehen-09",
+      "level": "Schwierig",
+      "title": "Kehrwertgraph verstehen",
+      "question": "Für f(x)=1/x²: Vergleiche f(1), f(2), f(4). Was geschieht beim Verdoppeln eines positiven x-Werts?",
+      "hint": "Denke daran, dass sich der gesamte Nenner quadriert.",
+      "steps": [
+        "Die Werte sind 1, 1/4 und 1/16.",
+        "Es gilt f(2x)=1/(4x²)=f(x)/4. Der Funktionswert wird beim Verdoppeln geviertelt.",
+        "Die Werte bleiben positiv und nähern sich für große x der x-Achse, ohne sie zu erreichen."
+      ]
+    }
+  ],
+  "stage": "Klasse 10",
+  "track": "Gymnasium",
+  "course": "G9",
+  "reference": "G9 10.1",
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Klammer zuerst verstehen",
+      "question": "Vergleiche (−2)⁴, −2⁴ und (2·3)³.",
+      "steps": [
+        "(−2)⁴=16, aber −2⁴=−(2⁴)=−16.",
+        "(2·3)³=6³=216. Alternativ 2³·3³=8·27=216. Beide Wege sind zulässig."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Potenzregeln kombinieren",
+      "question": "Vereinfache (3x²)²/x³.",
+      "steps": [
+        "Zähler 9x⁴; dann 9x⁴/x³=9x.",
+        "Die ursprüngliche Bedingung x≠0 bleibt bestehen."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Rationale Potenz lösen",
+      "question": "Löse x^(2/3)=4 für reelle x, mit x^(2/3)=(∛x)².",
+      "steps": [
+        "Setze u=∛x. Dann u²=4, also u=±2.",
+        "Zurück: x=u³=8 oder −8. Beide Werte erfüllen die Gleichung."
+      ]
+    }
+  ],
+  "prerequisites": "Grundrechenarten, Terme, Gleichungen und passende Grundlagen aus Klasse 9",
+  "note": "G9-Orientierung; die konkrete Reihenfolge richtet sich nach dem Schulcurriculum.",
+  "understanding": {
+    "why": "Warum schreibt man eine riesige Zahl lieber als Potenz? Weil man dadurch erkennt, wie sie entsteht: 2⁵ bedeutet fünf Faktoren 2. Potenzen beschreiben auch Zusammenhänge: Verdoppelst du die Seitenlänge eines Quadrats, vervierfacht sich seine Fläche. Der Graph von x² macht diesen Unterschied sichtbar.",
+    "idea": "Ein Exponent ist eine Rechenanweisung. Ein negativer Exponent führt zum Kehrwert; ein Bruch im Exponenten verbindet Wurzel und Potenz. Bei 27^(2/3) sagt die 3: Ziehe die dritte Wurzel. Die 2 sagt: Quadriere das Ergebnis. Nenner unten, Zähler oben – genauso wie auf deinem Blatt.",
+    "check": "Ist 2⁻³ eine negative Zahl?",
+    "answer": "Nein. 2⁻³=1/2³=1/8. Das Minus im Exponenten beschreibt den Kehrwert, nicht das Vorzeichen des Ergebnisses."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "R.4",
+  "slug": "realschule-potenzen-und-wachstum",
+  "name": "Realschule: Potenzen und Wachstum",
+  "stage": "Realschule",
+  "reference": "RS 10.4",
+  "lead": "Du rechnest mit Potenzen, stellst große und kleine Zahlen dar und modellierst wiederholte prozentuale Änderungen.",
+  "prerequisites": "Prozentrechnung, Gleichungen",
+  "concepts": [
+    {
+      "title": "Potenzen sicher anwenden",
+      "explanation": "Eine Potenz beschreibt wiederholtes Multiplizieren. Bei gleichen Basen werden Exponenten beim Multiplizieren addiert. Potenzieren eines Produkts wirkt auf jeden Faktor.",
+      "example": "aᵐaⁿ=aᵐ⁺ⁿ; (ab)ⁿ=aⁿbⁿ."
+    },
+    {
+      "title": "Wurzeln und negative Exponenten",
+      "explanation": "Ein negativer Exponent bildet den Kehrwert; die Basis darf dann nicht 0 sein. Eine gerade Wurzel bezeichnet die nichtnegative Hauptwurzel.",
+      "example": "2⁻³=1/8; √25=5, aber x²=25 hat x=±5."
+    },
+    {
+      "title": "Wissenschaftliche Schreibweise",
+      "explanation": "Du schreibst eine Zahl als a·10ⁿ mit 1≤|a|<10. Beim Verschieben des Kommas ändert sich der Exponent entsprechend.",
+      "example": "0,00042=4,2·10⁻⁴."
+    },
+    {
+      "title": "Wiederholte Änderung",
+      "explanation": "Der Prozentfaktor wirkt in jeder Periode auf den neuen Bestand. Bei Zinseszins oder Wertverlust potenzierst du den Faktor. Ein Logarithmus zur Zeitbestimmung ist eine zusätzliche Vertiefung.",
+      "example": "Kₙ=K₀·qⁿ; q=1+p/100 bei Zuwachs."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Potenzen kombinieren",
+      "question": "Vereinfache 3²·3⁴.",
+      "steps": [
+        "Gleiche Basis: 3²⁺⁴=3⁶=729."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Zinseszins",
+      "question": "1000 € werden im Rechenmodell drei Jahre mit 4 % verzinst.",
+      "steps": [
+        "q=1,04. K₃=1000·1,04³.",
+        "K₃=1124,864 €, gerundet 1124,86 €."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Wertverlust",
+      "question": "Ein Modell startet bei 20 000 € und verliert jährlich 15 %. Wert nach 4 Jahren?",
+      "steps": [
+        "Faktor q=0,85. W₄=20000·0,85⁴.",
+        "W₄=10440,125 €, gerundet 10440,13 €."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Negativer Exponent",
+      "question": "Berechne 10⁻³.",
+      "steps": [
+        "1/1000=0,001."
+      ],
+      "id": "R.4-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Klammer",
+      "question": "Vereinfache (2x²)³.",
+      "steps": [
+        "2³·x⁶=8x⁶."
+      ],
+      "id": "R.4-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Darstellung",
+      "question": "Schreibe 7 200 000 wissenschaftlich.",
+      "steps": [
+        "7,2·10⁶."
+      ],
+      "id": "R.4-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Zerfall",
+      "question": "80 g halbieren sich zweimal. Rest?",
+      "steps": [
+        "80·(1/2)²=20 g."
+      ],
+      "id": "R.4-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Wachstum",
+      "question": "Eine Anzahl 500 wächst zweimal um 8 %. Berechne den Modellwert.",
+      "steps": [
+        "500·1,08²=583,2. Bei tatsächlichen Stückzahlen ist eine angemessene Interpretation nötig."
+      ],
+      "id": "R.4-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Faktor bestimmen",
+      "question": "Ein Bestand steigt in zwei Jahren von 100 auf 121. Welcher konstante Jahresfaktor passt?",
+      "steps": [
+        "q²=121/100=1,21. Für positiven Faktor q=1,1.",
+        "Jährliche Zunahme 10 %."
+      ],
+      "id": "R.4-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Lineares Modell",
+      "question": "Ein Bestand 100 wächst jährlich um 20. Vergleiche nach 3 Jahren mit jährlich 20 %.",
+      "steps": [
+        "Linear: 100+3·20=160. Exponentiell: 100·1,2³=172,8."
+      ],
+      "id": "R.4-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Potenzen begründen",
+      "question": "Warum ist (a+b)² im Allgemeinen nicht a²+b²?",
+      "steps": [
+        "Ausmultiplizieren ergibt a²+2ab+b².",
+        "Beispiel a=b=1: links 4, rechts 2. Der gemischte Term fehlt."
+      ],
+      "id": "R.4-08"
+    },
+    {
+      "id": "R.4-verstehen-01",
+      "level": "Einfach",
+      "title": "Zehnerpotenz lesen",
+      "question": "Schreibe 3·10⁻² als Dezimalzahl.",
+      "hint": "10⁻² ist ein Hundertstel.",
+      "steps": [
+        "3·10⁻²=3/100=0,03."
+      ]
+    },
+    {
+      "id": "R.4-verstehen-02",
+      "level": "Mittel",
+      "title": "Zwei Preisänderungen",
+      "question": "100 € steigen zuerst um 20 % und sinken danach um 20 %. Endpreis?",
+      "hint": "Wende beide Faktoren nacheinander an.",
+      "steps": [
+        "100·1,2=120 €.",
+        "120·0,8=96 €. Die Abnahme bezieht sich auf den inzwischen höheren Preis."
+      ]
+    },
+    {
+      "id": "R.4-verstehen-03",
+      "level": "Schwierig",
+      "title": "Wachstumsmodelle vergleichen",
+      "question": "A(n)=100+10n und B(n)=100·1,1ⁿ. Vergleiche n=1 und n=2 und erkläre den Unterschied.",
+      "hint": "Nach einem Schritt können verschiedene Modelle denselben Wert liefern.",
+      "steps": [
+        "Bei n=1: A=B=110.",
+        "Bei n=2: A=120, B=121.",
+        "A wächst immer um 10; B immer um 10 % des aktuellen Werts. Gleicher erster Schritt beweist kein gleiches Modell."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Realschule",
+  "course": "MSA",
+  "understanding": {
+    "why": "Potenzen verkürzen wiederholtes Multiplizieren. Sie helfen bei sehr großen oder kleinen Zahlen und bei wiederholten prozentualen Änderungen. Ein Wachstumsfaktor macht viele einzelne Schritte in einer Formel sichtbar.",
+    "idea": "Unterscheide feste Zuwächse von festen Faktoren. Jedes Jahr 20 mehr ergibt einen linearen Verlauf. Jedes Jahr 20 % mehr ergibt bei positivem Anfangswert einen exponentiellen Verlauf. Die Graphen werden deshalb unterschiedlich steil.",
+    "check": "Ist ein negativer Exponent dasselbe wie eine negative Basis?",
+    "answer": "Nein. 2⁻²=1/4, aber (−2)²=4. Exponent und Basis haben unterschiedliche Aufgaben."
+  }
+}

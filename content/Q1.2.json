@@ -1,0 +1,189 @@
+{
+  "id": "Q1.2",
+  "slug": "flaechen-bestaende-und-volumen",
+  "name": "Flächen, Bestände und Rotationsvolumen",
+  "stage": "Q1",
+  "reference": "Q1.2",
+  "lead": "Du unterscheidest orientierte Bilanz und geometrische Fläche, rekonstruierst Bestände und vertiefst im LK Volumen und uneigentliche Integrale.",
+  "prerequisites": "Bestimmte Integrale, Nullstellen, Schnittpunkte",
+  "concepts": [
+    {
+      "title": "Fläche zwischen Graph und Achse",
+      "explanation": "Ein geometrischer Flächeninhalt ist nicht negativ. Bestimme zuerst die Nullstellen im Intervall, teile dort auf und addiere die Beträge der Teilintegrale.",
+      "example": "A=∫ₐᵇ|f(x)| dx, praktisch abschnittsweise berechnen."
+    },
+    {
+      "title": "Fläche zwischen zwei Graphen",
+      "explanation": "Finde die Schnittpunkte und prüfe, welcher Graph oben liegt. In jedem Abschnitt integrierst du obere minus untere Funktion.",
+      "example": "A=∫ₐᵇ(f−g) dx, wenn f≥g auf [a;b]."
+    },
+    {
+      "title": "Bestand und Mittelwert",
+      "explanation": "Die Änderungsrate wird integriert und zum Anfangsbestand addiert. Der mittlere Funktionswert ist das Integral geteilt durch die Intervalllänge.",
+      "example": "B(t)=B(a)+∫ₐᵗr(s)ds; f̄=1/(b−a)·∫ₐᵇf(x)dx."
+    },
+    {
+      "title": "LK: Rotation und unendliche Intervalle",
+      "explanation": "Bei Rotation um die x-Achse summierst du Kreisscheiben: Ihr Radius ist der Abstand zur Achse. Bei uneigentlichen Integralen ersetzt du die unendliche Grenze zuerst durch b und untersuchst danach den Grenzwert.",
+      "example": "V=π∫ₐᵇ[f(x)]²dx; ∫₀∞e^(−x)dx=lim(b→∞)(1−e^(−b))=1."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Beträge addieren",
+      "question": "Berechne die Fläche zwischen f(x)=x−1 und der x-Achse auf [0;2].",
+      "steps": [
+        "Nullstelle x=1. ∫₀¹(x−1)dx=−1/2.",
+        "∫₁²(x−1)dx=1/2.",
+        "Fläche A=|−1/2|+|1/2|=1 FE; das orientierte Gesamtintegral ist 0."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Zwischen Parabel und Gerade",
+      "question": "Berechne die eingeschlossene Fläche von f(x)=x und g(x)=x².",
+      "steps": [
+        "Schnittstellen x=x² → x=0,1. Auf [0;1] liegt x über x².",
+        "A=∫₀¹(x−x²)dx=[x²/2−x³/3]₀¹.",
+        "A=1/6 FE."
+      ]
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Rotationskörper",
+      "question": "f(x)=√x auf [0;4] rotiert um die x-Achse. Bestimme das Volumen.",
+      "steps": [
+        "Der Kreisradius ist √x, die Querschnittsfläche πx.",
+        "V=π∫₀⁴x dx=π[x²/2]₀⁴.",
+        "V=8π VE. Das Quadrat des Funktionswertes gehört in die Formel."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Positive Fläche",
+      "question": "Berechne die Fläche unter f(x)=2x auf [0;3].",
+      "steps": [
+        "f≥0. A=[x²]₀³=9 FE."
+      ],
+      "id": "Q1.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Negativer Graph",
+      "question": "Berechne die geometrische Fläche zwischen y=−2 und der Achse auf [1;4].",
+      "steps": [
+        "Integral −2·3=−6.",
+        "Geometrische Fläche 6 FE."
+      ],
+      "id": "Q1.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Tank",
+      "question": "Ein Tank enthält 20 L. Nettozufluss r(t)=3t L/min. Wie viel enthält er nach 4 min?",
+      "steps": [
+        "Änderung ∫₀⁴3t dt=24 L.",
+        "Bestand 20+24=44 L. Voraussetzung: kein Überlaufen und das Modell gilt im Intervall."
+      ],
+      "id": "Q1.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Mittelwert",
+      "question": "Bestimme den mittleren Wert von f(x)=x² auf [0;3].",
+      "steps": [
+        "Integral [x³/3]₀³=9.",
+        "Durch Länge 3 teilen: f̄=3."
+      ],
+      "id": "Q1.2-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Zwischen zwei Graphen",
+      "question": "Berechne die eingeschlossene Fläche von y=4 und y=x².",
+      "steps": [
+        "Schnittstellen −2 und 2.",
+        "A=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂²=32/3 FE."
+      ],
+      "id": "Q1.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Weglänge",
+      "question": "v(t)=2t−2 m/s auf [0;2]. Wie lang ist der zurückgelegte Weg?",
+      "steps": [
+        "Richtungswechsel bei t=1.",
+        "∫₀¹v dt=−1 m, ∫₁²v dt=1 m.",
+        "Weglänge 2 m; Ortsänderung 0 m."
+      ],
+      "id": "Q1.2-06"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Kegel durch Rotation",
+      "question": "y=x auf [0;3] rotiert um die x-Achse. Berechne V.",
+      "steps": [
+        "V=π∫₀³x²dx=9π VE.",
+        "Vergleich: Kegel mit r=h=3 hat V=π·9·3/3=9π."
+      ],
+      "id": "Q1.2-07"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Konvergenz",
+      "question": "Berechne ∫₁∞1/x² dx.",
+      "steps": [
+        "Stammfunktion −1/x. Bis b ergibt sich 1−1/b.",
+        "Grenzwert für b→∞: 1. Die Fläche ist endlich trotz unendlicher Ausdehnung."
+      ],
+      "id": "Q1.2-08"
+    },
+    {
+      "id": "Q1.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Fläche unterhalb der Achse",
+      "question": "f(x)=−3 auf [0;2]. Nenne Integral und geometrische Fläche.",
+      "hint": "Ein Rechteck hat positive Fläche, die Bilanz kann negativ sein.",
+      "steps": [
+        "Das Integral ist −3·2=−6.",
+        "Die geometrische Fläche beträgt 6 FE."
+      ]
+    },
+    {
+      "id": "Q1.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Zwei Richtungen",
+      "question": "v(t)=t−2 m/s auf [0;4]. Bestimme Ortsänderung und Weglänge.",
+      "hint": "Teile bei der Nullstelle t=2 auf.",
+      "steps": [
+        "Von 0 bis 2 entsteht ein negatives Dreieck mit Beitrag −2 m.",
+        "Von 2 bis 4 entsteht ein positives Dreieck mit Beitrag +2 m.",
+        "Ortsänderung 0 m, Weglänge 4 m."
+      ]
+    },
+    {
+      "id": "Q1.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Fläche zwischen Kurven",
+      "question": "Berechne die eingeschlossene Fläche zwischen f(x)=2x und g(x)=x².",
+      "hint": "Finde zuerst Schnittstellen und die obere Kurve.",
+      "steps": [
+        "2x=x² ergibt x=0 und x=2. Dazwischen liegt 2x oben.",
+        "A=∫₀²(2x−x²)dx=[x²−x³/3]₀².",
+        "A=4−8/3=4/3 FE."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Ein Fahrzeug fährt zuerst zurück und danach vor. Die Ortsänderung kann null sein, obwohl es eine Strecke zurückgelegt hat. Ebenso unterscheiden sich ein Integral mit Vorzeichen und eine geometrische Fläche.",
+    "idea": "Nullstellen teilen den Graphen in Abschnitte oberhalb und unterhalb der Achse. Für eine Bilanz behältst du die Vorzeichen. Für die Fläche addierst du die Beträge. Zwischen zwei Kurven beschreibt ihr Höhenunterschied die zu integrierende Streifenhöhe.",
+    "check": "Ist ein negatives Integral eine negative geometrische Fläche?",
+    "answer": "Nein. Das Vorzeichen gehört zur orientierten Bilanz. Ein geometrischer Flächeninhalt ist nie negativ."
+  }
+}

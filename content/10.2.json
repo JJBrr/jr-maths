@@ -1,0 +1,192 @@
+{
+  "id": "10.2",
+  "slug": "exponential-und-logarithmusfunktionen",
+  "name": "Exponential- und Logarithmusfunktionen",
+  "lead": "Wachstum, Zerfall und Logarithmen an konkreten Situationen verstehen.",
+  "time": "30 Unterrichtsstunden im G9-Lehrplan",
+  "concepts": [
+    {
+      "title": "1 · Wachstum",
+      "explanation": "Bei f(t)=a·bᵗ ist b der Faktor pro Zeiteinheit. b>1 steht für Wachstum, 0<b<1 für Zerfall. Anders als bei x² steht hier die Variable im Exponenten.",
+      "example": "100·1,05ᵗ"
+    },
+    {
+      "title": "2 · Verdoppeln und Halbieren",
+      "explanation": "Ein konstanter prozentualer Faktor wirkt wiederholt. Verdopplungs- und Halbierungszeiten beschreiben, wie schnell eine Größe sich verändert.",
+      "example": "N(t)=200·(1/2)^(t/3)"
+    },
+    {
+      "title": "3 · Logarithmus",
+      "explanation": "Der Logarithmus beantwortet die Frage nach dem Exponenten: log_b(a)=x genau dann, wenn bˣ=a (b>0, b≠1, a>0).",
+      "example": "log₂(32)=5, weil 2⁵=32"
+    },
+    {
+      "title": "4 · Modelle vergleichen",
+      "explanation": "Bei linearem Wachstum kommt in jedem Schritt derselbe Betrag hinzu; bei exponentiellem Wachstum wirkt derselbe Faktor. Modelle gelten nur für sinnvolle Zeiträume.",
+      "example": "100+20t versus 100·1,2ᵗ"
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Potenz berechnen",
+      "question": "Berechne 2⁵.",
+      "solution": "2⁵ = 2·2·2·2·2 = 32.",
+      "id": "10.2-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Wachstumsfaktor",
+      "question": "100 € wachsen zwei Jahre lang um jeweils 5 %. Wie viel ist es danach?",
+      "solution": "100·1,05² = 110,25 €. Der Faktor 1,05 wirkt zweimal.",
+      "id": "10.2-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Halbwertszeit",
+      "question": "Eine Menge von 200 g halbiert sich dreimal. Wie viel bleibt?",
+      "solution": "200·(1/2)³ = 200/8 = 25 g.",
+      "id": "10.2-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Exponentialgleichung",
+      "question": "Löse 3ˣ = 81.",
+      "solution": "81 = 3⁴. Also x = 4.",
+      "id": "10.2-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Logarithmus",
+      "question": "Berechne log₂(32).",
+      "solution": "2⁵ = 32. Daher log₂(32) = 5.",
+      "id": "10.2-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Verdopplungszeit",
+      "question": "N(t)=50·2^(t/3), t in Tagen. Wie groß ist N(9)?",
+      "solution": "9/3 = 3 Verdopplungen: N(9)=50·2³=400.",
+      "id": "10.2-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Modelle vergleichen",
+      "question": "Vergleiche nach 4 Schritten: A(t)=100+20t und B(t)=100·1,2ᵗ.",
+      "solution": "A(4)=180. B(4)=100·1,2⁴=207,36. B ist dann größer; Aussagen darüber hinaus benötigen passenden Kontext.",
+      "id": "10.2-07"
+    },
+    {
+      "level": "Einfach",
+      "title": "Zerfallsfaktor",
+      "question": "Welcher Faktor gehört zu 7 % Abnahme?",
+      "steps": [
+        "1−0,07=0,93."
+      ],
+      "id": "10.2-neu-01"
+    },
+    {
+      "level": "Mittel",
+      "title": "Logarithmusgleichung",
+      "question": "Löse 2ˣ=10.",
+      "steps": [
+        "x=ln10/ln2≈3,32193."
+      ],
+      "id": "10.2-neu-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Halbierungszeit",
+      "question": "N(t)=80·0,8ᵗ. Bestimme die Halbierungszeit.",
+      "steps": [
+        "0,8ᵀ=0,5 → T=ln0,5/ln0,8≈3,106 Zeiteinheiten."
+      ],
+      "id": "10.2-neu-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Definitionsbedingungen",
+      "question": "Für welche reellen x ist log₂(x−3) definiert, und wann ist er 2?",
+      "steps": [
+        "x−3>0 → x>3.",
+        "log₂(x−3)=2 → x−3=4 → x=7."
+      ],
+      "id": "10.2-neu-04"
+    },
+    {
+      "id": "10.2-verstehen-01",
+      "level": "Einfach",
+      "title": "Faktor erkennen",
+      "question": "Ein Bestand fällt in jedem Schritt um 15 %. Welcher Faktor gehört dazu?",
+      "hint": "Von 100 % bleiben wie viel übrig?",
+      "steps": [
+        "100 %−15 %=85 %.",
+        "Der Faktor ist 0,85. Nach einem Schritt bleibt 0,85 mal der vorige Bestand."
+      ]
+    },
+    {
+      "id": "10.2-verstehen-02",
+      "level": "Mittel",
+      "title": "Modell aus Werten",
+      "question": "N(0)=40 und N(2)=90. Bestimme den positiven Faktor q in N(t)=40·qᵗ.",
+      "hint": "Setze t=2 ein und löse nach q.",
+      "steps": [
+        "90=40q², also q²=9/4.",
+        "q=3/2=1,5, da q positiv sein soll. Das entspricht 50 % Zunahme pro Schritt."
+      ]
+    },
+    {
+      "id": "10.2-verstehen-03",
+      "level": "Schwierig",
+      "title": "Wann wird die Grenze überschritten?",
+      "question": "N(n)=100·1,2ⁿ mit ganzen n≥0. Wann ist der Bestand erstmals größer als 200?",
+      "hint": "Löse erst die reelle Ungleichung und prüfe benachbarte ganze Schritte.",
+      "steps": [
+        "1,2ⁿ>2 ergibt n>ln(2)/ln(1,2)≈3,802.",
+        "Der erste ganze Schritt ist n=4.",
+        "Probe: N(3)=172,8 und N(4)=207,36."
+      ]
+    }
+  ],
+  "stage": "Klasse 10",
+  "track": "Gymnasium",
+  "course": "G9",
+  "reference": "G9 10.2",
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Wachstumsfaktor",
+      "question": "Ein Wert 80 steigt um 12 %. Berechne den neuen Wert.",
+      "steps": [
+        "Faktor 1+12/100=1,12.",
+        "80·1,12=89,6."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Zeit suchen",
+      "question": "Wann wird aus 100 bei 5 % Wachstum mehr als 150?",
+      "steps": [
+        "100·1,05ᵗ>150 → 1,05ᵗ>1,5.",
+        "t>ln1,5/ln1,05≈8,31. Bei ganzen Jahren erstmals nach 9 Jahren."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Aus zwei Werten modellieren",
+      "question": "N(0)=200 und N(3)=250. Bestimme N(t)=a·bᵗ.",
+      "steps": [
+        "a=200; b³=250/200=1,25.",
+        "b=∛1,25≈1,07722. N(t)=200·1,25^(t/3)."
+      ]
+    }
+  ],
+  "prerequisites": "Grundrechenarten, Terme, Gleichungen und passende Grundlagen aus Klasse 9",
+  "note": "G9-Orientierung; die konkrete Reihenfolge richtet sich nach dem Schulcurriculum.",
+  "understanding": {
+    "why": "Zinsen, Zellteilung und der Wertverlust eines Geräts haben etwas gemeinsam: Die Änderung hängt oft vom bereits vorhandenen Bestand ab. Deshalb passt eine Gerade häufig nicht. Bei 10 % Wachstum kommen zu 100 genau 10 dazu, zu 200 aber schon 20.",
+    "idea": "Eine Exponentialfunktion beantwortet: Wie groß ist der Bestand nach einer bestimmten Zeit? Der Logarithmus dreht diese Frage um: Wie viel Zeit braucht es bis zu einem bestimmten Bestand? Im Graphen liest du zuerst eine Höhe und dann die dazugehörige Zeit ab.",
+    "check": "Wächst ein Bestand mit Faktor 1,2 immer um 20 Einheiten?",
+    "answer": "Nein. Er wächst in jedem Schritt um 20 % des jeweils aktuellen Bestands. Aus 100 werden 120, danach 144."
+  }
+}

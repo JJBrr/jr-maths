@@ -1,0 +1,199 @@
+{
+  "id": "Q2.3",
+  "slug": "geraden-ebenen-und-lgs",
+  "name": "Geraden, Ebenen und Gleichungssysteme",
+  "stage": "Q2",
+  "reference": "Q2.3",
+  "lead": "Du beschreibst geometrische Objekte durch Gleichungen, bestimmst ihre Lage und prüfst Schnittpunkte mit allen Koordinaten.",
+  "prerequisites": "Vektoren, Skalarprodukt, lineare Gleichungen",
+  "concepts": [
+    {
+      "title": "Gerade in Parameterform",
+      "explanation": "Ein Stützvektor legt einen Punkt fest; ein Richtungsvektor ungleich 0 die Richtung. Der Parameter durchläuft alle reellen Zahlen. Ein Streckenmodell beschränkt ihn zusätzlich.",
+      "example": "g: x=(1;0;2)+t(2;1;−1)."
+    },
+    {
+      "title": "Ebene beschreiben",
+      "explanation": "Zwei nicht parallele Richtungsvektoren spannen eine Ebene auf. In Koordinatenform beschreibt ein Normalenvektor ihre senkrechte Richtung. Einsetzen prüft die Zugehörigkeit eines Punktes.",
+      "example": "E: x=p+ru+sv; alternativ ax+by+cz=d mit n=(a;b;c)≠0."
+    },
+    {
+      "title": "Lage prüfen mit einem LGS",
+      "explanation": "Setze Parameterdarstellungen gleich oder setze eine Gerade in eine Ebenengleichung ein. Löse das entstehende lineare Gleichungssystem. Keine, eine oder unendlich viele Lösungen haben geometrisch verschiedene Bedeutungen.",
+      "example": "Gerade–Ebene: 0·t=0 → ganze Gerade in E; 0·t=5 → parallel ohne Schnitt."
+    },
+    {
+      "title": "Winkel und LK-Abstände",
+      "explanation": "Der Winkel zwischen Geraden folgt aus den Richtungsvektoren; für den kleineren Schnittwinkel nimmt man den Betrag des Skalarprodukts. Gerade–Ebene nutzt den Sinus zum Normalenvektor. Punkt–Ebene-Abstände werden im LK vertieft.",
+      "example": "sin α=|u·n|/(|u||n|); d(P,E)=|n·P−d|/|n| (LK)."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Gerade durch zwei Punkte",
+      "question": "Stelle die Gerade durch A(1|0|2) und B(3|1|1) auf.",
+      "steps": [
+        "Richtungsvektor B−A=(2;1;−1).",
+        "g: x=(1;0;2)+t(2;1;−1).",
+        "t=0 gibt A, t=1 gibt B."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Gerade trifft Ebene",
+      "question": "g: x=(0;0;1)+t(1;2;1), E: x+y+z=7. Bestimme den Schnittpunkt.",
+      "steps": [
+        "Koordinaten einsetzen: t+2t+(1+t)=7.",
+        "4t=6 → t=1,5.",
+        "S(1,5|3|2,5). Probe: 1,5+3+2,5=7."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Ein LGS geometrisch deuten",
+      "question": "Löse x+y=3 und 2x+2y=6.",
+      "steps": [
+        "Die zweite Gleichung ist das Doppelte der ersten.",
+        "Eine freie Variable: y=t, x=3−t.",
+        "Unendlich viele Lösungen; in der Ebene beschreiben beide Gleichungen dieselbe Gerade."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Punktprobe",
+      "question": "Liegt P(2|3|1) in E: x+y+z=6?",
+      "steps": [
+        "2+3+1=6. Ja."
+      ],
+      "id": "Q2.3-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Normalenvektor",
+      "question": "Gib einen Normalenvektor von 2x−y+3z=5 an.",
+      "steps": [
+        "n=(2;−1;3). Auch jedes von 0 verschiedene Vielfache ist möglich."
+      ],
+      "id": "Q2.3-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Geradenpunkt",
+      "question": "Liegt P(3|4|1) auf g: x=(1;0;3)+t(1;2;−1)?",
+      "steps": [
+        "Aus x-Koordinate t=2. Dann y=4 und z=1.",
+        "Alle Koordinaten stimmen: P liegt auf g."
+      ],
+      "id": "Q2.3-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "LGS",
+      "question": "Löse x+y=5 und x−y=1.",
+      "steps": [
+        "Addieren: 2x=6 → x=3.",
+        "y=2."
+      ],
+      "id": "Q2.3-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Parallel oder enthalten",
+      "question": "g: x=(0;0;2)+t(1;−1;0), E: x+y+z=2. Bestimme die Lage.",
+      "steps": [
+        "Einsetzen: t−t+2=2 für jedes t.",
+        "Die ganze Gerade liegt in E."
+      ],
+      "id": "Q2.3-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Windschief",
+      "question": "g: x=(0;0;0)+t(1;0;0), h: x=(0;1;1)+s(0;1;0). Begründe die Lage.",
+      "steps": [
+        "Richtungsvektoren sind nicht parallel.",
+        "Bei g ist z immer 0, bei h immer 1; kein Schnittpunkt.",
+        "Damit sind die Geraden windschief."
+      ],
+      "id": "Q2.3-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Ebene aufstellen",
+      "question": "Bestimme die Ebene durch A(1|0|0), B(0|1|0), C(0|0|1).",
+      "steps": [
+        "AB=(−1;1;0), AC=(−1;0;1), nicht parallel.",
+        "n=(1;1;1) ist zu beiden orthogonal. Mit A: d=1.",
+        "E: x+y+z=1."
+      ],
+      "id": "Q2.3-07"
+    },
+    {
+      "level": "Schwierig · LK",
+      "title": "Abstand",
+      "question": "Bestimme den Abstand von P(1|2|3) zur Ebene x+2y+2z=2.",
+      "steps": [
+        "n=(1;2;2), |n|=3.",
+        "d=|1+4+6−2|/3=3 LE."
+      ],
+      "id": "Q2.3-08"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Schnittwinkel",
+      "question": "Eine Gerade hat Richtung (1;0;1), eine Ebene Normalenvektor (0;0;1). Bestimme den Schnittwinkel.",
+      "steps": [
+        "sin α=1/(√2·1)=1/√2.",
+        "α=45°. Der Winkel zwischen Gerade und Ebene liegt zwischen 0° und 90°."
+      ],
+      "id": "Q2.3-09"
+    },
+    {
+      "id": "Q2.3-verstehen-01",
+      "level": "Einfach",
+      "title": "Geradenparameter einsetzen",
+      "question": "g: x=(1;2;0)+t(2;−1;3). Welcher Punkt gehört zu t=2?",
+      "hint": "Rechne komponentenweise.",
+      "steps": [
+        "(1;2;0)+2(2;−1;3)=(5;0;6).",
+        "Der Punkt ist P(5|0|6)."
+      ]
+    },
+    {
+      "id": "Q2.3-verstehen-02",
+      "level": "Mittel",
+      "title": "Durchstoßpunkt",
+      "question": "g: x=(0;0;1)+t(1;1;1), E: x+y+z=7. Bestimme den Schnittpunkt.",
+      "hint": "Setze alle drei Geradenkoordinaten in die Ebene ein.",
+      "steps": [
+        "t+t+(1+t)=7 ergibt 3t=6, also t=2.",
+        "S=(2;2;3).",
+        "Probe in E: 2+2+3=7."
+      ]
+    },
+    {
+      "id": "Q2.3-verstehen-03",
+      "level": "Schwierig",
+      "title": "Parallel oder enthalten?",
+      "question": "g: x=(0;0;2)+t(1;−1;0). Untersuche die Lage zu E: x+y+z=3.",
+      "hint": "Setze die Gerade ein, ohne nach einem Parameter zu erzwingen.",
+      "steps": [
+        "Einsetzen ergibt t−t+2=3, also 2=3. Es gibt keinen Schnittpunkt.",
+        "Die Richtung (1;−1;0) steht senkrecht zum Normalenvektor (1;1;1).",
+        "g ist zur Ebene parallel und liegt nicht in ihr."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Schneidet eine Flugbahn eine bestimmte Fläche? Liegt ein Punkt auf einer Ebene? Solche räumlichen Fragen werden durch Geraden- und Ebenengleichungen zu lösbaren Gleichungssystemen.",
+    "idea": "Ein Parameter bewegt dich entlang einer Geraden. Zwei unabhängige Richtungen spannen eine Ebene auf. Beim Einsetzen prüfst du, ob dieselben Koordinaten beide Bedingungen erfüllen. Eine Skizze liefert eine Vermutung; die Rechnung klärt die Lage.",
+    "check": "Beweist ein Schnitt in einer zweidimensionalen Skizze einen Schnitt im Raum?",
+    "answer": "Nein. In einer Projektion können windschiefe Geraden so aussehen, als würden sie sich schneiden. Du musst alle drei Koordinaten prüfen."
+  }
+}

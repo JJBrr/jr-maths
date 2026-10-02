@@ -1,0 +1,184 @@
+{
+  "id": "Q3.1",
+  "slug": "wahrscheinlichkeit-und-bayes",
+  "name": "Wahrscheinlichkeit, Bedingung und Unabhängigkeit",
+  "stage": "Q3",
+  "reference": "Q3.1",
+  "lead": "Du beschreibst Zufallsexperimente, rechnest mit Bäumen und Vierfeldertafeln und unterscheidest zwei Richtungen einer bedingten Wahrscheinlichkeit.",
+  "prerequisites": "Brüche, Prozentrechnung, Baumdiagramme",
+  "concepts": [
+    {
+      "title": "Ergebnis und Ereignis",
+      "explanation": "Ein Ergebnis ist ein einzelner Ausgang. Ein Ereignis ist eine Menge von Ergebnissen. Nur bei gleich wahrscheinlichen Ergebnissen darfst du günstige durch mögliche Ergebnisse teilen.",
+      "example": "Würfel: Ω={1,2,3,4,5,6}, A={2,4,6}, P(A)=3/6."
+    },
+    {
+      "title": "Bedingte Wahrscheinlichkeit",
+      "explanation": "Unter der Bedingung B wird nur die Teilmenge B betrachtet. Der Nenner ändert sich. P(A|B) und P(B|A) sind verschiedene Fragen und meist verschieden groß.",
+      "example": "P(A|B)=P(A∩B)/P(B), sofern P(B)>0."
+    },
+    {
+      "title": "Unabhängig oder ausgeschlossen?",
+      "explanation": "Unabhängigkeit bedeutet, dass die Kenntnis eines Ereignisses die Wahrscheinlichkeit des anderen nicht verändert. Sich ausschließende Ereignisse mit positiven Wahrscheinlichkeiten sind gerade nicht unabhängig.",
+      "example": "Unabhängig ⇔ P(A∩B)=P(A)P(B)."
+    },
+    {
+      "title": "Bayes und Basisrate",
+      "explanation": "Um eine Bedingung umzudrehen, brauchst du neben der Trefferquote auch die Grundhäufigkeit und die Fehlalarmquote. Natürliche Häufigkeiten machen das oft übersichtlicher.",
+      "example": "P(A|B)=P(B|A)P(A)/[P(B|A)P(A)+P(B|nicht A)P(nicht A)]."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Gegenereignis",
+      "question": "Ein Würfel wird zweimal unabhängig geworfen. Wie wahrscheinlich ist mindestens eine Sechs?",
+      "steps": [
+        "Gegenereignis: keine Sechs bei beiden Würfen. P=(5/6)².",
+        "Gesucht 1−25/36=11/36≈30,56 %.",
+        "Mindestens eine umfasst sowohl genau eine als auch zwei Sechsen."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Vierfeldertafel",
+      "question": "Von 100 Jugendlichen fahren 40 Rad. Von diesen tragen 30 einen Helm. Von 60 anderen tragen 10 einen Helm. Bestimme P(Rad|Helm).",
+      "steps": [
+        "Insgesamt tragen 30+10=40 einen Helm.",
+        "Davon fahren 30 Rad. P(Rad|Helm)=30/40=75 %.",
+        "P(Helm|Rad)=30/40 ist hier zufällig gleich; allgemein muss das nicht so sein."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Fehlalarme",
+      "question": "2 % der Produkte sind defekt. Ein Test erkennt 90 % davon, meldet aber auch bei 5 % der intakten Produkte einen Defekt. Wie wahrscheinlich ist ein Defekt bei positivem Test?",
+      "steps": [
+        "Von 10 000 Produkten sind 200 defekt; 180 davon testen positiv.",
+        "9 800 sind intakt; 490 davon testen ebenfalls positiv.",
+        "Unter 670 positiven Tests sind 180 echte Defekte: 180/670≈26,87 %."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Laplace",
+      "question": "Ein fairer Würfel: P(Zahl größer als 4)?",
+      "steps": [
+        "Günstig {5,6}; P=2/6=1/3."
+      ],
+      "id": "Q3.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Häufigkeit",
+      "question": "In 80 Versuchen tritt A 18-mal ein. Bestimme die relative Häufigkeit.",
+      "steps": [
+        "18/80=0,225=22,5 %. Das ist eine beobachtete Häufigkeit, nicht zwingend die exakte Wahrscheinlichkeit."
+      ],
+      "id": "Q3.1-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Bedingung",
+      "question": "P(A∩B)=0,12 und P(B)=0,3. Berechne P(A|B).",
+      "steps": [
+        "0,12/0,3=0,4."
+      ],
+      "id": "Q3.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Unabhängigkeit",
+      "question": "P(A)=0,4, P(B)=0,5, P(A∩B)=0,2. Unabhängig?",
+      "steps": [
+        "P(A)P(B)=0,4·0,5=0,2. Ja."
+      ],
+      "id": "Q3.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Vereinigung",
+      "question": "P(A)=0,4, P(B)=0,5, P(A∩B)=0,2. Berechne P(A∪B).",
+      "steps": [
+        "0,4+0,5−0,2=0,7. Die Schnittmenge wurde sonst doppelt gezählt."
+      ],
+      "id": "Q3.1-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Ohne Zurücklegen",
+      "question": "Urne mit 4 roten und 6 blauen Kugeln. Zweimal ohne Zurücklegen: P(genau eine rote)?",
+      "steps": [
+        "RB: 4/10·6/9; BR: 6/10·4/9.",
+        "Summe 48/90=8/15≈53,33 %."
+      ],
+      "id": "Q3.1-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Unabhängigkeit widerlegen",
+      "question": "A bedeutet beim Würfeln gerade Zahl, B bedeutet Zahl größer als 4. Sind sie unabhängig?",
+      "steps": [
+        "P(A)=1/2, P(B)=1/3. Schnittmenge {6} → P=1/6.",
+        "Produkt ebenfalls 1/6. Sie sind unabhängig, obwohl sie sich überschneiden."
+      ],
+      "id": "Q3.1-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Gesetz der großen Zahlen",
+      "question": "Nach fünfmal Kopf erwartet jemand, dass Zahl nun wahrscheinlicher sei. Beurteile für eine faire unabhängige Münze.",
+      "steps": [
+        "Der nächste Wurf bleibt mit P(Zahl)=1/2 unverändert.",
+        "Langfristig stabilisieren sich relative Häufigkeiten; es gibt keinen Ausgleichszwang beim nächsten Wurf."
+      ],
+      "id": "Q3.1-08"
+    },
+    {
+      "id": "Q3.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Vergleichsgruppe wählen",
+      "question": "Von 40 Lernenden fahren 10 Fahrrad. Von diesen 10 tragen 8 einen Helm. Wie groß ist P(Helm|Fahrrad)?",
+      "hint": "Es werden nur die Fahrradfahrenden betrachtet.",
+      "steps": [
+        "Die passende Grundgesamtheit umfasst 10 Personen.",
+        "P(Helm|Fahrrad)=8/10=0,8."
+      ]
+    },
+    {
+      "id": "Q3.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Unabhängigkeit prüfen",
+      "question": "P(A)=0,3, P(B)=0,4 und P(A∩B)=0,15. Sind A und B unabhängig?",
+      "hint": "Vergleiche Schnittwahrscheinlichkeit und Produkt.",
+      "steps": [
+        "P(A)P(B)=0,3·0,4=0,12.",
+        "0,15≠0,12, also sind die Ereignisse abhängig.",
+        "Auch P(A|B)=0,15/0,4=0,375 unterscheidet sich von 0,3."
+      ]
+    },
+    {
+      "id": "Q3.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Basisrate sichtbar machen",
+      "question": "1000 Teile: 20 sind defekt. Ein Alarm erkennt 18 dieser Defekte und meldet 49 intakte Teile fälschlich. Wie groß ist P(defekt|Alarm)?",
+      "hint": "Zähle alle Alarmfälle als neue Vergleichsgruppe.",
+      "steps": [
+        "Insgesamt gibt es 18+49=67 Alarme.",
+        "Darunter sind 18 tatsächlich defekte Teile.",
+        "P(defekt|Alarm)=18/67≈26,87 %. Eine hohe Erkennungsrate allein genügt nicht für einen hohen Anteil echter Defekte unter den Alarmen."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "GK + LK",
+  "understanding": {
+    "why": "Eine neue Information verändert oft die passende Vergleichsgruppe. Wer nur unter den Personen mit einem bestimmten Merkmal zählt, berechnet eine bedingte Wahrscheinlichkeit. Das erklärt, warum die Richtung einer Bedingung so wichtig ist.",
+    "idea": "Bei P(A|B) ist B bereits bekannt. Im Nenner stehen deshalb nur die Fälle aus B. Eine Vierfeldertafel oder absolute Anzahlen helfen, die Gruppen sichtbar zu machen. Unabhängigkeit bedeutet, dass diese zusätzliche Information die Wahrscheinlichkeit von A nicht verändert.",
+    "check": "Ist P(A|B) gleich P(B|A)?",
+    "answer": "Im Allgemeinen nicht. Die betrachtete Grundgesamtheit im Nenner ist jeweils eine andere."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "id": "Q3.4",
+  "slug": "intervalle-und-schaetzen",
+  "name": "Prognose- und Konfidenzintervalle",
+  "stage": "Q3",
+  "reference": "Q3.4 · Wahlthema",
+  "lead": "Du unterscheidest Vorhersagen für künftige Trefferzahlen von Schätzintervallen für einen unbekannten Anteil.",
+  "prerequisites": "Binomialverteilung, Erwartungswert, Standardabweichung",
+  "concepts": [
+    {
+      "title": "Prognoseintervall",
+      "explanation": "Ist p bekannt, sagt ein Prognoseintervall einen Bereich für eine zukünftige Trefferzahl voraus. Exakte Grenzen bestimmst du mit der Binomialverteilung; bei ausreichender Stichprobe hilft die Normalapproximation.",
+      "example": "Für Trefferzahlen näherungsweise μ±1,96σ für etwa 95 %."
+    },
+    {
+      "title": "Konfidenzintervall",
+      "explanation": "Ist p unbekannt, schätzt du es aus der relativen Häufigkeit p̂=X/n. Ein Konfidenzverfahren ist so konstruiert, dass seine Intervalle bei wiederholter Stichprobenziehung den festen Parameter mit der angegebenen Quote überdecken.",
+      "example": "95 % bezieht sich auf das Verfahren, nicht auf eine wechselnde Wahrheit des Parameters."
+    },
+    {
+      "title": "Eine einfache Näherung",
+      "explanation": "Das Wald-Intervall ist eine leicht berechenbare Näherung. Es ist besonders bei kleinen Stichproben oder Anteilen nahe 0 oder 1 unzuverlässig. In solchen Fällen sind etwa Wilson- oder exakte Verfahren geeigneter.",
+      "example": "p̂±1,96√(p̂(1−p̂)/n)."
+    },
+    {
+      "title": "Genauigkeit kostet Daten",
+      "explanation": "Die typische Intervallbreite skaliert ungefähr mit 1/√n. Für halbierte Unsicherheit benötigt man daher etwa die vierfache Stichprobengröße, bei vergleichbaren Anteilen.",
+      "example": "Fehlergrenze ε≈1,96√(p(1−p)/n)."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Schätzwert",
+      "question": "In einer Stichprobe von 200 stimmen 120 zu. Schätze den Anteil.",
+      "steps": [
+        "p̂=120/200=0,6=60 %.",
+        "Das ist ein Schätzwert aus dieser Stichprobe, nicht der bekannte Populationswert."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Näherungsintervall",
+      "question": "Berechne das Wald-Intervall für 120 von 200.",
+      "steps": [
+        "Standardfehler √(0,6·0,4/200)≈0,03464.",
+        "Fehlergrenze ≈1,96·0,03464=0,06790.",
+        "Intervall etwa [0,5321;0,6679]. Gültigkeit der Zufallsstichprobe bleibt eine Modellannahme."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Stichprobe planen",
+      "question": "Wie groß sollte n sein für eine approximative Fehlergrenze 0,05 bei 95 %, ohne vorherige Kenntnis von p?",
+      "steps": [
+        "Konservativ p(1−p)≤0,25 verwenden.",
+        "n≥1,96²·0,25/0,05²=384,16.",
+        "Aufrunden auf 385; dies ist eine Planungsnäherung, kein exaktes Deckungsversprechen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Begriffe",
+      "question": "p ist bekannt; gesucht ist der Bereich einer zukünftigen Trefferzahl. Welches Intervall?",
+      "steps": [
+        "Ein Prognoseintervall."
+      ],
+      "id": "Q3.4-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Schätzung",
+      "question": "45 Treffer aus 100. Bestimme p̂.",
+      "steps": [
+        "p̂=0,45."
+      ],
+      "id": "Q3.4-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Prognose",
+      "question": "X~B(400;0,5). Berechne μ und σ sowie μ±1,96σ.",
+      "steps": [
+        "μ=200, σ=10.",
+        "Reelle Näherungsgrenzen [180,4;219,6]. Ein exaktes ganzzahliges Intervall prüft man anschließend binomial."
+      ],
+      "id": "Q3.4-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Skalierung",
+      "question": "Wie ändert sich der Standardfehler bei n→9n ungefähr?",
+      "steps": [
+        "Er wird durch √9=3 geteilt."
+      ],
+      "id": "Q3.4-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Aussage prüfen",
+      "question": "Bedeutet 95 % Konfidenz, dass 95 % der Einzelpersonen im Intervall liegen?",
+      "steps": [
+        "Nein. Es geht um die Überdeckung eines festen Populationsparameters durch das wiederholte Schätzverfahren."
+      ],
+      "id": "Q3.4-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Randfall",
+      "question": "Warum ist das Wald-Intervall bei 0 Treffern problematisch?",
+      "steps": [
+        "p̂=0 ergibt geschätzten Standardfehler 0 und das Intervall [0;0].",
+        "Aus endlich vielen Misserfolgen folgt nicht p=0. Ein geeignetes anderes Intervallverfahren ist nötig."
+      ],
+      "id": "Q3.4-06"
+    },
+    {
+      "id": "Q3.4-verstehen-01",
+      "level": "Einfach",
+      "title": "Punktschätzung",
+      "question": "In einer Stichprobe von 200 gibt es 56 Treffer. Berechne p̂.",
+      "hint": "Trefferzahl geteilt durch Stichprobengröße.",
+      "steps": [
+        "p̂=56/200=0,28.",
+        "Der geschätzte Anteil beträgt 28 %."
+      ]
+    },
+    {
+      "id": "Q3.4-verstehen-02",
+      "level": "Mittel",
+      "title": "Stichprobengröße vergleichen",
+      "question": "Eine näherungsweise Fehlergrenze beträgt bei n=100 etwa 0,10. Wie groß ist sie bei n=400 unter gleichen übrigen Bedingungen?",
+      "hint": "Die Grenze ist proportional zu 1/√n.",
+      "steps": [
+        "400 ist die vierfache Stichprobengröße.",
+        "Die Fehlergrenze halbiert sich näherungsweise auf 0,05."
+      ]
+    },
+    {
+      "id": "Q3.4-verstehen-03",
+      "level": "Schwierig",
+      "title": "95 % richtig lesen",
+      "question": "Ein Konfidenzverfahren liefert über viele Wiederholungen 95 % Überdeckung. Was bedeutet das, und was nicht?",
+      "hint": "Unterscheide feste Parameter und zufällige Intervalle.",
+      "steps": [
+        "Bei vielen gleichartigen Stichproben enthalten etwa 95 % der so berechneten Intervalle den festen wahren Parameter.",
+        "Das bedeutet nicht, dass 95 % aller Einzelbeobachtungen im Intervall liegen.",
+        "Es ist auch keine Garantie für ein bestimmtes einzelnes Intervall."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Eine Stichprobe liefert eine Schätzung, aber keine unbegrenzt genaue Wahrheit. Intervalle machen diese Unsicherheit sichtbar. Dabei ist entscheidend, ob du zukünftige Daten oder einen unbekannten Parameter eingrenzen möchtest.",
+    "idea": "Ein Prognoseintervall beschreibt mögliche neue Beobachtungen bei einem Modell. Ein Konfidenzintervall wird aus einer Stichprobe konstruiert und zielt auf einen festen unbekannten Parameter. Größere Stichproben machen es typischerweise enger, beseitigen aber keine systematische Verzerrung.",
+    "check": "Wird die Fehlergrenze bei vierfacher Stichprobe viermal kleiner?",
+    "answer": "Unter denselben Näherungsbedingungen nur halb so groß. Sie hängt umgekehrt von der Quadratwurzel der Stichprobengröße ab."
+  }
+}

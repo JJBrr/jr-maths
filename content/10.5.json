@@ -1,0 +1,183 @@
+{
+  "id": "10.5",
+  "slug": "mehrstufige-zufallsversuche",
+  "name": "Mehrstufige Zufallsversuche",
+  "lead": "Baumdiagramme nutzen und Wahrscheinlichkeiten entlang von Pfaden berechnen.",
+  "time": "10 Unterrichtsstunden im G9-Lehrplan",
+  "concepts": [
+    {
+      "title": "1 · Pfadregel",
+      "explanation": "Die Wahrscheinlichkeiten entlang eines Pfades werden multipliziert.",
+      "example": "P(Kopf, Kopf)=1/2·1/2=1/4"
+    },
+    {
+      "title": "2 · Mehrere Wege",
+      "explanation": "Führen mehrere Pfade zum Ereignis, werden ihre Wahrscheinlichkeiten addiert.",
+      "example": "P(genau ein Kopf)=P(KZ)+P(ZK)"
+    },
+    {
+      "title": "3 · Mit und ohne Zurücklegen",
+      "explanation": "Ohne Zurücklegen verändert die erste Ziehung die Wahrscheinlichkeiten der nächsten. Mit Zurücklegen bleiben sie gleich.",
+      "example": "3 rote, 2 blaue Kugeln"
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Zwei Münzwürfe",
+      "question": "Eine faire Münze wird zweimal geworfen. Wie groß ist P(Kopf, Kopf)?",
+      "solution": "P=1/2·1/2=1/4=25 %.",
+      "id": "10.5-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Genau ein Kopf",
+      "question": "Wie groß ist bei zwei fairen Münzwürfen P(genau ein Kopf)?",
+      "solution": "Möglichkeiten KZ und ZK: 1/4+1/4=1/2.",
+      "id": "10.5-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Mit Zurücklegen",
+      "question": "3 rote und 2 blaue Kugeln: ziehen, zurücklegen, erneut ziehen. P(rot, blau)?",
+      "solution": "3/5·2/5=6/25=24 %.",
+      "id": "10.5-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Ohne Zurücklegen",
+      "question": "Dieselbe Urne, diesmal ohne Zurücklegen. P(rot, blau)?",
+      "solution": "Nach Rot bleiben 4 Kugeln, davon 2 blau. 3/5·2/4=3/10=30 %.",
+      "id": "10.5-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Gegenereignis",
+      "question": "Drei faire Münzwürfe: Wie groß ist P(mindestens ein Kopf)?",
+      "solution": "Das Gegenereignis ist dreimal Zahl mit P=(1/2)³=1/8. Also 1−1/8=7/8=87,5 %.",
+      "id": "10.5-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Zwei Würfel",
+      "question": "Zwei faire Würfel werden geworfen. Wie groß ist P(Summe 7)?",
+      "solution": "Unter 36 gleich wahrscheinlichen geordneten Paaren ergeben 6 die Summe 7: 6/36=1/6.",
+      "id": "10.5-06"
+    },
+    {
+      "level": "Einfach",
+      "title": "Gegenereignis",
+      "question": "P(A)=0,37. Bestimme P(nicht A).",
+      "steps": [
+        "1−0,37=0,63."
+      ],
+      "id": "10.5-neu-01"
+    },
+    {
+      "level": "Mittel",
+      "title": "Genau zwei",
+      "question": "Drei faire Münzwürfe. P(genau zweimal Kopf)?",
+      "steps": [
+        "Pfade KKZ,KZK,ZKK, jeweils 1/8.",
+        "Insgesamt 3/8=37,5 %."
+      ],
+      "id": "10.5-neu-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Würfelsumme",
+      "question": "Zwei faire Würfel. P(Summe höchstens 3)?",
+      "steps": [
+        "Günstig (1,1),(1,2),(2,1): 3 von 36.",
+        "P=1/12."
+      ],
+      "id": "10.5-neu-03"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Vergleich",
+      "question": "Urne 3 rot,2 blau. Vergleiche P(zweimal rot) mit und ohne Zurücklegen.",
+      "steps": [
+        "Mit: (3/5)²=9/25=36 %. Ohne: 3/5·2/4=3/10=30 %.",
+        "Ohne Zurücklegen sinkt die rote Chance nach dem ersten roten Treffer."
+      ],
+      "id": "10.5-neu-04"
+    },
+    {
+      "id": "10.5-verstehen-01",
+      "level": "Einfach",
+      "title": "Zwei gleiche Seiten",
+      "question": "Eine faire Münze wird zweimal geworfen. Wie wahrscheinlich sind zwei gleiche Seiten?",
+      "hint": "Zähle Kopf–Kopf und Zahl–Zahl als zwei verschiedene Wege.",
+      "steps": [
+        "Jeder Weg hat Wahrscheinlichkeit 1/2·1/2=1/4.",
+        "Die Wege schließen sich aus: 1/4+1/4=1/2."
+      ]
+    },
+    {
+      "id": "10.5-verstehen-02",
+      "level": "Mittel",
+      "title": "Reihenfolge berücksichtigen",
+      "question": "In einer Urne liegen 2 rote und 3 blaue Kugeln. Zwei Ziehungen ohne Zurücklegen: P(genau eine rote)?",
+      "hint": "Genau eine rote kann zuerst oder zuletzt kommen.",
+      "steps": [
+        "Rot–Blau: 2/5·3/4=3/10.",
+        "Blau–Rot: 3/5·2/4=3/10.",
+        "Zusammen 3/10+3/10=3/5."
+      ]
+    },
+    {
+      "id": "10.5-verstehen-03",
+      "level": "Schwierig",
+      "title": "Mindestens ein Erfolg",
+      "question": "Ein unabhängiger Versuch gelingt mit p=1/4. Wie wahrscheinlich ist bei drei Versuchen mindestens ein Erfolg?",
+      "hint": "Das Gegenereignis ist kein Erfolg in allen drei Versuchen.",
+      "steps": [
+        "Misserfolgswahrscheinlichkeit pro Versuch: 3/4.",
+        "P(kein Erfolg)=(3/4)³=27/64.",
+        "P(mindestens ein Erfolg)=1−27/64=37/64≈57,81 %."
+      ]
+    }
+  ],
+  "stage": "Klasse 10",
+  "track": "Gymnasium",
+  "course": "G9",
+  "reference": "G9 10.5",
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Baum",
+      "question": "Zweimal fairer Münzwurf. P(genau einmal Kopf)?",
+      "steps": [
+        "Die passenden Pfade sind KZ und ZK.",
+        "Jeder hat P=1/4. Addieren ergibt 1/2."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Ohne Zurücklegen",
+      "question": "4 rote und 2 blaue Kugeln. P(zweimal rot) ohne Zurücklegen?",
+      "steps": [
+        "Erste rote 4/6; danach noch 3 rote unter 5.",
+        "P=4/6·3/5=2/5=40 %."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Mindestens einmal",
+      "question": "Ein unabhängiger Versuch gelingt mit P=0,2. Wie groß ist die Chance auf mindestens einen Erfolg in 3 Versuchen?",
+      "steps": [
+        "Gegenereignis: dreimal Misserfolg mit 0,8³=0,512.",
+        "Ergebnis 1−0,512=0,488=48,8 %."
+      ]
+    }
+  ],
+  "prerequisites": "Grundrechenarten, Terme, Gleichungen und passende Grundlagen aus Klasse 9",
+  "note": "G9-Orientierung; die konkrete Reihenfolge richtet sich nach dem Schulcurriculum.",
+  "understanding": {
+    "why": "Bei mehreren Zufallsschritten ist die Frage oft nicht, was beim nächsten Schritt passiert, sondern welche ganze Folge eintritt. Ein Baumdiagramm hält auseinander, welche Wege möglich sind und wie wahrscheinlich jeder davon ist.",
+    "idea": "Entlang eines Weges müssen mehrere Ereignisse gemeinsam eintreten: Du multiplizierst die passenden bedingten Wahrscheinlichkeiten. Führen verschiedene, sich ausschließende Wege zum gesuchten Ereignis, addierst du ihre Wahrscheinlichkeiten.",
+    "check": "Warum ändern sich beim Ziehen ohne Zurücklegen die Brüche?",
+    "answer": "Die Gesamtzahl der Kugeln sinkt. Außerdem hängt die Zahl der noch vorhandenen Farben davon ab, welche Kugel zuvor gezogen wurde."
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "id": "R.1",
+  "slug": "realschule-koerper",
+  "name": "Körper berechnen und zusammensetzen",
+  "stage": "Realschule",
+  "reference": "RS 10.1",
+  "lead": "Du berechnest Volumen und Oberfläche und setzt komplexere Körper aus einfachen Bausteinen zusammen.",
+  "prerequisites": "Flächenformeln, Pythagoras, Einheiten",
+  "concepts": [
+    {
+      "title": "Volumen und Oberfläche",
+      "explanation": "Volumen misst den Rauminhalt in Kubikeinheiten. Oberfläche misst äußere Flächen in Quadrateinheiten. Berührungsflächen zusammengesetzter Körper gehören nicht zur äußeren Oberfläche.",
+      "example": "1 dm³=1 L; 1 cm³=1 mL."
+    },
+    {
+      "title": "Prisma und Pyramide",
+      "explanation": "Ein Prisma hat überall denselben Querschnitt. Eine Pyramide mit gleicher Grundfläche und senkrechter Höhe besitzt ein Drittel des Prismenvolumens.",
+      "example": "Prisma V=Gh; Pyramide V=Gh/3."
+    },
+    {
+      "title": "Kegel und Kugel",
+      "explanation": "Beim Kegel unterscheidest du senkrechte Höhe h und Mantellinie s. Die Kugel besitzt weder Grundfläche noch Mantelfläche.",
+      "example": "Kegel: V=πr²h/3, O=πr²+πrs; Kugel: V=4πr³/3, O=4πr²."
+    },
+    {
+      "title": "Rückwärts rechnen",
+      "explanation": "Stelle die passende Formel nach der gesuchten Größe um, bevor du einsetzt. Bei einem gesuchten Radius aus einem Kugelvolumen ist die Kubikwurzel erforderlich.",
+      "example": "r=∛(3V/(4π))."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Pyramide",
+      "question": "Quadratische Pyramide mit Grundkante 6 cm und Höhe 4 cm: Volumen?",
+      "steps": [
+        "G=6²=36 cm².",
+        "V=36·4/3=48 cm³."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Kegeloberfläche",
+      "question": "r=3 cm, h=4 cm. Bestimme O.",
+      "steps": [
+        "s=√(3²+4²)=5 cm.",
+        "O=π·3²+π·3·5=24π≈75,40 cm²."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Zusammengesetzter Körper",
+      "question": "Ein Zylinder (r=2 cm,h=5 cm) trägt eine Halbkugel gleichen Radius. Bestimme das Gesamtvolumen.",
+      "steps": [
+        "Zylinder: 20π cm³. Halbkugel: (1/2)·(4/3)π·8=16π/3 cm³.",
+        "Gesamt 76π/3≈79,59 cm³. Die Teile überlappen sich im Inneren nicht."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Quader",
+      "question": "Berechne V bei 3 cm×4 cm×5 cm.",
+      "steps": [
+        "V=3·4·5=60 cm³."
+      ],
+      "id": "R.1-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Liter",
+      "question": "Wandle 2500 cm³ in Liter um.",
+      "steps": [
+        "1000 cm³=1 L, also 2,5 L."
+      ],
+      "id": "R.1-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Kugel",
+      "question": "Kugelradius 3 cm: V und O?",
+      "steps": [
+        "V=36π≈113,10 cm³; O=36π≈113,10 cm². Gleicher Zahlenwert, verschiedene Größen und Einheiten."
+      ],
+      "id": "R.1-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Höhe",
+      "question": "Eine Pyramide hat V=80 cm³, G=30 cm². Bestimme h.",
+      "steps": [
+        "h=3V/G=240/30=8 cm."
+      ],
+      "id": "R.1-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Kegelhöhe",
+      "question": "Kegel mit r=5 cm und s=13 cm. Bestimme h.",
+      "steps": [
+        "h=√(s²−r²)=√144=12 cm."
+      ],
+      "id": "R.1-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Oberfläche eines Verbunds",
+      "question": "Zylinder r=2,h=5 mit aufgesetzter Halbkugel r=2. Berechne die äußere Oberfläche einschließlich Boden.",
+      "steps": [
+        "Zylindermantel 2πrh=20π; Boden πr²=4π; Halbkugeloberfläche 2πr²=8π.",
+        "Summe 32π≈100,53 cm². Die gemeinsame Kreisfläche im Inneren wird nicht gezählt."
+      ],
+      "id": "R.1-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Radius rückwärts",
+      "question": "Eine Kugel hat Volumen 288π cm³. Bestimme r.",
+      "steps": [
+        "4πr³/3=288π → r³=216 → r=6 cm."
+      ],
+      "id": "R.1-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Ähnlich vergrößern",
+      "question": "Alle Längen eines Körpers werden mit 1,5 multipliziert. Wie verändern sich Oberfläche und Volumen?",
+      "steps": [
+        "Oberfläche: Faktor 1,5²=2,25. Volumen: Faktor 1,5³=3,375."
+      ],
+      "id": "R.1-08"
+    },
+    {
+      "id": "R.1-verstehen-01",
+      "level": "Einfach",
+      "title": "Liter und Volumen",
+      "question": "Ein Quader hat Kanten 10 cm, 10 cm und 20 cm. Wie viele Liter passen hinein?",
+      "hint": "Berechne erst Kubikzentimeter.",
+      "steps": [
+        "V=10·10·20=2000 cm³.",
+        "Das sind 2 L."
+      ]
+    },
+    {
+      "id": "R.1-verstehen-02",
+      "level": "Mittel",
+      "title": "Hohlraum abziehen",
+      "question": "Ein Würfel hat Außenkante 5 cm und einen würfelförmigen Hohlraum mit Kante 3 cm. Materialvolumen?",
+      "hint": "Außenvolumen minus fehlender Innenraum.",
+      "steps": [
+        "Außenvolumen 5³=125 cm³.",
+        "Hohlraum 3³=27 cm³.",
+        "Materialvolumen 98 cm³."
+      ]
+    },
+    {
+      "id": "R.1-verstehen-03",
+      "level": "Schwierig",
+      "title": "Geklebte Flächen",
+      "question": "Zwei Würfel mit Kantenlänge 2 cm werden an einer ganzen Fläche zusammengeklebt. Bestimme die äußere Oberfläche.",
+      "hint": "Die beiden Kontaktflächen sind von außen nicht mehr sichtbar.",
+      "steps": [
+        "Ein Würfel hat Oberfläche 6·4=24 cm², beide zusammen zunächst 48 cm².",
+        "Zwei Kontaktflächen mit je 4 cm² entfallen.",
+        "Äußere Oberfläche 48−8=40 cm²."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Realschule",
+  "course": "MSA",
+  "understanding": {
+    "why": "Beim Befüllen eines Gefäßes interessiert dich sein Volumen, beim Lackieren seine Oberfläche. Bei zusammengesetzten Körpern musst du zusätzlich entscheiden, welche Flächen von außen überhaupt sichtbar sind.",
+    "idea": "Beginne mit einer Skizze und einer einheitlichen Längeneinheit. Zerlege den Körper in bekannte Formen. Volumina kannst du addieren oder als Hohlraum abziehen; bei Oberflächen zählen zusammengeklebte Kontaktflächen nicht zur Außenfläche.",
+    "check": "Warum verdoppelt sich das Volumen nicht bei doppelter Länge in allen Richtungen?",
+    "answer": "Die Länge wird in drei unabhängigen Richtungen verdoppelt: 2·2·2=8. Das Volumen wird achtmal so groß."
+  }
+}

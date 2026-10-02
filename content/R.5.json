@@ -1,0 +1,179 @@
+{
+  "id": "R.5",
+  "slug": "realschule-statistik",
+  "name": "Realschule: Statistik und Zufall wiederholen",
+  "stage": "Realschule",
+  "reference": "RS 10.5 / MSA Daten und Zufall",
+  "lead": "Du fasst Daten sinnvoll zusammen, beurteilst Diagramme und wiederholst Wahrscheinlichkeiten für den Abschluss.",
+  "prerequisites": "Brüche, Prozentrechnung",
+  "concepts": [
+    {
+      "title": "Daten erheben",
+      "explanation": "Kläre Grundgesamtheit, Merkmal und Auswahl der Befragten. Eine große Stichprobe hilft wenig, wenn systematisch die falschen Personen erreicht werden.",
+      "example": "Nur Sportvereinsmitglieder zu Sportstunden zu befragen kann die Schätzung verzerren."
+    },
+    {
+      "title": "Kennzahlen",
+      "explanation": "Mittelwert: Summe geteilt durch Anzahl. Median: Mitte der geordneten Werte. Spannweite: größter minus kleinster Wert. Bei gerader Anzahl mittelt man die beiden mittleren Werte für den Median.",
+      "example": "2,3,5,10 → Mittelwert 5; Median 4; Spannweite 8."
+    },
+    {
+      "title": "Diagramme lesen",
+      "explanation": "Prüfe Achsenanfang, Skalierung, Einheiten und Bezugsgrößen. Balkenhöhen und Flächen können einen Unterschied größer wirken lassen, als er ist.",
+      "example": "Ein Anstieg von 50 auf 60 ist +10 absolut, aber +20 % relativ."
+    },
+    {
+      "title": "Zufall wiederholen",
+      "explanation": "Laplace gilt nur bei gleich wahrscheinlichen Ergebnissen. Im Baum multiplizierst du entlang eines Pfads und addierst disjunkte passende Pfade. Das Gegenereignis vereinfacht häufig „mindestens einmal“.",
+      "example": "P(mindestens ein Treffer)=1−P(kein Treffer)."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Kennzahlen",
+      "question": "Berechne Mittelwert und Median von 1,2,2,3,12.",
+      "steps": [
+        "Mittelwert 20/5=4.",
+        "Median 2; der hohe Wert 12 zieht den Mittelwert nach oben."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Gewichteter Mittelwert",
+      "question": "Drei Tests haben die Noten 2,2,5. Der letzte zählt doppelt. Berechne den gewichteten Mittelwert.",
+      "steps": [
+        "Gewichte 1,1,2. Summe der Gewichte 4.",
+        "(2+2+2·5)/4=3,5."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Wahrscheinlichkeit",
+      "question": "Eine faire Münze wird dreimal geworfen. P(mindestens einmal Kopf)?",
+      "steps": [
+        "Gegenereignis dreimal Zahl: (1/2)³=1/8.",
+        "Gesucht 1−1/8=7/8=87,5 %."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Spannweite",
+      "question": "Daten 4,7,9,12. Bestimme die Spannweite.",
+      "steps": [
+        "12−4=8."
+      ],
+      "id": "R.5-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Häufigkeit",
+      "question": "12 von 50 Personen wählen A. Anteil in Prozent?",
+      "steps": [
+        "12/50=0,24=24 %."
+      ],
+      "id": "R.5-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Median",
+      "question": "Bestimme den Median von 8,2,5,3,9.",
+      "steps": [
+        "Sortiert 2,3,5,8,9. Median 5."
+      ],
+      "id": "R.5-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Mittelwert",
+      "question": "Die Werte 4,6,8,x haben Mittelwert 7. Bestimme x.",
+      "steps": [
+        "Summe muss 4·7=28 sein.",
+        "x=28−18=10."
+      ],
+      "id": "R.5-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Würfel",
+      "question": "Ein fairer Würfel: P(keine 6)?",
+      "steps": [
+        "5/6."
+      ],
+      "id": "R.5-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Baum",
+      "question": "Urne: 3 rot,2 blau; zweimal ohne Zurücklegen. P(zweimal rot)?",
+      "steps": [
+        "3/5·2/4=3/10=30 %."
+      ],
+      "id": "R.5-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Prozentpunkte",
+      "question": "Ein Anteil steigt von 20 % auf 25 %. Beschreibe den Anstieg.",
+      "steps": [
+        "+5 Prozentpunkte. Relativ: (25−20)/20=25 % Zunahme."
+      ],
+      "id": "R.5-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Achse",
+      "question": "Ein Balkendiagramm beginnt bei 95 und zeigt Werte 100 und 105. Welche Fehlinterpretation droht?",
+      "steps": [
+        "Sichtbare Balkenhöhen 5 und 10 können Verdopplung suggerieren.",
+        "Tatsächlich beträgt die Zunahme nur 5 %. Achsenbeginn und Zahlen prüfen."
+      ],
+      "id": "R.5-08"
+    },
+    {
+      "id": "R.5-verstehen-01",
+      "level": "Einfach",
+      "title": "Anteil berechnen",
+      "question": "18 von 60 Personen kommen mit dem Bus. Wie viel Prozent sind das?",
+      "hint": "Teil geteilt durch Ganzes.",
+      "steps": [
+        "18/60=3/10=0,3.",
+        "Das entspricht 30 %."
+      ]
+    },
+    {
+      "id": "R.5-verstehen-02",
+      "level": "Mittel",
+      "title": "Median bei gerader Anzahl",
+      "question": "Bestimme den Median von 2,4,7,11.",
+      "hint": "Bei vier Werten liegen zwei in der Mitte.",
+      "steps": [
+        "Die mittleren Werte sind 4 und 7.",
+        "Median=(4+7)/2=5,5. Er muss nicht selbst in der Liste vorkommen."
+      ]
+    },
+    {
+      "id": "R.5-verstehen-03",
+      "level": "Schwierig",
+      "title": "Prozent oder Prozentpunkte?",
+      "question": "Ein Anteil steigt von 30 % auf 36 %. Gib absolute Änderung in Prozentpunkten und relative Änderung an.",
+      "hint": "Für die relative Änderung brauchst du den alten Anteil als Basis.",
+      "steps": [
+        "36−30=6 Prozentpunkte.",
+        "Relativer Anstieg 6/30=0,2=20 %.",
+        "Beide Angaben beschreiben dieselbe Veränderung mit unterschiedlichem Bezug."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Realschule",
+  "course": "MSA",
+  "understanding": {
+    "why": "Diagramme sollen Daten verständlich machen, können aber auch täuschen. Ein sinnvoller Vergleich braucht dieselben Einheiten, passende Skalen und eine klare Vorstellung davon, welche Personen oder Fälle betrachtet werden.",
+    "idea": "Lies zuerst die Beschriftung. Ist ein Balken eine Anzahl, ein Anteil oder ein Durchschnitt? Bei Zufallsaussagen unterscheidest du beobachtete Häufigkeiten von Modellwahrscheinlichkeiten. Viele Wiederholungen liefern stabilere Anteile, aber keine Garantie für den nächsten Versuch.",
+    "check": "Ist ein Anstieg von 20 % auf 25 % ein Anstieg um 5 %?",
+    "answer": "Er beträgt 5 Prozentpunkte. Bezogen auf den Ausgangswert 20 % ist der relative Anstieg 5/20=25 %."
+  }
+}

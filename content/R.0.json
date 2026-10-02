@@ -1,0 +1,180 @@
+{
+  "id": "R.0",
+  "slug": "realschule-grundlagen",
+  "name": "Realschule: Grundlagen für den Abschluss",
+  "stage": "Realschule",
+  "reference": "MSA · Wiederholung",
+  "lead": "Brüche, Prozentrechnung, Gleichungen und Parabeln bilden das Fundament für die Abschlussaufgaben.",
+  "prerequisites": "Grundrechenarten",
+  "concepts": [
+    {
+      "title": "Brüche und Reihenfolge",
+      "explanation": "Rechne zuerst innerhalb von Klammern, dort wieder nach den Rechenregeln. Anschließend Potenzen, Punktrechnung, Strichrechnung. Bei der Addition von Brüchen brauchst du einen gemeinsamen Nenner.",
+      "example": "1/3+1/4=4/12+3/12=7/12."
+    },
+    {
+      "title": "Prozentrechnung",
+      "explanation": "Der Grundwert ist das Ganze, der Prozentwert der Anteil. Ein prozentualer Aufschlag wird mit einem Faktor gerechnet. Zum Rückwärtsrechnen teilst du durch diesen Faktor.",
+      "example": "Nach 20 % Rabatt: neuer Preis=alter Preis·0,8."
+    },
+    {
+      "title": "Gleichungen umformen",
+      "explanation": "Führe auf beiden Seiten dieselbe zulässige Operation aus. Beim Dividieren durch einen Term muss dieser ungleich 0 sein. Prüfe die erhaltene Lösung in der Ausgangsgleichung.",
+      "example": "3(x−2)=12 → x−2=4 → x=6."
+    },
+    {
+      "title": "Quadratische Zusammenhänge",
+      "explanation": "Parabeln haben die Form ax²+bx+c mit a≠0. Die Scheitelform zeigt den Scheitel direkt. Nullstellen findest du durch Faktorisieren, Wurzelziehen oder eine Lösungsformel.",
+      "example": "x²−5x+6=(x−2)(x−3) → x=2 oder 3."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Brüche",
+      "question": "Berechne 3/4−1/6.",
+      "steps": [
+        "Gemeinsamer Nenner 12: 9/12−2/12.",
+        "Ergebnis 7/12."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Originalpreis",
+      "question": "Nach 20 % Rabatt kostet eine Jacke 64 €. Wie teuer war sie vorher?",
+      "steps": [
+        "64 € entsprechen 80 % des Originalpreises.",
+        "G=64/0,8=80 €. Probe: 80·0,8=64."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Zwei Bedingungen",
+      "question": "Zwei Zahlen haben Summe 18 und Differenz 4. Bestimme sie.",
+      "steps": [
+        "x+y=18 und x−y=4.",
+        "Addieren: 2x=22 → x=11. Dann y=7."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Brüche multiplizieren",
+      "question": "Berechne (2/3)·(9/4).",
+      "steps": [
+        "18/12=3/2=1,5."
+      ],
+      "id": "R.0-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Prozentwert",
+      "question": "Wie viel sind 15 % von 240 €?",
+      "steps": [
+        "0,15·240=36 €."
+      ],
+      "id": "R.0-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Klammer",
+      "question": "Löse 4(x+2)=3x+15.",
+      "steps": [
+        "4x+8=3x+15 → x=7.",
+        "Probe: 4·9=21+15=36."
+      ],
+      "id": "R.0-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Parabel",
+      "question": "Löse x²−7x+12=0.",
+      "steps": [
+        "(x−3)(x−4)=0 → x=3 oder 4."
+      ],
+      "id": "R.0-04"
+    },
+    {
+      "level": "Mittel",
+      "title": "Linear",
+      "question": "Bestimme die Nullstelle von y=3x−12.",
+      "steps": [
+        "0=3x−12 → x=4."
+      ],
+      "id": "R.0-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Prozentfallen",
+      "question": "Ein Preis steigt erst um 10 % und sinkt dann um 10 %. Ist er wieder gleich?",
+      "steps": [
+        "Faktor 1,1·0,9=0,99.",
+        "Er liegt 1 % unter dem Ausgangspreis. Die Prozentwerte haben verschiedene Grundwerte."
+      ],
+      "id": "R.0-06"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Maßstab",
+      "question": "Eine 8 cm lange Strecke auf einem Plan mit Maßstab 1:250 entspricht welcher echten Länge?",
+      "steps": [
+        "8·250=2000 cm=20 m."
+      ],
+      "id": "R.0-07"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Parabelmodell",
+      "question": "Ein Rechteck hat Umfang 30 cm. Stelle die Fläche in Abhängigkeit von einer Seite x dar.",
+      "steps": [
+        "Andere Seite 15−x.",
+        "A(x)=x(15−x), 0<x<15. Der Scheitel liegt bei x=7,5; größte Fläche 56,25 cm²."
+      ],
+      "id": "R.0-08"
+    },
+    {
+      "id": "R.0-verstehen-01",
+      "level": "Einfach",
+      "title": "Gleich große Teile",
+      "question": "Berechne 1/2+1/3.",
+      "hint": "Finde einen gemeinsamen Nenner.",
+      "steps": [
+        "1/2=3/6 und 1/3=2/6.",
+        "Zusammen 5/6."
+      ]
+    },
+    {
+      "id": "R.0-verstehen-02",
+      "level": "Mittel",
+      "title": "Rabatt rückwärts",
+      "question": "Nach 20 % Rabatt kostet ein Artikel 64 €. Wie teuer war er vorher?",
+      "hint": "64 € entsprechen 80 %, nicht 100 %.",
+      "steps": [
+        "0,8·G=64.",
+        "G=64/0,8=80 €. Probe: 20 % von 80 sind 16; 80−16=64."
+      ]
+    },
+    {
+      "id": "R.0-verstehen-03",
+      "level": "Schwierig",
+      "title": "Gleichung mit Bruch",
+      "question": "Löse (x+2)/3=(x−1)/2.",
+      "hint": "Multipliziere beide Seiten mit dem gemeinsamen Nenner 6.",
+      "steps": [
+        "2(x+2)=3(x−1).",
+        "2x+4=3x−3 gibt x=7.",
+        "Probe: 9/3=6/2=3."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Realschule",
+  "course": "MSA",
+  "understanding": {
+    "why": "Brüche, Prozentrechnung und Gleichungen sind Werkzeuge für viele spätere Themen. Ein Bruch beschreibt gleich große Teile eines Ganzen oder ein Verhältnis. Seine Schreibweise mit Zähler oben und Nenner unten zeigt, was geteilt wird.",
+    "idea": "Bevor du rechnest, kläre die Bedeutung: Welches Ganze entspricht 100 %? Worauf bezieht sich eine Klammer? Welche Größe ist unbekannt? Eine Skizze oder eine Probe macht Rechenregeln nachvollziehbar.",
+    "check": "Warum addiert man bei 1/3+1/4 nicht einfach Zähler und Nenner?",
+    "answer": "Drittel und Viertel sind verschieden große Teile. Erst die Umrechnung auf gleich große Zwölftel erlaubt die Addition: 4/12+3/12=7/12."
+  }
+}

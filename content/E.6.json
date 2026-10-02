@@ -1,0 +1,165 @@
+{
+  "id": "E.6",
+  "slug": "numerische-gleichungen",
+  "name": "Gleichungen numerisch lösen",
+  "stage": "E-Phase",
+  "reference": "E.6 · Wahlthema",
+  "lead": "Wenn Umformen nicht reicht, helfen Intervallhalbierung und Newton-Verfahren. Du lernst dabei auch, Näherungen zu beurteilen.",
+  "prerequisites": "Stetigkeit anschaulich, Ableitungen, Gleichungen",
+  "concepts": [
+    {
+      "title": "Eine Nullstelle einschließen",
+      "explanation": "Bei einer stetigen Funktion und entgegengesetzten Vorzeichen an den Intervallenden liegt mindestens eine Nullstelle dazwischen. Ohne Stetigkeit gilt diese Folgerung nicht.",
+      "example": "f(x)=x²−2: f(1)=−1, f(2)=2."
+    },
+    {
+      "title": "Intervall halbieren",
+      "explanation": "Berechne den Mittelpunkt und behalte die Hälfte mit dem Vorzeichenwechsel. Nach n Schritten beträgt die Intervalllänge nur noch die ursprüngliche Länge geteilt durch 2ⁿ.",
+      "example": "Aus [1;2] wird für x²−2 zunächst [1;1,5]."
+    },
+    {
+      "title": "Newton-Verfahren",
+      "explanation": "Die Tangente im aktuellen Näherungspunkt schneidet die x-Achse beim nächsten Näherungswert. Das Verfahren ist oft schnell, kann aber bei ungeeignetem Startwert scheitern.",
+      "example": "xₙ₊₁=xₙ−f(xₙ)/f′(xₙ), sofern f′(xₙ)≠0."
+    },
+    {
+      "title": "Näherung und Nachweis",
+      "explanation": "Eine kleine Restabweichung f(x) ist ein hilfreicher Hinweis, aber nicht automatisch eine garantierte kleine Abweichung von der Nullstelle. Ein einschließendes Intervall gibt eine klare Fehlergrenze.",
+      "example": "Mittelpunkt eines Intervalls der Länge 0,002: Fehler höchstens 0,001."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Intervall finden",
+      "question": "Finde ein Intervall für die positive Nullstelle von x²−3.",
+      "steps": [
+        "f(1)=−2; f(2)=1.",
+        "f ist stetig. Die Nullstelle liegt zwischen 1 und 2."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Newton-Schritt",
+      "question": "Berechne einen Newton-Schritt für x²−2 mit x₀=1,5.",
+      "steps": [
+        "f(1,5)=0,25 und f′(1,5)=3.",
+        "x₁=1,5−0,25/3=1,416666… ."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Schrittzahl abschätzen",
+      "question": "Wie viele Halbierungen bringen ein Intervall der Länge 1 unter 0,001?",
+      "steps": [
+        "Gesucht 1/2ⁿ<0,001, also 2ⁿ>1000.",
+        "2¹⁰=1024; daher reichen 10 Halbierungen."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "level": "Einfach",
+      "title": "Vorzeichen",
+      "question": "Zeige, dass x³−5 eine Nullstelle in (1;2) hat.",
+      "steps": [
+        "f(1)=−4, f(2)=3 und f ist stetig.",
+        "Zwischenwertsatz liefert mindestens eine Nullstelle."
+      ],
+      "id": "E.6-01"
+    },
+    {
+      "level": "Einfach",
+      "title": "Halbierung",
+      "question": "Halbiere [1;2] für f(x)=x²−2 einmal.",
+      "steps": [
+        "Mitte 1,5, f(1,5)=0,25>0.",
+        "Neues Intervall [1;1,5]."
+      ],
+      "id": "E.6-02"
+    },
+    {
+      "level": "Mittel",
+      "title": "Zweiter Schritt",
+      "question": "Halbiere [1;1,5] nochmals für x²−2.",
+      "steps": [
+        "Mitte 1,25; f(1,25)=−0,4375.",
+        "Neues Intervall [1,25;1,5]."
+      ],
+      "id": "E.6-03"
+    },
+    {
+      "level": "Mittel",
+      "title": "Newton",
+      "question": "Newton für x²−3 mit x₀=2: berechne x₁.",
+      "steps": [
+        "x₁=2−(4−3)/4=1,75."
+      ],
+      "id": "E.6-04"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Abbruch",
+      "question": "Warum ist Newton für f(x)=x²−2 mit x₀=0 nicht definiert?",
+      "steps": [
+        "f′(0)=0; die Formel würde durch 0 teilen.",
+        "Die waagerechte Tangente liefert keinen eindeutigen nächsten Schnittpunkt."
+      ],
+      "id": "E.6-05"
+    },
+    {
+      "level": "Schwierig",
+      "title": "Stetigkeit nötig",
+      "question": "Warum beweisen f(−1)<0 und f(1)>0 bei f(x)=1/x keine Nullstelle?",
+      "steps": [
+        "f ist bei 0 nicht definiert und auf [−1;1] nicht stetig.",
+        "1/x wird nirgendwo 0; die Voraussetzung des Zwischenwertsatzes fehlt."
+      ],
+      "id": "E.6-06"
+    },
+    {
+      "id": "E.6-verstehen-01",
+      "level": "Einfach",
+      "title": "Startintervall prüfen",
+      "question": "Warum liegt eine Nullstelle von f(x)=x²−5 zwischen 2 und 3?",
+      "hint": "Prüfe Vorzeichen und Stetigkeit.",
+      "steps": [
+        "f(2)=−1 und f(3)=4.",
+        "Ein Polynom ist stetig. Es muss dazwischen den Wert 0 annehmen."
+      ]
+    },
+    {
+      "id": "E.6-verstehen-02",
+      "level": "Mittel",
+      "title": "Newton konkret",
+      "question": "Berechne für f(x)=x²−5 ausgehend von x₀=2 einen Newton-Schritt.",
+      "hint": "Verwende x₁=x₀−f(x₀)/f′(x₀).",
+      "steps": [
+        "f(2)=−1 und f′(2)=4.",
+        "x₁=2−(−1)/4=9/4=2,25.",
+        "Die Tangente liefert eine Näherung, nicht die exakte Wurzel."
+      ]
+    },
+    {
+      "id": "E.6-verstehen-03",
+      "level": "Schwierig",
+      "title": "Fehler kontrollieren",
+      "question": "Eine Nullstelle liegt in [1,4;1,5]. Wie viele Halbierungen garantieren für den Intervallmittelpunkt einen Fehler von höchstens 0,001?",
+      "hint": "Der maximale Mittelpunktfehler ist die halbe Intervallbreite.",
+      "steps": [
+        "Nach n Halbierungen ist die Breite 0,1/2ⁿ.",
+        "Gefordert ist 0,05/2ⁿ≤0,001, also 2ⁿ≥50.",
+        "n=6 reicht, weil 2⁵=32 und 2⁶=64."
+      ]
+    }
+  ],
+  "note": "",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "understanding": {
+    "why": "Manche Gleichungen lassen sich nicht mit einer vertrauten Umformung exakt lösen. Dann sucht man eine Näherung, beispielsweise für den Zeitpunkt, zu dem zwei Modelle denselben Wert annehmen.",
+    "idea": "Die Intervallhalbierung grenzt eine Nullstelle immer genauer ein. Newton benutzt die Tangente als lokale Ersatzgerade. Beides sind begründete Verfahren; eine vom Rechner angezeigte Zahl allein ist noch keine Erklärung ihrer Genauigkeit.",
+    "check": "Reicht ein Vorzeichenwechsel für eine Nullstelle?",
+    "answer": "Nur mit der passenden Voraussetzung: Die Funktion muss auf dem betrachteten Intervall stetig sein. 1/x zeigt, warum eine Definitionslücke den Schluss verhindern kann."
+  }
+}
