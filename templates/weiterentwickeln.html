@@ -1,0 +1,55 @@
+<span class="eyebrow">FÜR JJ · WEITERENTWICKELN</span>
+<h1>Deine eigene JR-Maths-Seite.</h1>
+<p>Du bekommst den vollständigen Quellcode mit allen Inhalten. Die fertige Seite besteht aus HTML, CSS und JavaScript. Python erzeugt die HTML-Seiten aus den Kapiteldateien und wird nur beim Bauen benötigt.</p>
+<p><a class="download-button" href="../downloads/mathepfad-quellcode.zip" download>Komplettes Projekt als ZIP</a></p>
+<h2>1. In Visual Studio Code öffnen</h2>
+<ol><li>ZIP herunterladen und vollständig entpacken.</li><li>In <strong>Visual Studio Code</strong> über <strong>Datei → Ordner öffnen</strong> den Ordner <code>mathepfad</code> wählen. Gemeint ist VS Code; die große Visual-Studio-IDE ist nicht erforderlich.</li><li>Für reine Vorschau <code>dist/index.html</code> im Browser öffnen. Navigation und Lösungen funktionieren auch direkt aus dem Ordner.</li><li>Für Änderungen an Kapiteln Python 3 installieren und das VS-Code-Terminal im Projektordner öffnen.</li></ol>
+<pre><code># Windows
+py build.py
+py export.py
+py check.py
+py -m http.server 8000 --directory dist
+
+# macOS / Linux: python3 statt py</code></pre>
+<p>Öffne anschließend <code>http://localhost:8000</code>. Beenden mit Strg+C. Nach einer Inhaltsänderung erneut bauen und den Browser neu laden. In VS Code sind außerdem Aufgaben unter <strong>Terminal → Aufgabe ausführen</strong> vorbereitet.</p>
+<h2>2. Welche Datei macht was?</h2>
+<div class="table-scroll"><table><thead><tr><th>Pfad</th><th>Aufgabe</th></tr></thead><tbody>
+<tr><td><code>content/*.json</code></td><td>Eine Datei je Kapitel: Erklärungen, Beispiele und Aufgaben. Hier bearbeitest du Lerninhalte.</td></tr>
+<tr><td><code>templates/base.html</code></td><td>Gemeinsamer HTML-Rahmen: Kopf, Navigation und Fußbereich.</td></tr>
+<tr><td><code>templates/lehrplan.html</code></td><td>Quellen und Lehrplaneinordnung.</td></tr>
+<tr><td><code>assets/style.css</code></td><td>Gestaltung, Handy- und Druckansicht.</td></tr>
+<tr><td><code>assets/app.js</code></td><td>Suche, Aufgabenfilter, Druckknopf und Parameterdiagramm.</td></tr>
+<tr><td><code>build.py</code></td><td>Baut alle Seiten und die Navigation aus den Inhalten.</td></tr>
+<tr><td><code>export.py / check.py</code></td><td>Downloadpaket erstellen / Links, Kennungen und Struktur prüfen.</td></tr>
+<tr><td><code>dist/</code></td><td>Fertige Website. Diesen Ordner veröffentlichst du.</td></tr>
+<tr><td><code>.github/workflows/pages.yml</code></td><td>Automatisches Bauen und Veröffentlichen auf GitHub Pages.</td></tr>
+</tbody></table></div>
+<h2>3. Ein Kapitel erweitern</h2>
+<p>Öffne beispielsweise <code>content/Q1.1.json</code>. Ergänze im Array <code>tasks</code> eine Aufgabe. Gib ihr eine neue, dauerhafte Kennung. Bestehende Kennungen und Slugs möglichst nicht ändern, damit Schülerlinks weiter funktionieren.</p>
+<pre><code>{
+  "id": "Q1.1-09",
+  "level": "Mittel",
+  "title": "Integral berechnen",
+  "question": "Berechne das Integral von 0 bis 2 über 3x².",
+  "steps": [
+    "Eine Stammfunktion ist F(x)=x³.",
+    "F(2)−F(0)=8−0=8."
+  ]
+}</code></pre>
+<p>Für ein neues Kapitel kopierst du eine Kapiteldatei, änderst <code>id</code>, <code>slug</code>, <code>name</code> und den Inhalt. Der <code>stage</code>-Wert ordnet es einer vorhandenen Lernstufe zu. Die Navigation entsteht automatisch. Text wird sicher als Text dargestellt; HTML-Tags gehören nicht in die JSON-Felder. Ein vollständig beschriebenes Beispiel liegt in <code>docs/kapitel-vorlage.json</code>.</p>
+<h2>4. Mit GitHub Pages öffentlich bereitstellen</h2>
+<p>Der mitgelieferte Workflow baut die Site bei einem Push auf <code>main</code>. Relative Links funktionieren auch unter einer Projektadresse wie <code>name.github.io/mathepfad/</code>.</p>
+<ol><li>Ein neues GitHub-Repository anlegen, zum Beispiel <code>mathepfad</code>. Für GitHub Free ein öffentliches Repository verwenden.</li><li>Den entpackten Projektinhalt in dieses Repository übernehmen. Der Quellcode liegt danach in deinem eigenen GitHub-Konto.</li><li>Im Repository <strong>Settings → Pages → Build and deployment → Source: GitHub Actions</strong> einstellen.</li><li>Den Code auf den Branch <code>main</code> pushen. Alternativ unter Actions den Workflow „Mathepfad auf GitHub Pages“ manuell starten.</li><li>Nach erfolgreichem Workflow zeigt GitHub Pages die Adresse. Diese können Schüler auf Handy, iPad und PC öffnen.</li></ol>
+<pre><code>git init -b main
+git add .
+git commit -m "Mathepfad starten"
+git remote add origin DEINE_GITHUB_REPOSITORY_URL
+git push -u origin main</code></pre>
+<p>Ersetze den Platzhalter durch die URL deines Repositories. Die GitHub-Anmeldung erfolgt über deine lokale Git- oder VS-Code-Anmeldung. Bei späteren Änderungen reichen Bauen/Prüfen, Commit und Push. Der Workflow baut zusätzlich selbst.</p>
+<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages" target="_blank" rel="noopener noreferrer">Offizielle GitHub-Anleitung für Pages-Workflows</a></p>
+<h2>5. Anderes Hosting oder eigener Webserver</h2>
+<p>Nach <code>build.py</code> und <code>export.py</code> kannst du den Inhalt von <code>dist/</code> auf jeden statischen Webhost hochladen. <code>index.html</code> muss im Webwurzelordner liegen; Unterordner und Dateinamen bleiben erhalten. Der Server muss weder Python noch Node.js ausführen. HTTPS und eine Domain werden beim jeweiligen Anbieter eingerichtet.</p>
+<p>Für einen kurzen Test im eigenen WLAN kannst du den lokalen Server nutzen und am Handy die lokale IP-Adresse deines PCs mit Port 8000 öffnen. PC und Handy müssen im gleichen Netz sein und die Firewall den Zugriff erlauben. Das ersetzt kein dauerhaftes Internet-Hosting; der PC müsste dabei eingeschaltet bleiben.</p>
+<h2>6. Modular weiterbauen</h2>
+<p>Neue Inhalte benötigen hauptsächlich neue JSON-Dateien. Änderungen am Design gelten über die gemeinsame CSS-Datei für alle Kapitel. Später können Benutzerkonten und eine Datenbank ergänzt werden; Aufgabenkennungen sind bereits stabil. Für den jetzigen Nachschlagebetrieb brauchst du das nicht.</p>
+<p>Das heruntergeladene Projekt enthält keine Bindung an das bisherige Sites-Projekt. Die bestehende Sites-Veröffentlichung behält ihre aktuellen Zugriffsrechte. Für Schüler, die jederzeit ohne Anmeldung nachschlagen sollen, nutze die eigene öffentliche Veröffentlichung.</p>

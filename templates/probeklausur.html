@@ -1,0 +1,14 @@
+<header class="intro exam-intro"><span class="eyebrow">DEIN KLAUSURBAUKASTEN</span><h1>Zeig, was du kannst.</h1><p>Wähle deine Kapitel und stelle dein Übungsblatt zusammen. Aufgaben und Lösungswege kannst du getrennt anzeigen und als PDF drucken.</p></header>
+<noscript><p>Bitte aktiviere JavaScript, um eine Probeklausur zusammenzustellen.</p></noscript>
+<div class="exam-builder js-only">
+<section class="exam-controls" aria-label="Klausur zusammenstellen">
+<div class="exam-toolbar"><h2>1. Themen wählen</h2><button type="button" id="exam-clear">Auswahl leeren</button></div>
+<label for="exam-stage">Lernstufe anzeigen</label><select id="exam-stage"><option value="">Alle Lernstufen</option></select>
+<div id="exam-topics"></div>
+<h2>2. Mischung festlegen</h2>
+<div class="exam-settings"><label>Schwierigkeit<select id="exam-level"><option value="">Gemischt</option><option>Einfach</option><option>Mittel</option><option>Schwierig</option></select></label><label>Aufgabenanzahl<input id="exam-size" type="number" min="1" max="40" value="8"></label></div>
+<p id="exam-pool" role="status"></p><button type="button" id="exam-generate" class="exam-primary">Probeklausur erstellen</button><p class="exam-fine">Aus dem Aufgabenbestand von JR Maths. Jedes gewählte Kapitel kommt mindestens einmal vor. Bei mehr Kapiteln wächst die Aufgabenzahl entsprechend.</p>
+</section>
+<section class="exam-preview" aria-label="Klausurvorschau"><div id="exam-empty"><span class="eyebrow">DEIN NÄCHSTER SCHRITT</span><h2>Aus Lernen wird Können.</h2><p>Wähle links deine Themen. Du kannst Kapitel auch direkt beim Lernen für die Klausur vormerken.</p><div class="exam-paper-lines" aria-hidden="true"></div></div>
+<div id="exam-result" hidden><div class="exam-output-tools"><button type="button" id="exam-show-questions" aria-pressed="true">Aufgaben</button><button type="button" id="exam-show-answers" aria-pressed="false">Lösungswege</button><button type="button" id="exam-print">Drucken / als PDF speichern</button></div><p class="exam-fine">Im Druckdialog „Als PDF speichern“ wählen. Auf dem iPad lässt sich die Druckvorschau als PDF teilen. Aufgaben und Lösungen werden einzeln ausgegeben.</p><p id="exam-change" role="status"></p><article id="exam-paper"></article></div>
+</section></div>

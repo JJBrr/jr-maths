@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182b53">
+  <title>{{title}} · JR Maths</title>
+  <meta name="description" content="{{description}}">
+  <link rel="icon" href="{{root}}assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{root}}assets/style.css">
+  <script src="{{root}}assets/app.js" defer></script>
+  <script src="{{root}}assets/search-index.js" defer></script>
+  <script src="{{root}}assets/navigation.js" defer></script>
+  <script src="{{root}}assets/graph-lab.js" defer></script>
+  <script src="{{root}}assets/recap.js" defer></script>
+  <script src="{{root}}assets/exam.js" defer></script>
+{{extra_scripts}}
+</head>
+<body data-root="{{root}}">
+  <a class="skip" href="#main">Zum Inhalt</a>
+  <aside class="learning-rail" aria-label="Lernnavigation">
+    <div class="rail-head"><a href="{{root}}index.html" class="brand"><span class="brand-mark">JR</span><span class="brand-name">Maths</span></a><button type="button" class="nav-toggle js-only" aria-expanded="false" aria-controls="learning-navigation">Menü</button></div>
+    <div id="learning-navigation" class="navigation-content">
+      <p class="rail-label">DEIN LERNWEG</p>
+      <nav class="stage-navigation" aria-label="Lernstufen und Kapitel">{{nav}}</nav>
+      <div class="rail-resources"><a href="{{root}}probeklausur/index.html">Probeklausur <span data-exam-count></span></a><a href="{{root}}formelsammlung/index.html{{recap_query}}" {{formula_current}}>Formelsammlung <span>Q1–Q4</span></a><a href="{{root}}lehrplan/index.html">Lehrplan & Niveaus</a></div>
+    </div>
+  </aside>
+  <div class="site-workspace">
+    <header class="site-header workspace-header">
+      <span class="workspace-location">{{location}}</span>
+      <div class="global-search js-only">
+        <label for="global-search" class="sr-only">Alle Kapitel und Zusammenfassungen durchsuchen</label>
+        <span class="search-symbol" aria-hidden="true">⌕</span>
+        <input id="global-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results" autocomplete="off" spellcheck="false" placeholder="Thema suchen … z. B. pot, wurz, Integral">
+        <div class="search-panel" id="search-panel" hidden><ul id="search-results" role="listbox" aria-label="Passende Kapitel"></ul><p id="search-status" role="status"></p></div>
+      </div>
+      <noscript><a href="{{root}}index.html">Alle Kapitel ansehen</a></noscript>
+    </header>
+    <main id="main">{{content}}</main>
+    <footer class="footer">
+      <div><strong>JR Maths</strong><p>Mathematik von Klasse 10 bis zum Abitur.<br>Eigene Aufgaben · keine Schülerkonten.</p></div>
+      <div><a href="{{root}}lehrplan/index.html">Lehrplan & Quellen</a><a href="{{root}}weiterentwickeln/index.html">Für JJ: Code & Hosting</a><a href="{{root}}downloads/mathepfad-quellcode.zip" download>Quellcode herunterladen</a></div>
+      <a href="#main">Nach oben ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
