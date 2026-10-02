@@ -1,0 +1,123 @@
+{
+  "id": "Q1.6",
+  "slug": "mein-neues-integralkapitel",
+  "name": "Mein neues Integralkapitel",
+  "stage": "Q1",
+  "reference": "Q1 · eigene Vertiefung",
+  "track": "Gymnasium",
+  "course": "Wahlthema",
+  "lead": "Hier beschreibst du, was die Lernenden in diesem Kapitel lernen.",
+  "prerequisites": "Hier stehen die benötigten Vorkenntnisse.",
+  "note": "Diese Vorlage vor dem Einfügen in content vollständig mit eigenen Inhalten füllen.",
+  "concepts": [
+    {
+      "title": "Begriff 1",
+      "explanation": "Eine verständliche Einführung.",
+      "example": "Eine passende Formel oder ein kurzes Beispiel."
+    },
+    {
+      "title": "Begriff 2",
+      "explanation": "Nächster Gedankenschritt.",
+      "example": "Eine Formel."
+    },
+    {
+      "title": "Typischer Fehler",
+      "explanation": "Erkläre den Grund des Fehlers.",
+      "example": "Korrekte Rechnung."
+    }
+  ],
+  "examples": [
+    {
+      "level": "Einfach",
+      "title": "Einstieg",
+      "question": "Eigene Beispielaufgabe einsetzen.",
+      "steps": [
+        "Ansatz.",
+        "Rechnung.",
+        "Deutung."
+      ]
+    },
+    {
+      "level": "Mittel",
+      "title": "Anwenden",
+      "question": "Eigene Beispielaufgabe einsetzen.",
+      "steps": [
+        "Ansatz.",
+        "Rechnung.",
+        "Deutung."
+      ]
+    },
+    {
+      "level": "Schwierig",
+      "title": "Übertragen",
+      "question": "Eigene Beispielaufgabe einsetzen.",
+      "steps": [
+        "Ansatz.",
+        "Rechnung.",
+        "Deutung."
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "Q1.6-01",
+      "level": "Einfach",
+      "title": "Aufgabe 1",
+      "question": "Eigene Frage einsetzen.",
+      "steps": [
+        "Vollständigen Lösungsweg einsetzen."
+      ]
+    },
+    {
+      "id": "Q1.6-02",
+      "level": "Einfach",
+      "title": "Aufgabe 2",
+      "question": "Eigene Frage einsetzen.",
+      "steps": [
+        "Vollständigen Lösungsweg einsetzen."
+      ]
+    },
+    {
+      "id": "Q1.6-03",
+      "level": "Mittel",
+      "title": "Aufgabe 3",
+      "question": "Eigene Frage einsetzen.",
+      "steps": [
+        "Vollständigen Lösungsweg einsetzen."
+      ]
+    },
+    {
+      "id": "Q1.6-04",
+      "level": "Mittel",
+      "title": "Aufgabe 4",
+      "question": "Eigene Frage einsetzen.",
+      "steps": [
+        "Vollständigen Lösungsweg einsetzen."
+      ]
+    },
+    {
+      "id": "Q1.6-05",
+      "level": "Schwierig",
+      "title": "Aufgabe 5",
+      "question": "Eigene Frage einsetzen.",
+      "steps": [
+        "Vollständigen Lösungsweg einsetzen."
+      ]
+    },
+    {
+      "id": "Q1.6-06",
+      "level": "Schwierig",
+      "title": "Aufgabe 6",
+      "question": "Eigene Frage einsetzen.",
+      "steps": [
+        "Vollständigen Lösungsweg einsetzen."
+      ]
+    }
+  ],
+  "understanding": {
+    "why": "Welche konkrete Frage beantwortet das Thema?",
+    "idea": "Die Grundidee ohne unnötige Fachsprache erklären.",
+    "check": "Eine kurze Frage, die Verständnis statt reines Rechnen prüft.",
+    "answer": "Die Antwort mit Begründung."
+  }
+}
