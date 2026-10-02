@@ -1,0 +1,439 @@
+{
+  "Q1.1": [
+    {
+      "name": "Stammfunktion und Hauptsatz",
+      "formula": "F′(x)=f(x); ∫ₐᵇf(x)dx=F(b)−F(a)",
+      "meaning": "Das bestimmte Integral ist die gesamte vorzeichenbehaftete Änderung zwischen a und b.",
+      "condition": "f stetig auf [a;b]; F ist eine Stammfunktion von f.",
+      "course": ""
+    },
+    {
+      "name": "Potenzregel rückwärts",
+      "formula": "∫xⁿdx=x^(n+1)/(n+1)+C",
+      "meaning": "Exponent um 1 erhöhen, durch den neuen Exponenten teilen. Beispiel: ∫3x²dx=x³+C.",
+      "condition": "n≠−1; auf einem Intervall, auf dem die betreffende reelle Potenzfunktion definiert ist.",
+      "course": ""
+    },
+    {
+      "name": "Grundbausteine",
+      "formula": "∫eˣdx=eˣ+C; ∫k·f(x)dx=k·∫f(x)dx",
+      "meaning": "Summen integrierst du gliedweise. Konstante Faktoren bleiben erhalten. C hebt sich bei bestimmten Integralen auf.",
+      "condition": "k konstant. Kontrolle: Stammfunktion ableiten.",
+      "course": ""
+    }
+  ],
+  "Q1.2": [
+    {
+      "name": "Fläche und Bilanz",
+      "formula": "A=∫ₐᵇ|f(x)|dx",
+      "meaning": "An Nullstellen aufteilen und Beträge der Teilintegrale addieren. Zwischen zwei Graphen abschnittsweise obere minus untere Funktion integrieren.",
+      "condition": "a<b. Nullstellen und Schnittstellen im Intervall beachten.",
+      "course": ""
+    },
+    {
+      "name": "Bestand und Mittelwert",
+      "formula": "B(t)=B(a)+∫ₐᵗr(s)ds; f̄=(1/(b−a))·∫ₐᵇf(x)dx",
+      "meaning": "Anfangsbestand plus integrierte Nettorate ergibt den Endbestand. Der mittlere Funktionswert ist Integral geteilt durch Intervalllänge.",
+      "condition": "a<b für den Mittelwert. Einheiten: Rate mal Zeit ergibt eine Bestandsänderung.",
+      "course": ""
+    },
+    {
+      "name": "Rotation um die x-Achse",
+      "formula": "V=π∫ₐᵇ(f(x))²dx",
+      "meaning": "Kreisscheiben mit Radius |f(x)| erklären das Quadrat in der Formel.",
+      "condition": "a<b; Rotation der Fläche zwischen Graph und x-Achse. Bei Hohlkörpern innere Querschnittsfläche abziehen.",
+      "course": "LK"
+    }
+  ],
+  "Q1.3": [
+    {
+      "name": "Exponentieller Verlauf",
+      "formula": "B(t)=B₀e^(kt); B′(t)=kB(t)",
+      "meaning": "k>0 bedeutet Wachstum, k<0 Zerfall. Die relative Änderungsrate ist konstant.",
+      "condition": "B₀>0, k konstant. Sachbereich des Modells beachten.",
+      "course": ""
+    },
+    {
+      "name": "Begrenztes Wachstum",
+      "formula": "B(t)=S−(S−B₀)e^(−kt); B′=k(S−B)",
+      "meaning": "Die Rate hängt vom verbleibenden Abstand zur Schranke S ab.",
+      "condition": "k>0. Bei B₀<S Annäherung von unten, bei B₀>S fallende Annäherung von oben.",
+      "course": ""
+    },
+    {
+      "name": "Logistisches Wachstum",
+      "formula": "B(t)=S/(1+ce^(−kt)); B′=kB(1−B/S)",
+      "meaning": "Die größte Zunahme des gesamten Verlaufs liegt bei B=S/2, nicht beim größten Bestand.",
+      "condition": "S,c,k>0. Zeitpunkt t=ln(c)/k liegt nur bei c≥1 im Sachbereich t≥0.",
+      "course": "LK"
+    }
+  ],
+  "Q1.4": [
+    {
+      "name": "Lineare innere Funktion",
+      "formula": "∫e^(kx)dx=e^(kx)/k+C; ∫cos(kx)dx=sin(kx)/k+C",
+      "meaning": "Division durch k gleicht die innere Ableitung aus.",
+      "condition": "k≠0; trigonometrische Argumente im Bogenmaß.",
+      "course": ""
+    },
+    {
+      "name": "Partielle Integration",
+      "formula": "∫u(x)v′(x)dx=u(x)v(x)−∫u′(x)v(x)dx",
+      "meaning": "Hilft bei Produkten, wenn ein Faktor durch Ableiten einfacher wird. Beispiel: ∫xeˣdx=(x−1)eˣ+C.",
+      "condition": "Passende differenzierbare Faktoren; beim bestimmten Integral auch den Randterm auswerten.",
+      "course": "LK"
+    },
+    {
+      "name": "Substitution",
+      "formula": "∫f(g(x))g′(x)dx=F(g(x))+C",
+      "meaning": "Die Kettenregel rückwärts. Beispiel: ∫2xe^(x²)dx=e^(x²)+C.",
+      "condition": "F′=f. Grenzen mittransformieren oder vor dem Einsetzen zurücksubstituieren.",
+      "course": "LK"
+    }
+  ],
+  "Q1.5": [
+    {
+      "name": "Rate proportional zum Bestand",
+      "formula": "y′=ky → y(t)=Ce^(kt)",
+      "meaning": "Die Anfangsbedingung y(0)=y₀ setzt C=y₀.",
+      "condition": "k konstant; C=0 liefert die Nulllösung.",
+      "course": ""
+    },
+    {
+      "name": "Gleichgewicht",
+      "formula": "y′=k(S−y) → y(t)=S+(y₀−S)e^(−kt)",
+      "meaning": "Bei k>0 nähert sich die Lösung S. y=S ist eine konstante Lösung.",
+      "condition": "Anfangsbedingung y(0)=y₀; k und S konstant.",
+      "course": ""
+    },
+    {
+      "name": "Gegebene Rate integrieren",
+      "formula": "y′=g(t) → y(t)=G(t)+C",
+      "meaning": "Wenn die Rate nur von t abhängt, genügt eine Stammfunktion. Beispiel: y′=6t und y(0)=4 ergeben y=3t²+4.",
+      "condition": "G′=g. Eine Anfangsbedingung bestimmt C.",
+      "course": ""
+    }
+  ],
+  "Q2.1": [
+    {
+      "name": "Kehrwert und Wurzel",
+      "formula": "(1/x)′=−1/x²; (√x)′=1/(2√x)",
+      "meaning": "Bei zusammengesetzten Funktionen zusätzlich die Kettenregel verwenden.",
+      "condition": "Kehrwert: x≠0. Ableitung der Quadratwurzel: x>0.",
+      "course": ""
+    },
+    {
+      "name": "Umkehrfunktion",
+      "formula": "f(x)=ax+b → f⁻¹(x)=(x−b)/a",
+      "meaning": "Eingabe und Ausgabe vertauschen; graphisch eine Spiegelung an y=x.",
+      "condition": "a≠0. Allgemein muss f auf dem gewählten Bereich eindeutig umkehrbar sein. f⁻¹ ist nicht der Kehrwert.",
+      "course": ""
+    },
+    {
+      "name": "Natürlicher Logarithmus",
+      "formula": "(ln x)′=1/x; ∫(1/x)dx=ln|x|+C",
+      "meaning": "Der Sonderfall der Potenzregel mit Exponent −1 führt zum Logarithmus.",
+      "condition": "ln x verlangt x>0. Die Stammfunktion ln|x| gilt auf Intervallen ohne 0.",
+      "course": "LK"
+    }
+  ],
+  "Q2.2": [
+    {
+      "name": "Verbindungsvektor und Länge",
+      "formula": "AB=B−A; |v|=√(v₁²+v₂²+v₃²)",
+      "meaning": "Ziel minus Start ist die Verschiebung. Ihre Länge ist der Punktabstand.",
+      "condition": "Koordinaten in derselben Einheit verwenden.",
+      "course": ""
+    },
+    {
+      "name": "Skalarprodukt und Winkel",
+      "formula": "u·v=u₁v₁+u₂v₂+u₃v₃; cos α=(u·v)/(|u||v|)",
+      "meaning": "Bei u·v=0 sind von null verschiedene Vektoren senkrecht.",
+      "condition": "u und v dürfen für die Winkelberechnung keine Nullvektoren sein.",
+      "course": ""
+    },
+    {
+      "name": "Mittelpunkt und Pyramide",
+      "formula": "M=(A+B)/2; V=G·h/3",
+      "meaning": "Jede Koordinate einzeln mitteln. Das Pyramidenvolumen nutzt die senkrechte Höhe.",
+      "condition": "G ist der Grundflächeninhalt; h ist nicht eine schräge Seitenkante.",
+      "course": ""
+    }
+  ],
+  "Q2.3": [
+    {
+      "name": "Gerade und Ebene",
+      "formula": "g: x=p+tu; E: x=p+ru+sv",
+      "meaning": "Stützvektor zum Startpunkt, Richtungsvektoren für die Bewegung.",
+      "condition": "Gerade: u≠0. Ebene: u und v linear unabhängig.",
+      "course": ""
+    },
+    {
+      "name": "Koordinatenform",
+      "formula": "E: ax+by+cz=d; n=(a;b;c)",
+      "meaning": "Gerade einsetzen: eindeutiger Parameter = Schnitt, Widerspruch = kein Schnitt, Identität = ganze Gerade in E.",
+      "condition": "n≠0. Alle drei Koordinaten prüfen.",
+      "course": ""
+    },
+    {
+      "name": "Gerade-Ebene-Winkel",
+      "formula": "sin α=|u·n|/(|u||n|)",
+      "meaning": "Der kleinere Winkel zur Ebene wird über den Normalenvektor berechnet.",
+      "condition": "u≠0, n≠0; 0°≤α≤90°.",
+      "course": ""
+    }
+  ],
+  "Q2.3.1": [
+    {
+      "name": "Gauß-Verfahren deuten",
+      "formula": "0=0: keine neue Bedingung; 0=c mit c≠0: Widerspruch",
+      "meaning": "Zeilen tauschen, mit einer von null verschiedenen Zahl multiplizieren oder Vielfache anderer Zeilen addieren.",
+      "condition": "Eine Nullzeile allein legt die Zahl freier Variablen noch nicht vollständig fest.",
+      "course": ""
+    },
+    {
+      "name": "Punkt-Ebene-Abstand",
+      "formula": "d(P,E)=|n·P−d|/|n|",
+      "meaning": "Die Abweichung von der Ebenengleichung wird durch die Normalenlänge geteilt.",
+      "condition": "E: n·x=d, n≠0. Der Abstand ist nichtnegativ.",
+      "course": "LK"
+    },
+    {
+      "name": "Spiegelung an einer Ebene",
+      "formula": "P′=2F−P",
+      "meaning": "F ist der Lotfuß auf der Ebene. Über F geht es nochmals dieselbe Strecke weiter.",
+      "condition": "F muss tatsächlich auf dem Lot durch P liegen.",
+      "course": "LK"
+    }
+  ],
+  "Q2.4": [
+    {
+      "name": "Übergänge",
+      "formula": "vₙ₊₁=Mvₙ; vₙ=Mⁿv₀",
+      "meaning": "Eine Matrix beschreibt einen Schritt; ihre Potenzen wiederholen ihn.",
+      "condition": "M bleibt gleich. Zustände und Spaltenkonvention vorab festlegen.",
+      "course": ""
+    },
+    {
+      "name": "Gesamtsumme erhalten",
+      "formula": "Summe jeder Spalte = 1",
+      "meaning": "Bei nichtnegativen Einträgen und Spaltenvektoren bleibt die Gesamtmenge so unverändert.",
+      "condition": "Bei Zeilenvektoren ändert sich die Konvention.",
+      "course": ""
+    },
+    {
+      "name": "Stationärer Zustand",
+      "formula": "Mv=v; v₁+v₂=N",
+      "meaning": "Die Verteilung bleibt gleich, obwohl sich gegenläufige Wechsel ausgleichen können.",
+      "condition": "Ein stationärer Zustand garantiert nicht die Konvergenz von jedem Startzustand.",
+      "course": ""
+    }
+  ],
+  "Q2.5": [
+    {
+      "name": "Spalten als Bilder",
+      "formula": "A·(1;0)=erste Spalte; A·(0;1)=zweite Spalte",
+      "meaning": "Die Bilder der Einheitsvektoren bestimmen die lineare Abbildung.",
+      "condition": "Reine lineare Abbildungen lassen den Ursprung fest.",
+      "course": ""
+    },
+    {
+      "name": "Streckung und Flächenfaktor",
+      "formula": "S(x;y)=(ax;by); Flächenfaktor=|ab|",
+      "meaning": "Negative Faktoren spiegeln die jeweilige Richtung. Zwei unabhängige Längenfaktoren multiplizieren sich für die Fläche.",
+      "condition": "Hier beschreibt S eine diagonale Matrix.",
+      "course": ""
+    },
+    {
+      "name": "Drehung und Verkettung",
+      "formula": "R(x;y)=(−y;x); erst A, dann B → BA",
+      "meaning": "R dreht um 90° gegen den Uhrzeigersinn. Bei einer Verkettung wirkt die rechte Matrix zuerst.",
+      "condition": "Die Reihenfolge lässt sich im Allgemeinen nicht vertauschen.",
+      "course": ""
+    }
+  ],
+  "Q3.1": [
+    {
+      "name": "Bedingte Wahrscheinlichkeit",
+      "formula": "P(A|B)=P(A∩B)/P(B)",
+      "meaning": "B ist bereits bekannt und bildet die neue Vergleichsgruppe.",
+      "condition": "P(B)>0. Bedingungsrichtung nicht vertauschen.",
+      "course": ""
+    },
+    {
+      "name": "Unabhängigkeit",
+      "formula": "P(A∩B)=P(A)P(B)",
+      "meaning": "Zusätzliche Information über B ändert die Wahrscheinlichkeit von A nicht.",
+      "condition": "Unabhängig bedeutet nicht unvereinbar.",
+      "course": ""
+    },
+    {
+      "name": "Vereinigung und Bayes",
+      "formula": "P(A∪B)=P(A)+P(B)−P(A∩B); P(A|B)=(P(B|A)P(A))/P(B)",
+      "meaning": "Bei „oder“ die Schnittmenge nicht doppelt zählen. Bayes berücksichtigt die Basisrate beim Umkehren der Bedingung.",
+      "condition": "Alle auftretenden bedingten Wahrscheinlichkeiten müssen definiert sein.",
+      "course": ""
+    }
+  ],
+  "Q3.2": [
+    {
+      "name": "Binomialverteilung",
+      "formula": "P(X=k)=C(n,k)pᵏ(1−p)^(n−k); C(n,k)=n!/(k!(n−k)!)",
+      "meaning": "Zähle die Anordnungen mit k Treffern und multipliziere mit der Wahrscheinlichkeit einer Anordnung.",
+      "condition": "n unabhängige Versuche, zwei Ausgänge, konstantes p; k ganzzahlig zwischen 0 und n.",
+      "course": ""
+    },
+    {
+      "name": "Mitte, Streuung, Gegenereignis",
+      "formula": "μ=np; σ=√(np(1−p)); P(X≥1)=1−(1−p)ⁿ",
+      "meaning": "Der Erwartungswert ist keine garantierte Trefferzahl. Mindestens ein Treffer lässt sich über keinen Treffer berechnen.",
+      "condition": "X ist binomialverteilt; Modellannahmen prüfen.",
+      "course": ""
+    },
+    {
+      "name": "Normalverteilung",
+      "formula": "P(a≤X≤b)=Φ((b−μ)/σ)−Φ((a−μ)/σ)",
+      "meaning": "Wahrscheinlichkeiten sind Flächen unter der Dichte. Φ ist die Verteilungsfunktion der Standardnormalverteilung.",
+      "condition": "X~N(μ;σ²), σ>0. Ein einzelner Wert hat Wahrscheinlichkeit 0.",
+      "course": "LK"
+    }
+  ],
+  "Q3.3": [
+    {
+      "name": "Rechtsseitiger Test",
+      "formula": "H₀:p≤p₀; H₁:p>p₀",
+      "meaning": "Eine vermutete Erhöhung wird durch ungewöhnlich große Trefferzahlen geprüft.",
+      "condition": "Hypothesen und Niveau vor der Stichprobe festlegen.",
+      "course": ""
+    },
+    {
+      "name": "Kritische Grenze",
+      "formula": "Verwerfen bei X≥k; Pₚ₀(X≥k)≤α",
+      "meaning": "Wähle die kleinste passende ganzzahlige Grenze k für den rechtsseitigen Binomialtest.",
+      "condition": "X~B(n,p). Unter H₀:p≤p₀ ist das rechtsseitige Verwerfungsrisiko am Rand p₀ am größten.",
+      "course": ""
+    },
+    {
+      "name": "Fehlerarten",
+      "formula": "1. Art: wahres H₀ verwerfen; 2. Art: falsches H₀ nicht verwerfen",
+      "meaning": "Nicht verwerfen ist kein Beweis für H₀. α ist keine Wahrscheinlichkeit für die Wahrheit von H₀ nach Betrachtung der Daten.",
+      "condition": "Das Risiko 2. Art hängt vom tatsächlichen Alternativwert ab.",
+      "course": ""
+    }
+  ],
+  "Q3.4": [
+    {
+      "name": "Anteil und Standardfehler",
+      "formula": "p̂=X/n; SE≈√(p̂(1−p̂)/n)",
+      "meaning": "Die Quote ist eine Punktschätzung; der Standardfehler beschreibt ihre zufällige Unsicherheit näherungsweise.",
+      "condition": "Passend erhobene, unabhängige Stichprobe; n>0. Erhebungsverzerrungen bleiben möglich.",
+      "course": ""
+    },
+    {
+      "name": "Näherungsweises 95-%-Intervall",
+      "formula": "p̂±1,96·√(p̂(1−p̂)/n)",
+      "meaning": "Beim Wald-Intervall beziehen sich 95 % auf das Überdeckungsverfahren über wiederholte Stichproben.",
+      "condition": "Nur für hinreichend große Stichproben und Abstand zu 0 und 1 brauchbar; bei 0 oder n Treffern ungeeignet.",
+      "course": ""
+    },
+    {
+      "name": "Prognose für Trefferzahlen",
+      "formula": "μ=np; σ=√(np(1−p)); Bereich näherungsweise μ±1,96σ",
+      "meaning": "Ein Prognoseintervall grenzt neue Beobachtungen bei bekanntem p ein, nicht einen unbekannten Parameter.",
+      "condition": "Normalapproximation nur unter geeigneten Bedingungen; ganzzahlige Grenzen und ggf. Stetigkeitskorrektur beachten.",
+      "course": ""
+    }
+  ],
+  "Q3.5": [
+    {
+      "name": "Mittelwert und Median",
+      "formula": "x̄=(x₁+…+xₙ)/n",
+      "meaning": "Der Median ist die Mitte der sortierten Daten. Er reagiert weniger stark auf einzelne extreme Werte.",
+      "condition": "n>0; bei geradem n die beiden mittleren Werte für den Median mitteln.",
+      "course": ""
+    },
+    {
+      "name": "Deskriptive Streuung",
+      "formula": "s²=(1/n)·Σ(xᵢ−x̄)²; s=√(s²)",
+      "meaning": "Varianz: mittlerer quadrierter Abstand. Standardabweichung: wieder die ursprüngliche Einheit.",
+      "condition": "Hier Beschreibung vorhandener Daten. Für eine unverzerrte Populationsvarianz-Schätzung durch n−1 teilen.",
+      "course": ""
+    },
+    {
+      "name": "Poissonverteilung",
+      "formula": "P(X=k)=e^(−λ)λᵏ/k!",
+      "meaning": "Modell für Ereigniszahlen in einem festen Zeitfenster unter passenden Annahmen wie konstanter mittlerer Rate und unabhängigen Ereignissen.",
+      "condition": "λ>0; k=0,1,2,…; Modellannahmen prüfen.",
+      "course": "LK"
+    }
+  ],
+  "Q4.1": [
+    {
+      "name": "Parameter beim Ableiten",
+      "formula": "fₐ(x)=ax²+1 → fₐ′(x)=2ax",
+      "meaning": "Beim Ableiten nach x bleibt a konstant. Erst danach wird sein Einfluss untersucht.",
+      "condition": "Vor Division durch a den Fall a=0 prüfen.",
+      "course": ""
+    },
+    {
+      "name": "Extremstellen mit Parameter",
+      "formula": "fₐ′(x)=0; danach Extremum nachweisen",
+      "meaning": "Kandidaten anschließend durch Vorzeichenwechsel oder zweite Ableitung prüfen; Fälle nach a unterscheiden.",
+      "condition": "Sachbereich und Randpunkte beachten.",
+      "course": ""
+    },
+    {
+      "name": "Ortskurve",
+      "formula": "Tₐ=(a;−a²) → y=−x²",
+      "meaning": "Eliminiere den Parameter zwischen den beiden Koordinaten.",
+      "condition": "Den zu a gehörenden x-Bereich übernehmen.",
+      "course": "LK"
+    }
+  ],
+  "Q4.2": [
+    {
+      "name": "Steigen begründen",
+      "formula": "f′(x)>0 auf I → f streng steigend auf I",
+      "meaning": "Eine einzelne positive Ableitung ist nur eine lokale Aussage.",
+      "condition": "f auf dem Intervall differenzierbar; Vorzeichenbedingung muss im ganzen Intervall gelten.",
+      "course": ""
+    },
+    {
+      "name": "Integral prüfen",
+      "formula": "f(x)≥0 auf [a;b] → ∫ₐᵇf(x)dx≥0",
+      "meaning": "Ein nichtnegativer Verlauf kann bei vorwärts laufenden Grenzen kein negatives Integral liefern.",
+      "condition": "a<b; f integrierbar, beispielsweise stetig.",
+      "course": ""
+    },
+    {
+      "name": "Gegenbeispiel",
+      "formula": "f(x)=x³: f′(0)=0, aber kein Extremum",
+      "meaning": "Ein Gegenbeispiel widerlegt eine allgemeine Behauptung. Passende Einzelbeispiele ersetzen keinen allgemeinen Beweis.",
+      "condition": "Wortlaut beachten: alle, mindestens eine, notwendig oder hinreichend.",
+      "course": ""
+    }
+  ],
+  "Q4.3": [
+    {
+      "name": "Komplexe Zahl",
+      "formula": "i²=−1; z=a+bi",
+      "meaning": "Re(z)=a und Im(z)=b sind reelle Zahlen und werden als zwei Koordinaten dargestellt.",
+      "condition": "Die komplexe Ebene ist kein gewöhnlicher Funktionsgraph.",
+      "course": ""
+    },
+    {
+      "name": "Konjugierte und Betrag",
+      "formula": "z̄=a−bi; |z|=√(a²+b²); z·z̄=a²+b²",
+      "meaning": "Der Betrag ist der Abstand zum Ursprung; die Konjugierte hilft beim Dividieren.",
+      "condition": "Beim Dividieren muss der Nenner von 0 verschieden sein.",
+      "course": ""
+    },
+    {
+      "name": "Geometrische Wirkung",
+      "formula": "i(a+bi)=−b+ai",
+      "meaning": "Multiplikation mit i dreht um 90° gegen den Uhrzeigersinn und erhält den Betrag.",
+      "condition": "Vier Vierteldrehungen führen zurück: i⁴=1.",
+      "course": ""
+    }
+  ]
+}
